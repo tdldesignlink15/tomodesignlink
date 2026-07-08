@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pricing — tomo design link</title>
+<link rel="icon" type="image/png" href="logo.png">
+<link rel="apple-touch-icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=Space+Mono:wght@400&family=Dancing+Script:wght@500;600&family=Noto+Serif+JP:wght@200;300;400&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --ivory:  #F4F0E8;
+  --ivory2: #EDE8DC;
+  --ivory3: #E5DFD0;
+  --navy:   #1A2744;
+  --navy2:  #2B3F6E;
+  --sand:   #C4A47C;
+  --muted:  #6B7A99;
+  --white:  #FFFFFF;
+  --rust:   #C17B5C;
+}
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--ivory);
+  color: var(--navy);
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 300;
+  line-height: 1.75;
+  overflow-x: hidden;
+  min-height: 100dvh;
+  display: flex; flex-direction: column;
+}
+
+/* ── NAV ── */
+nav {
+  position: sticky; top: 0; z-index: 100;
+  height: 64px;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 clamp(1.2rem, 5vw, 3rem);
+  background: rgba(244,240,232,0.96);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(26,39,68,0.07);
+  flex-shrink: 0;
+}
+.nav-logo {
+  font-family: 'Dancing Script', cursive;
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
+  font-weight: 500;
+  color: var(--navy);
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+.nav-logo:hover { opacity: 0.65; }
+.nav-back {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.58rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;
+  display: flex; align-items: center; gap: 0.5rem;
+  transition: color 0.2s;
+}
+.nav-back:hover { color: var(--navy); }
+
+/* ── HERO ── */
+.pricing-hero {
+  padding: clamp(3.5rem, 8vw, 6rem) clamp(1.5rem, 6vw, 4rem) clamp(2rem, 4vw, 3rem);
+  max-width: 860px;
+  margin: 0 auto;
+  width: 100%;
+}
+.pricing-eyebrow {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.58rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--sand);
+  margin-bottom: 1.4rem;
+  display: flex; align-items: center; gap: 0.8rem;
+}
+.pricing-eyebrow::before {
+  content: ''; width: 24px; height: 1px; background: var(--sand);
+}
+.pricing-title {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(2.2rem, 6vw, 4rem);
+  font-weight: 200;
+  line-height: 1.25;
+  color: var(--navy);
+  margin-bottom: 1.2rem;
+  word-break: keep-all;
+  letter-spacing: 0.04em;
+}
+.pricing-title em {
+  font-style: italic;
+  font-family: 'Cormorant Garamond', serif;
+  color: var(--muted);
+}
+.pricing-note {
+  font-size: clamp(0.8rem, 1.8vw, 0.88rem);
+  color: var(--muted);
+  line-height: 1.9;
+  max-width: 560px;
+  word-break: keep-all;
+}
+
+/* ── DIVIDER ── */
+.divider {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 clamp(1.5rem, 6vw, 4rem);
+}
+.divider hr {
+  border: none;
+  border-top: 1px solid rgba(26,39,68,0.09);
+}
+
+/* ── MAIN ── */
+main {
+  flex: 1;
+  padding: clamp(2.5rem, 6vw, 5rem) clamp(1.5rem, 6vw, 4rem) clamp(4rem, 8vw, 7rem);
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* ── PLANS GRID ── */
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+  margin-bottom: clamp(3rem, 6vw, 5rem);
+}
+
+.plan-card {
+  background: var(--ivory2);
+  border-radius: 1.2rem;
+  padding: clamp(1.8rem, 4vw, 2.5rem);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.3s;
+  border: 1px solid transparent;
+}
+.plan-card:hover {
+  box-shadow: 0 8px 32px rgba(26,39,68,0.08);
+}
+.plan-card.featured {
+  background: var(--navy);
+  color: white;
+  border-color: transparent;
+}
+.plan-card.featured:hover {
+  box-shadow: 0 8px 32px rgba(26,39,68,0.25);
+}
+
+/* 人気バッジ */
+.plan-badge {
+  position: absolute;
+  top: -0.6rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Space Mono', monospace;
+  font-size: 0.5rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  background: var(--sand);
+  color: var(--navy);
+  padding: 0.25rem 0.9rem;
+  border-radius: 50px;
+  white-space: nowrap;
+}
+
+.plan-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.55rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--sand);
+  margin-bottom: 0.8rem;
+}
+.plan-card.featured .plan-label { color: rgba(196,164,124,0.8); }
+
+.plan-name {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(1.3rem, 2.5vw, 1.7rem);
+  font-weight: 200;
+  color: var(--navy);
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.04em;
+  word-break: keep-all;
+}
+.plan-card.featured .plan-name { color: white; }
+
+.plan-price {
+  display: flex;
+  align-items: baseline;
+  gap: 0.3rem;
+  margin-bottom: 0.4rem;
+}
+.plan-price-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 300;
+  color: var(--navy);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+.plan-card.featured .plan-price-num { color: white; }
+.plan-price-unit {
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+.plan-card.featured .plan-price-unit { color: rgba(255,255,255,0.5); }
+.plan-price-note {
+  font-size: 0.7rem;
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+}
+.plan-card.featured .plan-price-note { color: rgba(255,255,255,0.45); }
+
+.plan-divider {
+  border: none;
+  border-top: 1px solid rgba(26,39,68,0.1);
+  margin-bottom: 1.5rem;
+}
+.plan-card.featured .plan-divider { border-color: rgba(255,255,255,0.1); }
+
+.plan-desc {
+  font-size: 0.78rem;
+  color: var(--muted);
+  line-height: 1.85;
+  margin-bottom: 1.5rem;
+  word-break: keep-all;
+  flex: 1;
+}
+.plan-card.featured .plan-desc { color: rgba(255,255,255,0.6); }
+
+.plan-features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 2rem;
+}
+.plan-features li {
+  font-size: 0.78rem;
+  color: var(--navy);
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  line-height: 1.5;
+  word-break: keep-all;
+}
+.plan-card.featured .plan-features li { color: rgba(255,255,255,0.82); }
+.plan-features li::before {
+  content: '';
+  width: 14px; height: 14px;
+  flex-shrink: 0;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpath d='M2 7l3.5 3.5L12 3' stroke='%23C4A47C' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") center/contain no-repeat;
+  margin-top: 0.1rem;
+}
+
+.plan-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.4rem;
+  border-radius: 50px;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.58rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: opacity 0.2s, transform 0.2s;
+  margin-top: auto;
+}
+.plan-cta:hover { opacity: 0.78; transform: translateY(-1px); }
+.plan-cta-outline {
+  border: 1px solid rgba(26,39,68,0.2);
+  color: var(--navy);
+  background: transparent;
+}
+.plan-cta-filled {
+  background: var(--sand);
+  color: var(--navy);
+  border: 1px solid transparent;
+}
+.plan-cta-white {
+  background: white;
+  color: var(--navy);
+  border: 1px solid transparent;
+}
+
+/* ── OPTION TABLE ── */
+.options-section {
+  margin-bottom: clamp(3rem, 6vw, 5rem);
+}
+.options-heading {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+  font-weight: 200;
+  color: var(--navy);
+  margin-bottom: 0.6rem;
+  letter-spacing: 0.04em;
+  word-break: keep-all;
+}
+.options-sub {
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin-bottom: 1.8rem;
+  line-height: 1.8;
+}
+.options-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.55rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--sand);
+  margin-bottom: 1.5rem;
+  display: flex; align-items: center; gap: 0.7rem;
+}
+.options-label::before {
+  content: ''; width: 20px; height: 1px; background: var(--sand);
+}
+.options-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.8rem;
+}
+.option-item {
+  background: var(--ivory2);
+  border-radius: 0.8rem;
+  padding: 1.2rem 1.4rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.option-name {
+  font-size: 0.82rem;
+  color: var(--navy);
+  font-weight: 400;
+  word-break: keep-all;
+}
+.option-desc {
+  font-size: 0.68rem;
+  color: var(--muted);
+  margin-top: 0.2rem;
+  line-height: 1.6;
+  word-break: keep-all;
+}
+.option-price {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--navy);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ── FAQ ── */
+.faq-section { margin-bottom: clamp(3rem, 6vw, 5rem); }
+.faq-heading {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+  font-weight: 200;
+  color: var(--navy);
+  margin-bottom: 1.8rem;
+  letter-spacing: 0.04em;
+  word-break: keep-all;
+}
+.faq-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.55rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--sand);
+  margin-bottom: 1.5rem;
+  display: flex; align-items: center; gap: 0.7rem;
+}
+.faq-label::before {
+  content: ''; width: 20px; height: 1px; background: var(--sand);
+}
+.faq-list { display: flex; flex-direction: column; }
+.faq-item {
+  border-bottom: 1px solid rgba(26,39,68,0.08);
+  padding: 1.4rem 0;
+}
+.faq-item:first-child { border-top: 1px solid rgba(26,39,68,0.08); }
+.faq-q {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--navy);
+  margin-bottom: 0.6rem;
+  display: flex; align-items: flex-start; gap: 0.8rem;
+  word-break: keep-all;
+  line-height: 1.6;
+}
+.faq-q::before {
+  content: 'Q';
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--sand);
+  flex-shrink: 0;
+  margin-top: 0.05rem;
+}
+.faq-a {
+  font-size: 0.82rem;
+  color: var(--muted);
+  line-height: 1.9;
+  padding-left: 1.4rem;
+  word-break: keep-all;
+}
+
+/* ── CTA BANNER ── */
+.cta-banner {
+  background: linear-gradient(145deg, var(--navy2), var(--navy));
+  border-radius: 1.2rem;
+  padding: clamp(2.5rem, 5vw, 4rem);
+  text-align: center;
+}
+.cta-banner-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.55rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(196,164,124,0.7);
+  margin-bottom: 1.2rem;
+}
+.cta-banner-heading {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(1.5rem, 3.5vw, 2.4rem);
+  font-weight: 200;
+  color: white;
+  margin-bottom: 0.8rem;
+  letter-spacing: 0.04em;
+  word-break: keep-all;
+}
+.cta-banner-sub {
+  font-size: 0.84rem;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 2rem;
+  line-height: 1.8;
+}
+.cta-banner-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--sand);
+  color: var(--navy);
+  padding: 0.9rem 2rem;
+  border-radius: 50px;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: opacity 0.2s, transform 0.2s;
+}
+.cta-banner-btn:hover { opacity: 0.82; transform: translateY(-1px); }
+
+/* ── FOOTER ── */
+footer {
+  flex-shrink: 0;
+  background: var(--navy);
+  padding: clamp(2rem, 4vw, 3rem) clamp(1.5rem, 5vw, 3rem);
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 1rem;
+}
+.footer-logo {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.65);
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+.footer-logo:hover { opacity: 0.5; }
+.footer-copy {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.5rem;
+  letter-spacing: 0.08em;
+  color: rgba(255,255,255,0.22);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 860px) {
+  .plans-grid { grid-template-columns: 1fr; max-width: 480px; margin-left: auto; margin-right: auto; }
+  .options-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .options-grid { grid-template-columns: 1fr; }
+  footer { flex-direction: column; align-items: flex-start; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">tomo design link</a>
+  <a href="index.html#contact" class="nav-back">
+    <svg width="14" height="10" viewBox="0 0 14 10" fill="none">
+      <path d="M14 5H2M6 1L2 5L6 9" stroke="currentColor" stroke-width="1.2"/>
+    </svg>
+    Back
+  </a>
+</nav>
+
+<!-- HERO -->
+<div class="pricing-hero">
+  <p class="pricing-eyebrow">Pricing</p>
+  <h1 class="pricing-title">
+    丁寧に、<br>あなたのために。
+  </h1>
+  <p class="pricing-note">
+    すべての価格は税込みの目安です。プロジェクトの規模・要件によって変動しますので、まずはお気軽にご相談ください。
+  </p>
+</div>
+<div class="divider"><hr></div>
+
+<!-- MAIN -->
+<main>
+
+  <!-- PLANS -->
+  <div class="plans-grid">
+
+    <!-- ライト -->
+    <div class="plan-card">
+      <p class="plan-label">Light</p>
+      <h2 class="plan-name">シンプルサイト</h2>
+      <div class="plan-price">
+        <span class="plan-price-num">¥88,000</span>
+        <span class="plan-price-unit">〜</span>
+      </div>
+      <p class="plan-price-note">税込 / 一括払い</p>
+      <hr class="plan-divider">
+      <p class="plan-desc">名刺代わりのシンプルな1〜3ページサイト。スピード重視で丁寧に仕上げます。</p>
+      <ul class="plan-features">
+        <li>ページ数：1〜3ページ</li>
+        <li>レスポンシブ対応</li>
+        <li>お問い合わせフォーム</li>
+        <li>納期目安：2〜3週間</li>
+        <li>修正回数：2回</li>
+      </ul>
+      <a href="index.html#contact" class="plan-cta plan-cta-outline">
+        相談する
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M1 9L9 1M9 1H3M9 1V7" stroke="currentColor" stroke-width="1.3"/></svg>
+      </a>
+    </div>
+
+    <!-- スタンダード（おすすめ） -->
+    <div class="plan-card featured">
+      <span class="plan-badge">人気プラン</span>
+      <p class="plan-label">Standard</p>
+      <h2 class="plan-name">ブランドサイト</h2>
+      <div class="plan-price">
+        <span class="plan-price-num">¥198,000</span>
+        <span class="plan-price-unit">〜</span>
+      </div>
+      <p class="plan-price-note">税込 / 一括払い</p>
+      <hr class="plan-divider">
+      <p class="plan-desc">ブランドの世界観を丁寧にウェブへ。コンセプト設計から実装まで一貫して担当します。</p>
+      <ul class="plan-features">
+        <li>ページ数：4〜8ページ</li>
+        <li>デザインコンセプト提案</li>
+        <li>レスポンシブ対応</li>
+        <li>お問い合わせフォーム</li>
+        <li>納期目安：4〜6週間</li>
+        <li>修正回数：3回</li>
+        <li>公開後1ヶ月サポート</li>
+      </ul>
+      <a href="index.html#contact" class="plan-cta plan-cta-white">
+        相談する
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M1 9L9 1M9 1H3M9 1V7" stroke="currentColor" stroke-width="1.3"/></svg>
+      </a>
+    </div>
+
+    <!-- プレミアム -->
+    <div class="plan-card">
+      <p class="plan-label">Premium</p>
+      <h2 class="plan-name">フルオーダー</h2>
+      <div class="plan-price">
+        <span class="plan-price-num">¥330,000</span>
+        <span class="plan-price-unit">〜</span>
+      </div>
+      <p class="plan-price-note">税込 / 要相談</p>
+      <hr class="plan-divider">
+      <p class="plan-desc">ECサイト・大規模サイト・ブランディングを含む総合的なウェブ制作をお任せください。</p>
+      <ul class="plan-features">
+        <li>ページ数：9ページ〜</li>
+        <li>ブランディング込み</li>
+        <li>EC機能対応可</li>
+        <li>CMS実装対応</li>
+        <li>納期目安：8週間〜</li>
+        <li>修正回数：無制限</li>
+        <li>公開後3ヶ月サポート</li>
+      </ul>
+      <a href="index.html#contact" class="plan-cta plan-cta-filled">
+        相談する
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M1 9L9 1M9 1H3M9 1V7" stroke="currentColor" stroke-width="1.3"/></svg>
+      </a>
+    </div>
+
+  </div>
+
+  <!-- OPTIONS -->
+  <div class="options-section">
+    <p class="options-label">Add-on Options</p>
+    <h2 class="options-heading">オプション料金</h2>
+    <p class="options-sub">各プランに追加できるオプションです。ご要望に応じてカスタマイズします。</p>
+    <div class="options-grid">
+      <div class="option-item">
+        <div>
+          <div class="option-name">追加ページ制作</div>
+          <div class="option-desc">1ページごとに追加</div>
+        </div>
+        <span class="option-price">¥22,000〜</span>
+      </div>
+      <div class="option-item">
+        <div>
+          <div class="option-name">WordPress実装</div>
+          <div class="option-desc">更新しやすいCMSへ</div>
+        </div>
+        <span class="option-price">¥33,000〜</span>
+      </div>
+      <div class="option-item">
+        <div>
+          <div class="option-name">ロゴデザイン</div>
+          <div class="option-desc">ブランドアイデンティティ</div>
+        </div>
+        <span class="option-price">¥55,000〜</span>
+      </div>
+      <div class="option-item">
+        <div>
+          <div class="option-name">SEO対策</div>
+          <div class="option-desc">メタタグ・構造化データ</div>
+        </div>
+        <span class="option-price">¥22,000〜</span>
+      </div>
+      <div class="option-item">
+        <div>
+          <div class="option-name">コピーライティング</div>
+          <div class="option-desc">ことばからデザインへ</div>
+        </div>
+        <span class="option-price">¥33,000〜</span>
+      </div>
+      <div class="option-item">
+        <div>
+          <div class="option-name">保守・運用サポート</div>
+          <div class="option-desc">月額サポート契約</div>
+        </div>
+        <span class="option-price">¥11,000〜/月</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="faq-section">
+    <p class="faq-label">FAQ</p>
+    <h2 class="faq-heading">よくあるご質問</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <p class="faq-q">分割払いはできますか？</p>
+        <p class="faq-a">はい、対応可能です。基本的には着手金50%・納品時50%のお支払いをお願いしていますが、ご相談に応じて柔軟に対応します。</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">制作期間はどのくらいかかりますか？</p>
+        <p class="faq-a">プランによって異なりますが、シンプルサイトで2〜3週間、ブランドサイトで4〜6週間が目安です。お急ぎの場合はご相談ください。</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">修正はどこまで対応してもらえますか？</p>
+        <p class="faq-a">各プランに修正回数を設けています。大きな方向変更（デザインコンセプトの変更など）は追加料金が発生する場合があります。</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">サーバーやドメインの取得も依頼できますか？</p>
+        <p class="faq-a">ご案内・サポートが可能です。初期費用・維持費はお客様負担となりますが、一緒に最適なものを選びます。</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">既存サイトのリニューアルも対応していますか？</p>
+        <p class="faq-a">はい、リニューアルのご依頼も歓迎しています。現状の課題や目的をヒアリングしながら最適なプランをご提案します。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-banner">
+    <p class="cta-banner-label">Let's talk</p>
+    <h2 class="cta-banner-heading">まずは、ことばを交わすところから。</h2>
+    <p class="cta-banner-sub">お見積もりは無料です。お気軽にご連絡ください。</p>
+    <a href="index.html#contact" class="cta-banner-btn">
+      お問い合わせはこちら
+      <svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M0 5H10M6 1l4 4-4 4" stroke="currentColor" stroke-width="1.3"/></svg>
+    </a>
+  </div>
+
+</main>
+
+<footer>
+  <a href="index.html" class="footer-logo">tomo design link</a>
+  <span class="footer-copy">© 2026 tomo design link. All rights reserved.</span>
+</footer>
+
+</body>
+</html>

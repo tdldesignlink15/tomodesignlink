@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>利用規約 — tomo design link</title>
+<link rel="icon" type="image/png" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=DM+Sans:opsz,wght@9..40,300;9..40,400&family=Space+Mono:wght@400&family=Dancing+Script:wght@500&family=Noto+Serif+JP:wght@200;300;400&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --ivory: #F4F0E8; --ivory2: #EDE8DC; --navy: #1A2744;
+  --sand: #C4A47C; --muted: #6B7A99;
+}
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--ivory); color: var(--navy);
+  font-family: 'DM Sans', sans-serif; font-weight: 300;
+  line-height: 1.75; overflow-x: hidden;
+  min-height: 100dvh; display: flex; flex-direction: column;
+}
+nav {
+  position: sticky; top: 0; z-index: 100; height: 64px;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 clamp(1.2rem,5vw,2.5rem);
+  background: rgba(244,240,232,0.96); backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(26,39,68,0.07); flex-shrink: 0;
+}
+.nav-logo {
+  font-family: 'Dancing Script', cursive; font-size: clamp(1.2rem,3vw,1.5rem);
+  font-weight: 500; color: var(--navy); text-decoration: none;
+}
+.nav-back {
+  font-family: 'Space Mono', monospace; font-size: 0.58rem;
+  letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--muted); text-decoration: none;
+  display: flex; align-items: center; gap: 0.4rem; transition: color 0.2s;
+}
+.nav-back:hover { color: var(--navy); }
+.hero {
+  padding: clamp(3rem,7vw,5rem) clamp(1.5rem,6vw,3rem) clamp(2rem,4vw,3rem);
+  max-width: 800px; margin: 0 auto; width: 100%;
+}
+.eyebrow {
+  font-family: 'Space Mono', monospace; font-size: 0.58rem;
+  letter-spacing: 0.28em; text-transform: uppercase;
+  color: var(--sand); margin-bottom: 1.2rem;
+  display: flex; align-items: center; gap: 0.7rem;
+}
+.eyebrow::before { content:''; width:22px; height:1px; background:var(--sand); }
+h1 {
+  font-family: 'Noto Serif JP', serif; font-size: clamp(1.8rem,5vw,3rem);
+  font-weight: 200; line-height: 1.25; color: var(--navy);
+  margin-bottom: 1rem; word-break: keep-all; letter-spacing: 0.04em;
+}
+.updated {
+  font-family: 'Space Mono', monospace; font-size: 0.6rem;
+  letter-spacing: 0.12em; color: var(--muted);
+}
+.divider { max-width: 800px; margin: 0 auto; padding: 0 clamp(1.5rem,6vw,3rem); }
+.divider hr { border: none; border-top: 1px solid rgba(26,39,68,0.09); }
+main {
+  flex: 1; max-width: 800px; margin: 0 auto; width: 100%;
+  padding: clamp(2.5rem,5vw,4rem) clamp(1.5rem,6vw,3rem) clamp(4rem,8vw,6rem);
+}
+.terms-section { margin-bottom: clamp(2rem,4vw,3rem); }
+.terms-num {
+  font-family: 'Space Mono', monospace; font-size: 0.55rem;
+  letter-spacing: 0.2em; color: var(--sand); margin-bottom: 0.6rem;
+}
+.terms-section h2 {
+  font-family: 'Noto Serif JP', serif; font-size: clamp(1.1rem,2.2vw,1.4rem);
+  font-weight: 300; color: var(--navy); margin-bottom: 0.9rem;
+  word-break: keep-all; letter-spacing: 0.03em;
+  padding-bottom: 0.6rem; border-bottom: 1px solid rgba(26,39,68,0.08);
+}
+.terms-section p {
+  font-size: clamp(0.8rem,1.7vw,0.88rem); color: var(--muted);
+  line-height: 1.95; margin-bottom: 0.75rem; word-break: keep-all;
+  overflow-wrap: break-word;
+}
+.terms-section p:last-child { margin-bottom: 0; }
+.terms-section ul {
+  list-style: none; display: flex; flex-direction: column; gap: 0.55rem;
+  margin-top: 0.3rem;
+}
+.terms-section ul li {
+  font-size: clamp(0.8rem,1.7vw,0.88rem); color: var(--muted);
+  line-height: 1.85; padding-left: 1.1rem; position: relative;
+  overflow-wrap: break-word; word-break: keep-all;
+}
+.terms-section ul li::before {
+  content: '—'; position: absolute; left: 0;
+  color: var(--sand); font-size: 0.75rem;
+}
+a.inline { color: var(--navy); }
+footer {
+  flex-shrink: 0; background: var(--navy);
+  padding: 1.8rem clamp(1.5rem,5vw,2.5rem);
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 0.8rem;
+}
+.footer-logo {
+  font-family: 'Dancing Script', cursive; font-size: 1.2rem;
+  font-weight: 500; color: rgba(255,255,255,0.65); text-decoration: none;
+}
+.footer-links { display: flex; gap: 1rem; flex-wrap: wrap; }
+.footer-links a {
+  font-family: 'Space Mono', monospace; font-size: 0.5rem;
+  letter-spacing: 0.1em; color: rgba(255,255,255,0.28);
+  text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.15); transition: color 0.2s;
+}
+.footer-links a:hover { color: rgba(255,255,255,0.58); }
+.footer-copy {
+  font-family: 'Space Mono', monospace; font-size: 0.5rem;
+  color: rgba(255,255,255,0.2); letter-spacing: 0.08em;
+}
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">tomo design link</a>
+  <a href="index.html" class="nav-back">
+    <svg width="14" height="10" viewBox="0 0 14 10" fill="none"><path d="M14 5H2M6 1L2 5L6 9" stroke="currentColor" stroke-width="1.2"/></svg>
+    Back
+  </a>
+</nav>
+<div class="hero">
+  <p class="eyebrow">Legal</p>
+  <h1>利用規約</h1>
+  <p class="updated">最終更新日：2026年07月01日</p>
+</div>
+<div class="divider"><hr></div>
+<main>
+
+  <div class="terms-section">
+    <p class="terms-num">/01</p>
+    <h2>適用範囲</h2>
+    <p>本利用規約（以下「本規約」）は、tomo design link（以下「当スタジオ」）が運営するウェブサイト（https://tomodesignlink.netlify.app）の利用、およびお問い合わせフォームを通じた制作サービスの依頼に適用されます。</p>
+    <p>本サイトをご利用いただくことで、本規約に同意したものとみなします。</p>
+  </div>
+
+  <div class="terms-section">
+    <p class="terms-num">/02</p>
+    <h2>サービスの内容</h2>
+    <p>当スタジオは、以下のサービスを提供します。</p>
+    <ul>
+      <li>ウェブサイトのデザイン・コーディング・制作</li>
+      <li>ランディングページ（LP）の制作</li>
+      <li>ECサイトの構築・設定</li>
+      <li>ブランドロゴ・ビジュアルアイデンティティのデザイン</li>
+      <li>その他、上記に付随するデザイン支援業務</li>
+    </ul>
+  </div>
+
+  <div class="terms-section">
+    <p class="terms-num">/03</p>
+    <h2>お申し込みと契約の成立</h2>
+    <p>お問い合わせフォームまたはメールでのご依頼をもってお申し込みとし、当スタジオが書面（メール含む）にて承諾の意思を示した時点で契約が成立するものとします。</p>
+    <p>契約内容・納品物・料金・スケジュールは個別の契約書または合意メールにて確認いたします。</p>
+  </div>
+
+  <div class="terms-section">
+    <p class="terms-num">/04</p>
+    <h2>料金と支払い</h2>
+    <p>料金は<a href="pricing.html" class="inline">料金ページ</a>に記載の金額を基準とし、プロジェクトの内容によって変動する場合があります。詳細は個別にお見積もりいたします。</p>
+    <p>原則として着手金50%を契約後7日以内に、残金50%を納品後14日以内にお支払いいただきます。支払い方法は銀行振込とします。</p>
+  </div>
+
+  <div class="terms-section">
+    <p class="terms-num">/05</p>
+    <h2>キャンセルと解約</h2>
+    <p>制作着手前のキャンセルは、書面による通知をもって受け付けます。着手後のキャンセルは、作業進捗に応じた費用を請求させていただく場合があります。</p>
+    <p>当スタジオは、依頼者が以下に該当する場合、契約を解除する権利を有します。</p>
+    <ul>
+      <li>本規約に違反した場合</li>
+      <li>支払いが期日を過ぎても行われない場合</li>
+      <li>当スタジオへの誹謗中傷・不当な要求が行われた場合</li>
+    </ul>
+  </div>
+
+  <div class="terms-section">
+    <p class="terms-num">/06</p>
+    <h2>著作権と権利の帰属</h2>
+    <p>納品物の著作権は、制作費が完済された時点で依頼者に帰属します。完済前の著作権は当スタジオに帰属します。</p>
+    <p>当スタジオは、制作実績としてポートフォリオやSNSへの掲載を行う権利を有します（依頼者が非公開を希望する場合はご相談ください）。</p>
+  </div>
+
+  <div class="terms-section">
+    <p class="terms-num">/07</p>
+    <h2>免責事項</h2>
+    <p>当スタジオは、納品物の利用によって生じた損害について、故意または重大な過失がある場合を除き、責任を負いません。</p>
+    <p>また、以下については当スタジオの責任外とします。</p>
+    <ul>
+      <li>サーバー障害・ドメイン失効等、第三者サービス起因の問題</li>
+      <li>納品後に依頼者が加えた変更による不具合</li>
+      <li>ブラウザ・OS・デバイスのアップデートによる表示崩れ</li>
+    </ul>
+  </div>
+
+  <div class="terms-section">
+    <p class="terms-num">/08</p>
+    <h2>個人情報の取り扱い</h2>
+    <p>お問い合わせを通じて取得した個人情報は、<a href="privacy.html" class="inline">プライバシーポリシー</a>に基づき適切に管理します。第三者への提供・販売は一切行いません。</p>
+  </div>
+
+  <div class="terms-section">
+    <p class="terms-num">/09</p>
+    <h2>規約の変更</h2>
+    <p>本規約は、必要に応じて予告なく変更する場合があります。変更後の規約は本ページへの掲載をもって効力を生じます。</p>
+  </div>
+
+  <div class="terms-section">
+    <p class="terms-num">/10</p>
+    <h2>準拠法と管轄裁判所</h2>
+    <p>本規約は日本法に準拠します。本規約に関する紛争は、当スタジオの所在地を管轄する裁判所を第一審の専属的合意管轄裁判所とします。</p>
+  </div>
+
+  <div class="terms-section">
+    <p class="terms-num">/11</p>
+    <h2>お問い合わせ</h2>
+    <p>本規約に関するご質問は以下までご連絡ください。<br>
+    tomo design link / tomodesignlink@gmail.com</p>
+  </div>
+
+</main>
+<footer>
+  <a href="index.html" class="footer-logo">tomo design link</a>
+  <div class="footer-links">
+    <a href="privacy.html">Privacy</a>
+    <a href="tokusho.html">特定商取引法</a>
+    <a href="terms.html">利用規約</a>
+  </div>
+  <span class="footer-copy">© 2026 tomo design link.</span>
+</footer>
+</body>
+</html>
