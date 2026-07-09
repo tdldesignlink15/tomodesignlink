@@ -305,6 +305,75 @@ footer {
 @media (min-width: 1280px) {
   main { padding-top: 7rem; padding-bottom: 7rem; }
 }
+
+/* ══ UNIVERSAL OVERFLOW & TEXT FIX ══ */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+*, *::before, *::after {
+  max-width: 100%;
+}
+/* 全テキスト要素：画面幅で折り返す */
+p, h1, h2, h3, h4, li, td, th, label, span, a {
+  overflow-wrap: break-word;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+/* 日本語は keep-all のまま（途中で切れないよう）、英語は break-word */
+:lang(ja) p, :lang(ja) h1, :lang(ja) h2, :lang(ja) h3 {
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+/* marquee だけは nowrap を維持 */
+.marquee-wrap, .marquee-track, .marquee-item {
+  overflow: visible;
+  white-space: nowrap;
+}
+/* テーブルがはみ出さないよう */
+table {
+  table-layout: fixed;
+  width: 100%;
+  overflow-wrap: break-word;
+  word-break: break-all;
+}
+/* nav-cta / ボタン類が縮まないよう最低限確保 */
+.nav-cta, .hero-btn, .filter-btn, .plan-cta, .form-submit,
+.inquiry-submit, .btn-primary, .btn-secondary {
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+/* nav-links が画面からはみ出すなら隠す（既存responsive補完） */
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+}
+
+
+/* ══ GLOBAL OVERFLOW & TEXT FIX ══ */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+*, *::before, *::after {
+  max-width: 100%;
+}
+/* 日本語テキストを画面幅で自然に折り返す */
+h1, h2, h3, h4, p, li, td, th, span, a, label, div {
+  overflow-wrap: break-word;
+  word-break: keep-all;
+  white-space: normal;
+}
+/* 英数字の長い文字列も折り返す */
+.studio-line, .contact-info-val, .footer-copy,
+.footer-tagline, td, .inquiry-agree {
+  word-break: break-all;
+  overflow-wrap: anywhere;
+}
+/* テーブルがはみ出さないように */
+table { table-layout: fixed; width: 100%; }
+/* marquee は横スクロール専用なので除外 */
+.marquee-wrap { overflow: hidden; }
 </style>
 </head>
 <body>

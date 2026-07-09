@@ -257,6 +257,8 @@ main {
   gap: 0.6rem;
   line-height: 1.5;
   word-break: keep-all;
+  overflow-wrap: break-word;
+  min-width: 0;
 }
 .plan-card.featured .plan-features li { color: rgba(255,255,255,0.82); }
 .plan-features li::before {
@@ -343,6 +345,7 @@ main {
   align-items: flex-start;
   justify-content: space-between;
   gap: 1rem;
+  min-width: 0;
 }
 .option-name {
   font-size: 0.82rem;
@@ -520,6 +523,75 @@ footer {
   .plan-price-num { font-size: 2rem; }
   .cta-banner-heading { font-size: 1.5rem; }
 }
+
+/* ══ UNIVERSAL OVERFLOW & TEXT FIX ══ */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+*, *::before, *::after {
+  max-width: 100%;
+}
+/* 全テキスト要素：画面幅で折り返す */
+p, h1, h2, h3, h4, li, td, th, label, span, a {
+  overflow-wrap: break-word;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+/* 日本語は keep-all のまま（途中で切れないよう）、英語は break-word */
+:lang(ja) p, :lang(ja) h1, :lang(ja) h2, :lang(ja) h3 {
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+/* marquee だけは nowrap を維持 */
+.marquee-wrap, .marquee-track, .marquee-item {
+  overflow: visible;
+  white-space: nowrap;
+}
+/* テーブルがはみ出さないよう */
+table {
+  table-layout: fixed;
+  width: 100%;
+  overflow-wrap: break-word;
+  word-break: break-all;
+}
+/* nav-cta / ボタン類が縮まないよう最低限確保 */
+.nav-cta, .hero-btn, .filter-btn, .plan-cta, .form-submit,
+.inquiry-submit, .btn-primary, .btn-secondary {
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+/* nav-links が画面からはみ出すなら隠す（既存responsive補完） */
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+}
+
+
+/* ══ GLOBAL OVERFLOW & TEXT FIX ══ */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+*, *::before, *::after {
+  max-width: 100%;
+}
+/* 日本語テキストを画面幅で自然に折り返す */
+h1, h2, h3, h4, p, li, td, th, span, a, label, div {
+  overflow-wrap: break-word;
+  word-break: keep-all;
+  white-space: normal;
+}
+/* 英数字の長い文字列も折り返す */
+.studio-line, .contact-info-val, .footer-copy,
+.footer-tagline, td, .inquiry-agree {
+  word-break: break-all;
+  overflow-wrap: anywhere;
+}
+/* テーブルがはみ出さないように */
+table { table-layout: fixed; width: 100%; }
+/* marquee は横スクロール専用なので除外 */
+.marquee-wrap { overflow: hidden; }
 </style>
 </head>
 <body>
@@ -588,7 +660,7 @@ footer {
       </div>
       <p class="plan-price-note">税込 / 一括払い</p>
       <hr class="plan-divider">
-      <p class="plan-desc">ブランドの世界観を丁寧にウェブへ。<br>コンセプト設計から実装まで<br>一貫して担当します。</p>
+      <p class="plan-desc">ブランドの世界観を丁寧にウェブへ。コンセプト設計から実装まで一貫して担当します。</p>
       <ul class="plan-features">
         <li>ページ数：4〜8ページ</li>
         <li>デザインコンセプト提案</li>
@@ -614,7 +686,7 @@ footer {
       </div>
       <p class="plan-price-note">税込 / 要相談</p>
       <hr class="plan-divider">
-      <p class="plan-desc">ECサイト・大規模サイト・ブランディングを含む総合的な<br>ウェブ制作をお任せください。</p>
+      <p class="plan-desc">ECサイト・大規模サイト・ブランディングを含む総合的なウェブ制作をお任せください。</p>
       <ul class="plan-features">
         <li>ページ数：9ページ〜</li>
         <li>ブランディング込み</li>
