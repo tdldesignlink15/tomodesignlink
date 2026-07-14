@@ -3,7 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>tomo design link</title>
+<title>tomo design link｜Web制作</title>
+<meta name="description" content="愛知・一宮を拠点にウェブデザインを手がけるtomo design link。静けさと暖かさを大切にした、信頼につながるウェブサイトを制作します。">
+<link rel="canonical" href="https://tomodesignlink.netlify.app/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="tomo design link｜Web制作">
+<meta property="og:description" content="愛知・一宮を拠点にウェブデザインを手がけるtomo design link。静けさと暖かさを大切にした、信頼につながるウェブサイトを制作します。">
+<meta property="og:url" content="https://tomodesignlink.netlify.app/">
+<meta property="og:image" content="https://tomodesignlink.netlify.app/logo.png">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="tomo design link｜Web制作">
+<meta name="twitter:description" content="愛知・一宮を拠点にウェブデザインを手がけるtomo design link。静けさと暖かさを大切にした、信頼につながるウェブサイトを制作します。">
 <link rel="icon" type="image/png" href="logo.png">
 <link rel="apple-touch-icon" href="logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,32 +26,53 @@
 
 <!-- NAV -->
 <nav id="main-nav">
-  <a href="#hero" class="nav-logo-rest">tomo design link</a>
+  <a href="#hero" class="nav-logo-rest">tomo design link.</a>
   <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#works">Work</a></li>
-    <li><a href="#services">Services</a></li>
+    <li><a href="thoughts.html">Thoughts</a></li>
+    <li><a href="project.html">Project</a></li>
+    <li><a href="service.html">Service</a></li>
     <li><a href="pricing.html">Pricing</a></li>
-    <li><a href="#journal">Journal</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="journal.html">Journal</a></li>
+    <li><a href="contact.html">Contact</a></li>
   </ul>
-  <a href="#contact" class="nav-cta">
+  <a href="contact.html" class="nav-cta">
     お問い合わせ
     <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M1 10L10 1M10 1H3M10 1V8" stroke="currentColor" stroke-width="1.3"/></svg>
   </a>
+  <button type="button" class="nav-burger" id="nav-burger" aria-expanded="false" aria-controls="nav-drawer" aria-label="メニューを開く">
+    <span class="nav-burger__line"></span>
+    <span class="nav-burger__line"></span>
+    <span class="nav-burger__line"></span>
+  </button>
 </nav>
+
+<div class="nav-drawer" id="nav-drawer" aria-hidden="true">
+  <ul class="nav-drawer__links">
+    <li><a href="thoughts.html">Thoughts</a></li>
+    <li><a href="project.html">Project</a></li>
+    <li><a href="service.html">Service</a></li>
+    <li><a href="pricing.html">Pricing</a></li>
+    <li><a href="journal.html">Journal</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="contact.html" class="nav-drawer__cta">
+    お問い合わせ
+    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M1 10L10 1M10 1H3M10 1V8" stroke="currentColor" stroke-width="1.3"/></svg>
+  </a>
+</div>
+<div class="nav-drawer-scrim" id="nav-drawer-scrim" hidden></div>
 
 <!-- HERO -->
 <section id="hero">
-  <div class="hero-bg"></div>
+  <div class="hero-bg">
+    <video class="hero-bg__video" autoplay muted loop playsinline poster="カーテン.jpg" aria-hidden="true">
+      <source src="assets/video/hero-curtain.webm" type="video/webm">
+      <source src="assets/video/hero-curtain.mp4" type="video/mp4">
+    </video>
+  </div>
   <div class="hero-inner">
-    <p class="hero-eyebrow">PORTFOLIO — SINCE 2026</p>
-    <h1 class="hero-h1">
-      <em>静けさを、</em><br>デザインする。<br>
-    </h1>
     <p class="hero-desc">
-      tomo design link は想いをかたちにする<br>
-      y のクリエイティブスタジオです。
+      ひとつひとつの想いを形にする<br>小さなdesign studio
     </p>
   </div>
   <div class="hero-bottom">
@@ -58,143 +90,115 @@
         <div class="hero-stat-label">Awards</div>
       </div>
     </div>
-    <a href="#works" class="hero-btn">
-      制作実績を見る
-      <svg width="14" height="10" viewBox="0 0 14 10" fill="none"><path d="M0 5H12M8 1L12 5L8 9" stroke="white" stroke-width="1.2"/></svg>
-    </a>
   </div>
 </section>
 
-<!-- MARQUEE -->
-<div class="marquee-wrap">
-  <div class="marquee-track">
-    <!-- repeated twice for seamless loop -->
-    <span class="marquee-item">UI / UX Design<span class="marquee-dot"></span></span>
-    <span class="marquee-item">Responsive Design<span class="marquee-dot"></span></span>
-    <span class="marquee-item">WordPress<span class="marquee-dot"></span></span>
-    <span class="marquee-item">HTML5 / CSS3<span class="marquee-dot"></span></span>
-    <span class="marquee-item">Figma<span class="marquee-dot"></span></span>
-    <span class="marquee-item">Webflow<span class="marquee-dot"></span></span>
-    <span class="marquee-item">Branding<span class="marquee-dot"></span></span>
-    <span class="marquee-item">Typography<span class="marquee-dot"></span></span>
-    <span class="marquee-item">UI / UX Design<span class="marquee-dot"></span></span>
-    <span class="marquee-item">Responsive Design<span class="marquee-dot"></span></span>
-    <span class="marquee-item">WordPress<span class="marquee-dot"></span></span>
-    <span class="marquee-item">HTML5 / CSS3<span class="marquee-dot"></span></span>
-    <span class="marquee-item">Figma<span class="marquee-dot"></span></span>
-    <span class="marquee-item">Webflow<span class="marquee-dot"></span></span>
-    <span class="marquee-item">Branding<span class="marquee-dot"></span></span>
-    <span class="marquee-item">Typography<span class="marquee-dot"></span></span>
-  </div>
-</div>
-
-<!-- ABOUT -->
-<section id="about">
-  <div class="about-grid">
+<!-- Thoughts：想い -->
+<section id="Thoughts">
+  <div class="thoughts-grid">
     <div class="fade">
-      <p class="sec-label">About / 01</p>
-      <h2 class="about-heading">ことばに、<br>余白というかたちを。</h2>
-      <p class="about-body">
-        Webデザイナーの y です。<br>愛知を拠点にウェブデザインを専門に活動しています。<br>派手な装飾よりも文字組みと余白の呼吸を整えること。<br>訪れた人が思わず息を止めるような、静かで心地のよい<br>Web体験を大切にしています。
+      <p class="sec-label">Thoughts</p>
+      <h2 class="thoughts-heading">ことばに、<br>余白という形を。</h2>
+      <p class="thoughts-body">
+        愛知の一宮を拠点にウェブデザインを専門に活動しています。<br>（あとは考える
       </p>
-      <div class="about-tags">
-        <span class="tag">Web Design</span>
-        <span class="tag">UI / UX Design</span>
-        <span class="tag">WordPress</span>
-        <span class="tag">Figma</span>
-        <span class="tag">HTML / CSS / JS</span>
-        <span class="tag">Responsive Design</span>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+  <div class="process-card fade">
+    <p class="sec-label">Process</p>
+    <h2 class="process-heading">ことばを聴き、形にするまで。</h2>
+    <div class="process-steps">
+      <div class="process-step">
+        <div class="step-num">/01</div>
+        <div class="step-title">Listen</div>
+        <p class="step-body">対話から始める。お話の奥にある言葉と願いを丁寧に聴きます。</p>
       </div>
-      <a href="#contact" class="about-more">
+      <div class="process-step">
+        <div class="step-num">/02</div>
+        <div class="step-title">Sketch</div>
+        <p class="step-body">手と頭を行き来しながら、複数の方向性をスケッチに。</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">/03</div>
+        <div class="step-title">Refine</div>
+        <p class="step-body">選んだ方向を磨き上げ、手触りまでデザインに落とし込みます。</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">/04</div>
+        <div class="step-title">Deliver</div>
+        <p class="step-body">納品で終わりではなく、その後の運用までを共に考えます。</p>
+      </div>
+    </div>
+  </div>
+      <a href="thoughts.html" class="thoughts-more">
         もっと詳しく →
       </a>
-    </div>
-
-    <div class="fade" style="transition-delay:.12s">
-      <div class="about-card">
-        <div class="about-card-label">
-          DESIGNER y
-          <span class="about-card-dots">•••</span>
-        </div>
-        <p class="about-quote">"デザインとは、<br>人と人のあいだに<br>小さな橋をかけること"</p>
-        <div class="about-card-profile">
-          <div class="profile-left">
-            <div class="profile-avatar">y</div>
-            <div>
-              <div class="profile-name">y</div>
-              <div class="profile-role">Designer &amp; Founder</div>
-            </div>
-          </div>
-          <a href="#contact" class="profile-btn">
-            挨拶を送る
-            <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M1 9L9 1M9 1H3M9 1V7" stroke="white" stroke-width="1.2"/></svg>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
 </section>
 
-<!-- WORKS -->
-<section id="works">
-  <div class="works-inner">
-    <p class="sec-label fade">Selected Works / 02</p>
-    <h2 class="works-heading fade">手仕事のような静けさを、<br>いまの時代に。</h2>
-    <div class="works-filter fade">
-      <button class="filter-btn active" onclick="filterWorks(this,'all')">All</button>
-      <button class="filter-btn" onclick="filterWorks(this,'brand')">ブランドサイト</button>
-      <button class="filter-btn" onclick="filterWorks(this,'corp')">コーポレートサイト</button>
-      <button class="filter-btn" onclick="filterWorks(this,'ec')">ECサイト</button>
-    </div>
-    <div class="works-grid">
-      <a href="https://arcaluce.pages.dev/" target="_blank"class="work-card-link">
-      <div class="work-card fade" data-cat="brand">
-        <img class="work-card-img" src="arcaluce.png" alt="介護美容 ARCA LUCE">
-        <div class="work-card-overlay">
-          <span class="work-card-tag">サロン</span>
-          <div class="work-card-bottom">
-            <div class="work-card-num">介護美容 Arca Luce</div>
-            <span class="work-card-num">/ 01</span>
+<!-- project：制作実績 -->
+<section id="project">
+  <div class="project-inner">
+    <p class="sec-label fade">project</p>
+    <h2 class="project-heading fade">手仕事のような静けさを、<br>いまの時代に。</h2>
+    <div class="project-grid">
+      <a href="https://arcaluce.pages.dev/" target="_blank"class="project-card-link">
+      <div class="project-card fade" data-cat="brand">
+        <img class="project-card-img" src="arcaluce.png" alt="介護美容 ARCA LUCE">
+        <div class="project-card-overlay">
+          <span class="project-card-tag">サロン</span>
+          <div class="project-card-bottom">
+            <div class="project-card-num">介護美容 Arca Luce</div>
+            <span class="project-card-num">/ 01</span>
           </div>
         </div>
       </div>
       </a>
-      <div class="work-card fade" data-cat="corp" style="transition-delay:.08s">
-        <div class="work-card-img" style="width:100%;height:100%;background:linear-gradient(135deg,#c8c0b4 0%,#a8a098 100%);display:flex;align-items:center;justify-content:center;">
+      <div class="project-card fade" data-cat="corp" style="transition-delay:.08s">
+        <div class="project-card-img" style="width:100%;height:100%;background:linear-gradient(135deg,#c8c0b4 0%,#a8a098 100%);display:flex;align-items:center;justify-content:center;">
           <svg width="80" height="60" viewBox="0 0 80 60" fill="none" opacity="0.3"><rect x="10" y="15" width="60" height="35" rx="2" stroke="#1A2744" stroke-width="1.5"/><line x1="10" y1="23" x2="70" y2="23" stroke="#1A2744" stroke-width="1.5"/><circle cx="16" cy="19" r="2" fill="#1A2744"/><circle cx="22" cy="19" r="2" fill="#1A2744"/></svg>
         </div>
-        <div class="work-card-overlay">
-          <span class="work-card-tag">コーポレートサイト</span>
-          <div class="work-card-bottom">
-            <div></div>
-            <span class="work-card-num">/ 02</span>
+        <div class="project-card-overlay">
+          <span class="project-card-tag">コーポレートサイト</span>
+          <div class="project-card-bottom">
+            <div class="project-card-num">コーポレートサイト</div>
+            <span class="project-card-num">/ 02</span>
           </div>
         </div>
       </div>
-      <div class="work-card fade" data-cat="ec" style="transition-delay:.16s">
-        <div class="work-card-img" style="width:100%;height:100%;background:linear-gradient(135deg,#bdb5aa 0%,#9e9690 100%);display:flex;align-items:center;justify-content:center;">
+      <div class="project-card fade" data-cat="ec" style="transition-delay:.16s">
+        <div class="project-card-img" style="width:100%;height:100%;background:linear-gradient(135deg,#bdb5aa 0%,#9e9690 100%);display:flex;align-items:center;justify-content:center;">
           <svg width="80" height="60" viewBox="0 0 80 60" fill="none" opacity="0.3"><rect x="10" y="15" width="60" height="35" rx="2" stroke="#1A2744" stroke-width="1.5"/><line x1="10" y1="23" x2="70" y2="23" stroke="#1A2744" stroke-width="1.5"/><circle cx="16" cy="19" r="2" fill="#1A2744"/><circle cx="22" cy="19" r="2" fill="#1A2744"/></svg>
         </div>
-        <div class="work-card-overlay">
-          <span class="work-card-tag">ECサイト</span>
-          <div class="work-card-bottom">
-            <div></div>
-            <span class="work-card-num">/ 03</span>
+        <div class="project-card-overlay">
+          <span class="project-card-tag">ECサイト</span>
+          <div class="project-card-bottom">
+            <div class="project-card-num">ECサイト</div>
+            <span class="project-card-num">/ 03</span>
           </div>
         </div>
       </div>
-      <div class="work-card fade" data-cat="brand" style="transition-delay:.24s">
-        <div class="work-card-img" style="width:100%;height:100%;background:linear-gradient(135deg,#cac0b0 0%,#aba398 100%);display:flex;align-items:center;justify-content:center;">
+      <div class="project-card fade" data-cat="brand" style="transition-delay:.24s">
+        <div class="project-card-img" style="width:100%;height:100%;background:linear-gradient(135deg,#cac0b0 0%,#aba398 100%);display:flex;align-items:center;justify-content:center;">
           <svg width="80" height="60" viewBox="0 0 80 60" fill="none" opacity="0.3"><rect x="10" y="15" width="60" height="35" rx="2" stroke="#1A2744" stroke-width="1.5"/><line x1="10" y1="23" x2="70" y2="23" stroke="#1A2744" stroke-width="1.5"/><circle cx="16" cy="19" r="2" fill="#1A2744"/><circle cx="22" cy="19" r="2" fill="#1A2744"/></svg>
         </div>
-        <div class="work-card-overlay">
-          <span class="work-card-tag">ブランドサイト</span>
-          <div class="work-card-bottom">
-            <div></div>
-            <span class="work-card-num">/ 04</span>
+        <div class="project-card-overlay">
+          <span class="project-card-tag">ブランドサイト</span>
+          <div class="project-card-bottom">
+            <div class="project-card-num">ブランドサイト</div>
+            <span class="project-card-num">/ 04</span>
           </div>
         </div>
       </div>
+    </div>
+    <div class="project-all-wrap fade">
+      <a href="project.html" class="project-all-btn">
+        ALL PROJECT
+        <svg width="14" height="10" viewBox="0 0 14 10" fill="none"><path d="M0 5H12M8 1L12 5L8 9" stroke="currentColor" stroke-width="1.3"/></svg>
+      </a>
     </div>
   </div>
 </section>
@@ -204,7 +208,7 @@
   <div class="services-inner">
     <div class="services-top fade">
       <div>
-        <p class="sec-label">Services / 03</p>
+        <p class="sec-label">Services</p>
         <h2 class="services-heading">できること、<br>そして寄り添えること。</h2>
       </div>
       <p class="services-desc">コーポレートサイト、ECサイト、LP作成まで。<br>必要に応じてコピーライターや写真家と協働しながら<br>一つ一つの想いを丁寧にWeb上で形にしていきます。</p>
@@ -251,43 +255,27 @@
         </a>
       </div>
     </div>
-  </div>
-  <div class="pricing-cta-wrap fade">
-      <a href="pricing.html" class="pricing-cta-btn">
-        料金・プランを見る
+    <div class="project-all-wrap fade">
+      <a href="service.html" class="project-all-btn">
+        ALL SERVICE
         <svg width="14" height="10" viewBox="0 0 14 10" fill="none"><path d="M0 5H12M8 1L12 5L8 9" stroke="currentColor" stroke-width="1.3"/></svg>
       </a>
-      <p class="pricing-cta-note">すべてのプランにお見積もり無料の事前相談が含まれます</p>
     </div>
   </div>
 </section>
 
-<!-- PROCESS -->
-<section id="process">
-  <div class="process-card fade">
-    <p class="sec-label">Process / 04</p>
-    <h2 class="process-heading">ことばを聴き、形にするまで。</h2>
-    <div class="process-steps">
-      <div class="process-step">
-        <div class="step-num">/01</div>
-        <div class="step-title">Listen</div>
-        <p class="step-body">対話から始める。お話の奥にある言葉と願いを丁寧に聴きます。</p>
-      </div>
-      <div class="process-step">
-        <div class="step-num">/02</div>
-        <div class="step-title">Sketch</div>
-        <p class="step-body">手と頭を行き来しながら、複数の方向性をスケッチに。</p>
-      </div>
-      <div class="process-step">
-        <div class="step-num">/03</div>
-        <div class="step-title">Refine</div>
-        <p class="step-body">選んだ方向を磨き上げ、手触りまでデザインに落とし込みます。</p>
-      </div>
-      <div class="process-step">
-        <div class="step-num">/04</div>
-        <div class="step-title">Deliver</div>
-        <p class="step-body">納品で終わりではなく、その後の運用までを共に考えます。</p>
-      </div>
+<!-- PRICING -->
+<section id="pricing">
+  <div class="pricing-inner">
+    <p class="sec-label fade">Pricing</p>
+    <h2 class="pricing-heading fade">わかりやすく、<br>誠実な料金設計。</h2>
+    <p class="pricing-desc fade">ご依頼内容に合わせた3つのプランをご用意しています。<br>すべてのプランにお見積もり無料の事前相談が含まれます。</p>
+    <div class="pricing-cta-wrap fade">
+      <a href="pricing.html" class="pricing-cta-btn">
+        料金・プランを見る
+        <svg width="14" height="10" viewBox="0 0 14 10" fill="none"><path d="M0 5H12M8 1L12 5L8 9" stroke="currentColor" stroke-width="1.3"/></svg>
+      </a>
+      <p class="pricing-cta-note">Light ¥88,000〜 ／ Standard ¥198,000〜 ／ Premium ¥330,000〜</p>
     </div>
   </div>
 </section>
@@ -297,10 +285,10 @@
   <div class="journal-inner">
     <div class="journal-top fade">
       <div>
-        <p class="sec-label">Journal / 05</p>
+        <p class="sec-label">Journal</p>
         <h2 class="journal-heading">手しごとの記録。</h2>
       </div>
-      <a href="#works" class="journal-all">すべての記録 →</a>
+      <a href="journal.html" class="journal-all">すべての記録 →</a>
     </div>
     <div class="journal-list fade">
       <a href="#" class="journal-item">
@@ -327,50 +315,26 @@
   <div class="contact-box fade">
     <p class="contact-eyebrow">LET'S MAKE SOMETHING QUIET TOGETHER</p>
     <h2 class="contact-heading">まずは言葉を<br>　交わすところから。</h2>
-    <div class="contact-form-wrap">
-      <form id="contact-form" class="contact-form">
-        <input type="hidden" name="_next" value="https://tomodesignlink.netlify.app/thanks.html">
-        <input type="hidden" name="_subject" value="【tomo design link】お問い合わせ">
-        <div class="form-row">
-          <div class="form-group">
-            <label class="form-label">お名前 <span class="req">*</span></label>
-            <input type="text" name="name" required placeholder="山田 太郎" class="form-input">
-          </div>
-          <div class="form-group">
-            <label class="form-label">メールアドレス <span class="req">*</span></label>
-            <input type="email" name="email" required placeholder="mail@example.com" class="form-input">
-          </div>
-        </div>
-        <div class="form-group">
-          <label class="form-label">ご依頼の種類</label>
-          <select name="type" class="form-input form-select">
-            <option value="">選択してください</option>
-            <option value="シンプルサイト">シンプルサイト</option>
-            <option value="ブランドサイト">ブランドサイト</option>
-            <option value="フルオーダー">フルオーダー</option>
-            <option value="オプション追加">オプション追加</option>
-            <option value="その他">その他</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label class="form-label">メッセージ <span class="req">*</span></label>
-          <textarea name="message" required rows="5" placeholder="ご依頼内容やご質問をお気軽にどうぞ。" class="form-input form-textarea"></textarea>
-        </div>
-        <div class="contact-meta">
-          <div class="studio-line">
-            <svg viewBox="0 0 14 14" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"><circle cx="7" cy="7" r="6"/><path d="M7 4v3l2 2"/></svg>
-            Mon — Fri / 09:00 — 18:00
-          </div>
-          <div class="studio-line">
-            <svg viewBox="0 0 14 12" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"><rect x="1" y="1" width="12" height="10" rx="1.5"/><path d="M1 3l6 4 6-4"/></svg>
-            tomodesignlink@gmail.com
-          </div>
-        </div>
-        <button type="submit" class="form-submit">
-          <svg width="14" height="12" viewBox="0 0 14 12" fill="none"><rect x="1" y="1" width="12" height="10" rx="1.5" stroke="#1A2744" stroke-width="1.3"/><path d="M1 3l6 4 6-4" stroke="#1A2744" stroke-width="1.3"/></svg>
-          送信する
-        </button>
-      </form>
+    <p class="contact-sub">ご依頼のご相談、ご質問など、<br>どんな小さなことでもお気軽にお問い合わせください。</p>
+    <div class="contact-btns">
+      <a href="contact.html" class="contact-btn-primary">
+        お問い合わせへ
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M1 10L10 1M10 1H3M10 1V8" stroke="currentColor" stroke-width="1.3"/></svg>
+      </a>
+      <a href="mailto:tomodesignlink@gmail.com" class="contact-btn-secondary">
+        <svg viewBox="0 0 14 12" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="1" y="1" width="12" height="10" rx="1.5"/><path d="M1 3l6 4 6-4"/></svg>
+        メールで直接送る
+      </a>
+    </div>
+    <div class="contact-info-row">
+      <div class="contact-info-item">
+        <div class="contact-info-label">Mail</div>
+        <div class="contact-info-val">tomodesignlink@gmail.com</div>
+      </div>
+      <div class="contact-info-item">
+        <div class="contact-info-label">Hours</div>
+        <div class="contact-info-val">Mon — Fri / 09:00 — 18:00</div>
+      </div>
     </div>
   </div>
 </section>
@@ -382,7 +346,6 @@
       <div class="footer-brand-logo">
         <span class="footer-rest">tomo design link</span>
       </div>
-      <p class="footer-tagline">静けさと余白を大切に、ブランドのことばを形にする小さなデザインスタジオです。</p>
       <div class="footer-follow-label">FOLLOW</div>
       <div class="footer-socials">
         <a href="#" class="social-icon">
@@ -396,12 +359,12 @@
     <div>
       <div class="footer-col-label">Navigate</div>
       <ul class="footer-links">
-        <li><a href="#works">Work</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
+        <li><a href="thoughts.html">Thoughts</a></li>
+        <li><a href="project.html">Project</a></li>
+        <li><a href="service.html">Service</a></li>
         <li><a href="pricing.html">Pricing</a></li>
-        <li><a href="#journal">Journal</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="journal.html">Journal</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
     <div>
@@ -487,18 +450,19 @@ nav.scrolled .nav-logo .logo-dark  { display: block; filter: none; }
 .nav-logo-rest {
   font-family: 'Dancing Script', cursive;
   font-size: 2.0rem;
-  font-weight: 500;
+  font-weight: 00;
   letter-spacing: 0.04em;
   color: rgba(255,255,255,0.92);
   text-decoration: none;
   transition: color 0.5s;
+  margin-right: auto;
 }
 nav.scrolled .nav-logo-rest { color: var(--navy); }
 .nav-logo-rest:hover { opacity: 0.7; }
 
 .nav-links { display: flex; gap: clamp(1rem,3vw,2rem); list-style: none; }
 .nav-links a {
-  font-family: 'Dancing Script', cursive;
+  font-family: 'Space Mono', cursive;
   font-size: 0.65rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -523,6 +487,7 @@ nav.scrolled .nav-links a { color: var(--navy); }
   display: flex; align-items: center; gap: 0.4rem;
   backdrop-filter: blur(6px);
   transition: background 0.3s, border-color 0.3s, color 0.3s;
+  margin-left: clamp(1.5rem, 3vw, 2.5rem)
 }
 nav.scrolled .nav-cta {
   background: var(--navy);
@@ -530,6 +495,79 @@ nav.scrolled .nav-cta {
   color: white;
 }
 .nav-cta:hover { opacity: 0.8; }
+
+/* ─── NAV：ハンバーガー & ドロワー ─── */
+.nav-burger {
+  display: none;
+  flex-direction: column; justify-content: center; align-items: center;
+  gap: 5px;
+  width: 40px; height: 40px;
+  background: transparent; border: none; cursor: pointer;
+  padding: 0;
+  z-index: 310;
+}
+.nav-burger__line {
+  display: block; width: 20px; height: 1.5px;
+  background: rgba(255,255,255,0.9);
+  transition: transform 0.35s cubic-bezier(0.22,1,0.36,1), opacity 0.25s, background 0.35s;
+}
+nav.scrolled .nav-burger__line { background: var(--navy); }
+.nav-burger[aria-expanded="true"] .nav-burger__line:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.nav-burger[aria-expanded="true"] .nav-burger__line:nth-child(2) { opacity: 0; }
+.nav-burger[aria-expanded="true"] .nav-burger__line:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+.nav-burger[aria-expanded="true"] .nav-burger__line { background: var(--navy); }
+
+.nav-drawer {
+  position: fixed; top: 0; right: 0;
+  height: 100svh; width: min(320px, 82vw);
+  background: var(--ivory);
+  z-index: 305;
+  padding: clamp(6rem, 16vw, 7rem) 2rem 2.5rem;
+  display: flex; flex-direction: column; gap: 2.5rem;
+  transform: translateX(100%);
+  transition: transform 0.5s cubic-bezier(0.22,1,0.36,1);
+  box-shadow: -12px 0 40px rgba(15,22,40,0.12);
+}
+.nav-drawer.is-open { transform: translateX(0); }
+.nav-drawer__links { list-style: none; display: flex; flex-direction: column; gap: 1.6rem; }
+.nav-drawer__links a {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.15rem;
+  font-weight: 300;
+  color: var(--navy);
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+.nav-drawer__links a:hover { opacity: 0.55; }
+.nav-drawer__cta {
+  margin-top: flex; margin-left: flex-end;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase;
+  background: var(--navy); color: white;
+  text-decoration: none;
+  padding: 0.9rem 1.4rem; border-radius: 50px;
+  display: flex; align-items: center; justify-content: center; gap: 0.5rem;
+  transition: opacity 0.2s;
+}
+.nav-drawer__cta:hover { opacity: 0.85; }
+
+.nav-drawer-scrim {
+  position: fixed; inset: 0;
+  background: rgba(15,22,40,0.35);
+  z-index: 304;
+  opacity: 0; transition: opacity 0.4s;
+}
+.nav-drawer-scrim.is-visible { opacity: 1; }
+
+/* 少し窮屈になり始めたら、すぐハンバーガーへ切り替える */
+@media (max-width: 980px) {
+  .nav-links,
+  .nav-cta { display: none; }
+  .nav-burger { display: flex; }
+}
+@media (min-width: 981px) {
+  .nav-drawer, .nav-drawer-scrim { display: none; }
+}
 
 /* ─── SECTION LABEL ─── */
 .sec-label {
@@ -558,16 +596,22 @@ nav.scrolled .nav-cta {
 .hero-bg {
   position: fixed; /* fixedで完全固定 */
   inset: 0;
-  background-image: url('カーテン.jpg');
-  background-size: cover;
-  background-position: center top;
-  background-repeat: no-repeat;
+  overflow: hidden;
+  background: #1a2740; /* 動画読み込み前のフォールバック色 */
   z-index: -1; /* 他のセクションの下に潜る */
 }
-/* テキスト視認性のためのオーバーレイ */
+.hero-bg__video {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  z-index: 0;
+}
+/* テキスト視認性のためのオーバーレイ（動画の上に重ねる） */
 .hero-bg::before {
   content: '';
   position: absolute; inset: 0;
+  z-index: 1;
   background: linear-gradient(
     160deg,
     rgba(30, 40, 60, 0.52) 0%,
@@ -579,11 +623,17 @@ nav.scrolled .nav-cta {
 .hero-bg::after {
   content: '';
   position: absolute; inset: 0;
+  z-index: 2;
   background: linear-gradient(
     to bottom,
     transparent 30%,
     rgba(15, 22, 40, 0.45) 100%
   );
+}
+/* 動きに敏感なユーザーには静止画（poster）のまま止める */
+@media (prefers-reduced-motion: reduce) {
+  .hero-bg__video { display: none; }
+  .hero-bg { background-image: url('カーテン.jpg'); background-size: cover; background-position: center top; }
 }
 
 .hero-inner {
@@ -652,63 +702,17 @@ nav.scrolled .nav-cta {
   margin-top: 0.3rem;
 }
 
-.hero-btn {
-  background: rgba(255,255,255,0.15);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255,255,255,0.3);
-  color: var(--white);
-  padding: 0.75rem 1.6rem;
-  border-radius: 50px;
-  font-size: 0.82rem;
-  text-decoration: none;
-  display: flex; align-items: center; gap: 0.5rem;
-  transition: background 0.3s;
-}
 .hero-btn:hover { background: rgba(255,255,255,0.25); }
 
-/* ─── MARQUEE ─── */
-.marquee-wrap {
-  background: var(--navy);
-  padding: 1.2rem 0;
-  overflow: hidden;
-  white-space: nowrap;
-}
-.marquee-track {
-  display: inline-flex;
-  animation: marquee 30s linear infinite;
-}
-.marquee-item {
-  font-family: 'Space Mono', monospace;
-  font-size: 0.9rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: rgba(200,184,150,0.85);
-  padding: 0 2rem;
-  display: flex; align-items: center; gap: 2rem;
-}
-.marquee-dot {
-  width: 4px; height: 4px; border-radius: 50%;
-  background: var(--sand); flex-shrink: 0;
-}
-@keyframes marquee {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
-}
-
-/* ─── ABOUT ─── */
-#about {
+/* ─── THOUGHTS ─── */
+#Thoughts {
   padding: clamp(4rem, 8vw, 7rem) clamp(1.5rem, 5vw, 3rem);
   background: var(--ivory);
 }
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1.3fr;
+.thoughts-grid {
   max-width: 1140px; margin: 0 auto;
-  gap: 4rem;
-  max-width: 1140px; margin: 0 auto;
-  align-items: start;
 }
-.about-heading {
+.thoughts-heading {
   font-family: 'Noto Serif JP', serif;
   font-size: clamp(2rem, 4vw, 3.2rem);
   font-weight: 200;
@@ -718,13 +722,13 @@ nav.scrolled .nav-cta {
   word-break: keep-all;
   letter-spacing: 0.04em;
 }
-.about-body {
+.thoughts-body {
   font-size: 0.88rem;
   color: var(--text-muted);
   line-height: 1.9;
   margin-bottom: 2rem;
 }
-.about-tags {
+.thoughts-tags {
   display: flex; flex-wrap: wrap; gap: 0.5rem;
 }
 .tag {
@@ -735,9 +739,9 @@ nav.scrolled .nav-cta {
   border-radius: 50px;
   padding: 0.3rem 0.9rem;
 }
-.about-more {
+.thoughts-more {
   display: flex; align-items: center; gap: 0.5rem;
-  margin-top: 1.8rem;
+  margin-top: 2rem;
   font-size: 0.82rem;
   color: var(--text);
   text-decoration: none;
@@ -746,41 +750,11 @@ nav.scrolled .nav-cta {
   width: fit-content;
   transition: opacity 0.2s;
 }
-.about-more:hover { opacity: 0.6; }
+.thoughts-more:hover { opacity: 0.6; }
 
-/* About right card */
-.about-card {
-  background: var(--navy);
-  border-radius: 1.2rem;
-  padding: 2.5rem;
-  color: var(--white);
-}
-.about-card-label {
-  font-family: 'Space Mono', monospace;
-  font-size: 0.58rem;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
-  color: rgba(200,184,150,0.7);
-  margin-bottom: 2rem;
-  display: flex; justify-content: space-between; align-items: center;
-}
-.about-card-dots { letter-spacing: 0.1em; color: rgba(255,255,255,0.3); }
-.about-quote {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.55rem;
-  font-weight: 300;
-  line-height: 1.45;
-  color: var(--white);
-  margin-bottom: 3rem;
-}
-.about-card-profile {
-  display: flex; align-items: center; justify-content: space-between;
-  border-top: 1px solid rgba(255,255,255,0.1);
-  padding-top: 1.5rem;
-}
 .profile-left { display: flex; align-items: center; gap: 1rem; }
 .profile-avatar {
-  width: 46px; height: 46px; border-radius: 50%;
+  width: 46px; height: 46px; border-radius: 100%;
   background: linear-gradient(135deg, #8fa0c0, #5a7098);
   display: flex; align-items: center; justify-content: center;
   font-family: 'Cormorant Garamond', serif;
@@ -798,7 +772,7 @@ nav.scrolled .nav-cta {
   background: transparent;
   border: 1px solid rgba(255,255,255,0.25);
   color: white;
-  border-radius: 50px;
+  border-radius: 100px;
   padding: 0.45rem 1rem;
   font-size: 0.72rem;
   text-decoration: none;
@@ -835,45 +809,45 @@ nav.scrolled .nav-cta {
   margin-top: 0.3rem;
 }
 
-/* ─── WORKS ─── アシンメトリーグリッド */
-#works {
+/* ─── PROJECTS ─── アシンメトリーグリッド */
+#project{
   padding: clamp(4rem, 8vw, 7rem) clamp(1.5rem, 5vw, 3rem);
   background: var(--ivory);
   position: relative; z-index: 2;
 }
-.works-inner { max-width: 1140px; margin: 0 auto; }
-.works-heading {
+.project-inner { max-width: 1140px; margin: 0 auto; }
+.project-heading {
   font-family: 'Cormorant Garamond', serif;
   font-size: clamp(1.8rem, 3.5vw, 2.8rem);
   font-weight: 300; color: var(--navy);
   line-height: 1.2; margin-bottom: 2rem;
   word-break: keep-all; overflow-wrap: break-word;
 }
-.works-filter {
+.project-filter {
   display: flex; gap: 0.5rem;
   margin-bottom: 2rem; flex-wrap: wrap;
 }
-.filter-btn {
+.project-btn {
   font-family: 'Space Mono', monospace; font-size: 0.55rem;
   letter-spacing: 0.12em; text-transform: uppercase;
   border: 1px solid rgba(26,39,68,0.18); background: transparent;
   color: var(--text); border-radius: 50px;
   padding: 0.35rem 0.9rem; cursor: pointer; transition: all 0.2s;
 }
-.filter-btn.active, .filter-btn:hover {
+.project-btn.active, .project-btn:hover {
   background: var(--navy); color: white; border-color: var(--navy);
 }
  
 /* アシンメトリーグリッド本体 */
-.works-grid {
+.project-grid {
   display: grid;
   grid-template-columns: 1.4fr 1fr;
   grid-template-rows: auto auto;
   gap: 1.2rem;
 }
 /* 1枚目：左カラム2行分 */
-.work-card-link { text-decoration: none; display: contents; }
-.work-card {
+.project-card-link { text-decoration: none; display: contents; }
+.project-card {
   border-radius: 0.8rem;
   overflow: hidden;
   position: relative;
@@ -882,12 +856,12 @@ nav.scrolled .nav-cta {
   aspect-ratio: 4/3;
 }
 /* 最初のカードだけ縦長 */
-.work-card:first-of-type {
+.project-card:first-of-type {
   grid-row: span 2;
   aspect-ratio: unset;
   min-height: 400px;
 }
-.work-card-img {
+.project-card-img {
   /* 完全固定サイズ — 画像が引き伸びず位置もズレない */
   position: absolute; inset: 0;
   width: 100%; height: 100%;
@@ -897,27 +871,27 @@ nav.scrolled .nav-cta {
   display: block;
 }
 /* div背景のプレースホルダーも同じ処理 */
-.work-card-bg {
+.project-card-bg {
   position: absolute; inset: 0;
   width: 100%; height: 100%;
 }
-.work-card:hover .work-card-img { transform: scale(1.04); }
-.work-card-overlay {
+.project-card:hover .project-card-img { transform: scale(1.04); }
+.project-card-overlay {
   position: absolute; inset: 0;
   background: linear-gradient(to bottom, transparent 40%, rgba(15,22,45,0.65));
   display: flex; flex-direction: column; justify-content: space-between;
   padding: 1.2rem;
   opacity: 0; transition: opacity 0.3s;
 }
-.work-card:hover .work-card-overlay { opacity: 1; }
-.work-card-tag {
+.project-card:hover .project-card-overlay { opacity: 1; }
+.project-card-tag {
   font-family: 'Space Mono', monospace; font-size: 0.54rem;
   letter-spacing: 0.16em; text-transform: uppercase;
   background: rgba(244,240,232,0.92); color: var(--navy);
   border-radius: 50px; padding: 0.25rem 0.65rem; width: fit-content;
 }
-.work-card-bottom { display: flex; justify-content: space-between; align-items: flex-end; }
-.work-card-num {
+.project-card-bottom { display: flex; justify-content: space-between; align-items: flex-end; }
+.project-card-num {
   font-family: 'Space Mono', monospace; font-size: 0.58rem;
   color: rgba(255,255,255,0.6);
 }
@@ -1004,9 +978,45 @@ nav.scrolled .nav-cta {
 .service-card.featured .service-link:hover { background: rgba(255,255,255,0.22); }
 .service-link svg { width: 12px; height: 12px; }
 
-.pricing-cta-wrap {
-  margin-top: 3rem;
+.project-all-wrap { margin-top: 2.5rem; display: flex; justify-content: center; }
+.project-all-btn {
+  display: inline-flex; align-items: center; gap: 0.6rem;
+  border: 1px solid rgba(26,39,68,0.25);
+  color: var(--navy);
+  font-family: 'Space Mono', monospace;
+  font-size: 0.62rem; letter-spacing: 0.16em; text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.85rem 2rem; border-radius: 50px;
+  transition: background 0.25s, color 0.25s, border-color 0.25s;
+}
+.project-all-btn:hover { background: var(--navy); color: white; border-color: var(--navy); }
+
+/* ─── PRICING（プレビュー） ─── */
+#pricing {
+  padding: clamp(4rem, 8vw, 7rem) clamp(1.5rem, 5vw, 3rem);
   background: var(--ivory);
+  text-align: center;
+}
+.pricing-inner { max-width: 720px; margin: 0 auto; }
+.pricing-inner .sec-label { justify-content: center; }
+.pricing-heading {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  font-weight: 200;
+  color: var(--navy);
+  line-height: 1.35;
+  margin-bottom: 1.2rem;
+  word-break: keep-all;
+}
+.pricing-desc {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.9;
+  margin-bottom: 2.5rem;
+}
+.pricing-cta-wrap {
+  margin-top: 0;
+  background: transparent;
   color: var(--text);
   display: flex; flex-direction: column; align-items: center; gap: 0.8rem;
   text-align: center;
@@ -1027,15 +1037,17 @@ nav.scrolled .nav-cta {
 
 /* ─── PROCESS ─── */
 #process {
-  padding: 5rem 3rem;
+  padding: clamp(4rem,8vw,6rem) clamp(1.5rem,5vw,3rem);
   background: var(--ivory);
 }
 .process-card {
   max-width: 1140px; margin: 0 auto;
   background: var(--ivory-card);
   border-radius: 1.2rem;
-  padding: 3.5rem;
+  padding: clamp(2.5rem,5vw,3.5rem);
+  text-align: center;
 }
+.process-card .sec-label { justify-content: center; }
 .process-heading {
   font-family: 'Cormorant Garamond', serif;
   font-size: clamp(1.6rem, 2.5vw, 2.1rem);
@@ -1600,10 +1612,40 @@ table { table-layout: fixed; width: 100%; }
 </style>
 
 <script>
-  /* NAV */
+  /* NAV：スクロールで背景切り替え */
  const nav = document.getElementById('main-nav');
  window.addEventListener('scroll', () => {
  nav.classList.toggle('scrolled', window.scrollY > 60);}, { passive: true });
+
+  /* NAV：ハンバーガーメニュー */
+  const burger = document.getElementById('nav-burger');
+  const drawer = document.getElementById('nav-drawer');
+  const scrim  = document.getElementById('nav-drawer-scrim');
+
+  function closeDrawer() {
+    burger.setAttribute('aria-expanded', 'false');
+    drawer.classList.remove('is-open');
+    drawer.setAttribute('aria-hidden', 'true');
+    scrim.classList.remove('is-visible');
+    scrim.hidden = true;
+    document.body.style.overflow = '';
+  }
+  function openDrawer() {
+    burger.setAttribute('aria-expanded', 'true');
+    drawer.classList.add('is-open');
+    drawer.setAttribute('aria-hidden', 'false');
+    scrim.hidden = false;
+    requestAnimationFrame(() => scrim.classList.add('is-visible'));
+    document.body.style.overflow = 'hidden';
+  }
+  burger.addEventListener('click', () => {
+    const isOpen = burger.getAttribute('aria-expanded') === 'true';
+    isOpen ? closeDrawer() : openDrawer();
+  });
+  scrim.addEventListener('click', closeDrawer);
+  drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', closeDrawer));
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeDrawer(); });
+  window.matchMedia('(min-width: 981px)').addEventListener('change', (e) => { if (e.matches) closeDrawer(); });
 
   // Scroll fade
   const observer = new IntersectionObserver(entries => {
@@ -1617,13 +1659,6 @@ table { table-layout: fixed; width: 100%; }
     btn.classList.add('active');
     document.querySelectorAll('.work-card').forEach(card => {
       card.style.display = (cat === 'all' || card.dataset.cat === cat) ? '' : 'none';});}
-
-  // Contact form submission
-  document.getElementById("contact-form").addEventListener("submit", async function(e){e.preventDefault();
-  const formData = new FormData(this);
-  const response = await fetch("https://formspree.io/f/xykqkkky", {method: "POST",body: formData,headers: {Accept: "application/json"}});
-  if(response.ok){window.location.href = "/thanks.html";}});
-
 </script>
 </body>
 </html>
