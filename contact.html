@@ -5,12 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact｜tomo design link</title>
 <meta name="description" content="ウェブサイト制作のご依頼・ご相談はこちらから。愛知・一宮の tomo design link へのお問い合わせフォームです。2営業日以内にご返信いたします。">
-<link rel="canonical" href="https://tomodesignlink.pages.dev/contact.html">
+<link rel="canonical" href="https://tomodesignlink.netlify.app/contact.html">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Contact｜tomo design link">
 <meta property="og:description" content="ウェブサイト制作のご依頼・ご相談はこちらから。愛知・一宮の tomo design link へのお問い合わせフォームです。2営業日以内にご返信いたします。">
-<meta property="og:url" content="https://tomodesignlink.pages.dev/contact.html">
-<meta property="og:image" content="https://tomodesignlink.pages.dev/ogp.png">
+<meta property="og:url" content="https://tomodesignlink.netlify.app/contact.html">
+<meta property="og:image" content="https://tomodesignlink.netlify.app/ogp.png">
 <meta property="og:locale" content="ja_JP">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Contact｜tomo design link">
@@ -30,10 +30,11 @@
 <section class="page-hero">
   <div class="page-hero__inner">
     <p class="sec-label">Contact</p>
-    <h1 class="page-hero__heading">まずは言葉を<br>交わすところから。</h1>
+    <h1 class="page-hero__heading">お気軽に、<br>声をかけてください。</h1>
     <p class="page-hero__lead">
-      ご依頼のご相談、ご質問など、どんな小さなことでもお気軽にどうぞ。<br>
-      内容を拝見した上で、2営業日以内を目安にご返信いたします。
+      「まだ依頼するか決めていない」「予算がどのくらいかわからない」——<br>
+      そんな段階でも、ぜひ気軽にメッセージをください。<br>
+      一緒に整理するところから始めましょう。
     </p>
   </div>
 </section>
@@ -42,7 +43,7 @@
 
   <!-- 左カラム：情報 -->
   <div class="contact-info fade">
-    <h2 class="contact-info__heading">お気軽に、<br>ご連絡ください。</h2>
+    <h2 class="contact-info__heading">どんなことでも、<br>聞かせてください。</h2>
     <p class="contact-info__lead">
       まだ漠然としたイメージでも、「こんなことできますか？」という
       小さなご相談でも、喜んでお伺いします。
@@ -62,15 +63,15 @@
       </li>
     </ul>
     <div class="contact-info__note">
-      <strong>ご返信について</strong>
-      いただいたお問い合わせには、2営業日以内（土日祝を除く）を目安にご返信いたします。
-      お急ぎの場合はメールに「急ぎ」とご記載ください。
+      <strong>お返事について</strong>
+      2営業日以内（土日祝を除く）を目安にお返事します。
+      急ぎのご相談の場合は、メッセージ内にその旨を書いていただけると助かります。
     </div>
   </div>
 
   <!-- 右カラム：フォームカード -->
   <div class="contact-form-card fade" style="transition-delay:.1s">
-    <h2 class="contact-form-card__heading">フォームから<br>送る</h2>
+    <h2 class="contact-form-card__heading">メッセージを<br>送ってみる</h2>
     <div id="form-status" class="form-status"></div>
     <form id="contact-form" class="contact-form" novalidate>
       <input type="hidden" name="_next" value="https://tomodesignlink.netlify.app/thanks.html">
@@ -101,7 +102,7 @@
       <div class="form-group">
         <label class="form-label" for="message">メッセージ <span class="req">*</span></label>
         <textarea id="message" name="message" required rows="6"
-                  placeholder="ご依頼内容やご質問をお気軽にどうぞ。&#10;まだ漠然としたイメージでも大丈夫です。"
+                  placeholder="なんでも大丈夫です。「まだ悩み中」でも気軽に送ってみてください。"
                   class="form-input form-textarea"></textarea>
       </div>
       <button type="submit" class="form-submit">
@@ -603,6 +604,33 @@ p, h1, h2, h3, h4, li, span, a, label { overflow-wrap: break-word; word-break: b
   .contact-form-card { padding: 1.8rem 1.4rem; }
 }
 
+
+/* ── モバイル文字サイズ補正 */
+@media (max-width: 620px) {
+  .page-hero__heading  { font-size: clamp(2rem, 9vw, 2.8rem); }
+  .page-hero__lead     { font-size: 0.9rem; line-height: 1.9; }
+  .sec-label           { font-size: 0.65rem; }
+  .service-title       { font-size: 1.05rem; }
+  .service-body        { font-size: 0.86rem; line-height: 1.85; }
+  .journal-title       { font-size: 1.05rem; }
+  .journal-date        { font-size: 0.7rem; }
+  .step-body           { font-size: 0.86rem; line-height: 1.85; }
+  .thoughts-intro__body { font-size: 0.9rem; line-height: 1.95; }
+  .value-card__text    { font-size: 0.84rem; line-height: 1.8; }
+  .thoughts-profile__text { font-size: 0.9rem; line-height: 1.9; }
+  .contact-info__lead  { font-size: 0.9rem; line-height: 1.9; }
+  .contact-info__item  { font-size: 0.88rem; }
+  .contact-info__note  { font-size: 0.82rem; }
+  .form-input          { font-size: 0.9rem; }
+  .form-label          { font-size: 0.62rem; }
+  .footer-links a      { font-size: 0.9rem; }
+  .studio-line         { font-size: 0.85rem; }
+  .footer-copy         { font-size: 0.68rem; }
+}
+@media (max-width: 900px) {
+  .page-hero__heading  { font-size: clamp(1.9rem, 5vw, 2.8rem); }
+  .page-hero__lead     { font-size: 0.9rem; }
+}
 </style>
 
 <script>

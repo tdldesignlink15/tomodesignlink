@@ -5,12 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Journal｜tomo design link</title>
 <meta name="description" content="愛知・一宮のウェブデザイナー tomo design link の制作の裏側や、日々のちいさな気づきを綴るジャーナル。">
-<link rel="canonical" href="https://tomodesignlink.pages.dev/journal.html">
+<link rel="canonical" href="https://tomodesignlink.netlify.app/journal.html">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Journal｜tomo design link">
 <meta property="og:description" content="愛知・一宮のウェブデザイナー tomo design link の制作の裏側や、日々のちいさな気づきを綴るジャーナル。">
-<meta property="og:url" content="https://tomodesignlink.pages.dev/journal.html">
-<meta property="og:image" content="https://tomodesignlink.pages.dev/ogp.png">
+<meta property="og:url" content="https://tomodesignlink.netlify.app/journal.html">
+<meta property="og:image" content="https://tomodesignlink.netlify.app/ogp.png">
 <meta property="og:locale" content="ja_JP">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Journal｜tomo design link">
@@ -30,10 +30,10 @@
 <section class="page-hero">
   <div class="page-hero__inner">
     <p class="sec-label">Journal</p>
-    <h1 class="page-hero__heading">手しごとの記録。</h1>
+    <h1 class="page-hero__heading">つくりながら、考えること。</h1>
     <p class="page-hero__lead">
-      制作の裏側や、日々のちいさな気づきを綴っています。<br>
-      新しい記録は、少しずつ増えていきます。
+      制作の裏側や、ふと気づいたことを気ままに綴っています。<br>
+      完成したサイトの話だけでなく、悩んだ過程や失敗談も書いていきたいと思っています。
     </p>
   </div>
 </section>
@@ -42,7 +42,7 @@
 
   <!-- ヘッダー + タグフィルター -->
   <div class="journal-page-header">
-    <h2 class="journal-page-heading">記録の一覧</h2>
+    <h2 class="journal-page-heading">すべての記録</h2>
     <div class="journal-tag-filter">
       <button class="journal-tag-btn active" onclick="filterJournal(this,'all')" type="button">All</button>
       <button class="journal-tag-btn" onclick="filterJournal(this,'design')" type="button">Design</button>
@@ -82,8 +82,8 @@
 
   <!-- 末尾CTA -->
   <div class="journal-end-cta fade">
-    <h2 class="journal-end-cta__heading">ご依頼やご相談は、いつでも。</h2>
-    <p class="journal-end-cta__body">どんな小さなことでもお気軽にお問い合わせください。</p>
+    <h2 class="journal-end-cta__heading">ここまで読んでくださって、ありがとうございます。</h2>
+    <p class="journal-end-cta__body">もし気になることがあれば、気軽に声をかけてください。お待ちしています。</p>
     <a href="contact.html" class="btn-fill">
       お問い合わせ
       <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M1 10L10 1M10 1H3M10 1V8" stroke="currentColor" stroke-width="1.3"/></svg>
@@ -570,6 +570,33 @@ p, h1, h2, h3, h4, li, span, a, label { overflow-wrap: break-word; word-break: b
   .journal-page-header { flex-direction: column; align-items: flex-start; }
 }
 
+
+/* ── モバイル文字サイズ補正 */
+@media (max-width: 620px) {
+  .page-hero__heading  { font-size: clamp(2rem, 9vw, 2.8rem); }
+  .page-hero__lead     { font-size: 0.9rem; line-height: 1.9; }
+  .sec-label           { font-size: 0.65rem; }
+  .service-title       { font-size: 1.05rem; }
+  .service-body        { font-size: 0.86rem; line-height: 1.85; }
+  .journal-title       { font-size: 1.05rem; }
+  .journal-date        { font-size: 0.7rem; }
+  .step-body           { font-size: 0.86rem; line-height: 1.85; }
+  .thoughts-intro__body { font-size: 0.9rem; line-height: 1.95; }
+  .value-card__text    { font-size: 0.84rem; line-height: 1.8; }
+  .thoughts-profile__text { font-size: 0.9rem; line-height: 1.9; }
+  .contact-info__lead  { font-size: 0.9rem; line-height: 1.9; }
+  .contact-info__item  { font-size: 0.88rem; }
+  .contact-info__note  { font-size: 0.82rem; }
+  .form-input          { font-size: 0.9rem; }
+  .form-label          { font-size: 0.62rem; }
+  .footer-links a      { font-size: 0.9rem; }
+  .studio-line         { font-size: 0.85rem; }
+  .footer-copy         { font-size: 0.68rem; }
+}
+@media (max-width: 900px) {
+  .page-hero__heading  { font-size: clamp(1.9rem, 5vw, 2.8rem); }
+  .page-hero__lead     { font-size: 0.9rem; }
+}
 </style>
 
 <script>
