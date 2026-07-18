@@ -2,307 +2,292 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>利用規約 — tomo design link</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>利用規約｜tomo design link</title>
+<meta name="og:locale" content="ja_JP">
 <link rel="icon" type="image/png" href="logo.png">
+<link rel="apple-touch-icon" href="logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=DM+Sans:opsz,wght@9..40,300;9..40,400&family=Space+Mono:wght@400&family=Dancing+Script:wght@500&family=Noto+Serif+JP:wght@200;300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
 <style>
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-:root {
-  --ivory: #F4F0E8; --ivory2: #EDE8DC; --navy: #1A2744;
-  --sand: #C4A47C; --muted: #6B7A99;
-}
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
-body {
-  background: var(--ivory); color: var(--navy);
-  font-family: 'DM Sans', sans-serif; font-weight: 300;
-  line-height: 1.75; overflow-x: hidden;
-  min-height: 100dvh; display: flex; flex-direction: column;
-}
-nav {
-  position: sticky; top: 0; z-index: 100; height: 64px;
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 0 clamp(1.2rem,5vw,2.5rem);
-  background: rgba(244,240,232,0.96); backdrop-filter: blur(14px);
-  border-bottom: 1px solid rgba(26,39,68,0.07); flex-shrink: 0;
-}
-.nav-logo {
-  font-family: 'Dancing Script', cursive; font-size: clamp(1.2rem,3vw,1.5rem);
-  font-weight: 500; color: var(--navy); text-decoration: none;
-}
-.nav-back {
-  font-family: 'Space Mono', monospace; font-size: 0.58rem;
-  letter-spacing: 0.15em; text-transform: uppercase;
-  color: var(--muted); text-decoration: none;
-  display: flex; align-items: center; gap: 0.4rem; transition: color 0.2s;
-}
-.nav-back:hover { color: var(--navy); }
-.hero {
-  padding: clamp(3rem,7vw,5rem) clamp(1.5rem,6vw,3rem) clamp(2rem,4vw,3rem);
-  max-width: 800px; margin: 0 auto; width: 100%;
-}
-.eyebrow {
-  font-family: 'Space Mono', monospace; font-size: 0.58rem;
-  letter-spacing: 0.28em; text-transform: uppercase;
-  color: var(--sand); margin-bottom: 1.2rem;
-  display: flex; align-items: center; gap: 0.7rem;
-}
-.eyebrow::before { content:''; width:22px; height:1px; background:var(--sand); }
-h1 {
-  font-family: 'Noto Serif JP', serif; font-size: clamp(1.8rem,5vw,3rem);
-  font-weight: 200; line-height: 1.25; color: var(--navy);
-  margin-bottom: 1rem; word-break: keep-all; letter-spacing: 0.04em;
-}
-.updated {
-  font-family: 'Space Mono', monospace; font-size: 0.6rem;
-  letter-spacing: 0.12em; color: var(--muted);
-}
-.divider { max-width: 800px; margin: 0 auto; padding: 0 clamp(1.5rem,6vw,3rem); }
-.divider hr { border: none; border-top: 1px solid rgba(26,39,68,0.09); }
-main {
-  flex: 1; max-width: 800px; margin: 0 auto; width: 100%;
-  padding: clamp(2.5rem,5vw,4rem) clamp(1.5rem,6vw,3rem) clamp(4rem,8vw,6rem);
-}
-.terms-section { margin-bottom: clamp(2rem,4vw,3rem); }
-.terms-num {
-  font-family: 'Space Mono', monospace; font-size: 0.55rem;
-  letter-spacing: 0.2em; color: var(--sand); margin-bottom: 0.6rem;
-}
-.terms-section h2 {
-  font-family: 'Noto Serif JP', serif; font-size: clamp(1.1rem,2.2vw,1.4rem);
-  font-weight: 300; color: var(--navy); margin-bottom: 0.9rem;
-  word-break: keep-all; letter-spacing: 0.03em;
-  padding-bottom: 0.6rem; border-bottom: 1px solid rgba(26,39,68,0.08);
-}
-.terms-section p {
-  font-size: clamp(0.8rem,1.7vw,0.88rem); color: var(--muted);
-  line-height: 1.95; margin-bottom: 0.75rem; word-break: keep-all;
-  overflow-wrap: break-word;
-}
-.terms-section p:last-child { margin-bottom: 0; }
-.terms-section ul {
-  list-style: none; display: flex; flex-direction: column; gap: 0.55rem;
-  margin-top: 0.3rem;
-}
-.terms-section ul li {
-  font-size: clamp(0.8rem,1.7vw,0.88rem); color: var(--muted);
-  line-height: 1.85; padding-left: 1.1rem; position: relative;
-  overflow-wrap: break-word; word-break: keep-all;
-}
-.terms-section ul li::before {
-  content: '—'; position: absolute; left: 0;
-  color: var(--sand); font-size: 0.75rem;
-}
-a.inline { color: var(--navy); }
-footer {
-  flex-shrink: 0; background: var(--navy);
-  padding: 1.8rem clamp(1.5rem,5vw,2.5rem);
-  display: flex; align-items: center; justify-content: space-between;
-  flex-wrap: wrap; gap: 0.8rem;
-}
-.footer-logo {
-  font-family: 'Dancing Script', cursive; font-size: 1.2rem;
-  font-weight: 500; color: rgba(255,255,255,0.65); text-decoration: none;
-}
-.footer-links { display: flex; gap: 1rem; flex-wrap: wrap; }
-.footer-links a {
-  font-family: 'Space Mono', monospace; font-size: 0.5rem;
-  letter-spacing: 0.1em; color: rgba(255,255,255,0.28);
-  text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.15); transition: color 0.2s;
-}
-.footer-links a:hover { color: rgba(255,255,255,0.58); }
-.footer-copy {
-  font-family: 'Space Mono', monospace; font-size: 0.5rem;
-  color: rgba(255,255,255,0.2); letter-spacing: 0.08em;
-}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{--white:#F4F0E6;--off:#EDE8DA;--ink:#1A2744;--ink-mid:#2B3F6E;--ink-lt:#7A8BAA;--rule:#C8C0AE;--navy:#1A2744;}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+body{background:var(--white);color:var(--ink);font-family:'DM Sans',sans-serif;font-weight:300;line-height:1.8;overflow-x:hidden;}
+#main-nav{position:fixed;inset:0 0 auto;z-index:300;height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(1.5rem,5vw,4rem);transition:background .4s,border-color .4s;border-bottom:1px solid transparent;}
+#main-nav.scrolled{background:rgba(244,240,230,0.97);backdrop-filter:blur(16px);border-bottom-color:var(--rule);}
+#main-nav.solid{background:var(--white);border-bottom-color:var(--rule);}
+.nav-logo-rest{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:300;font-style:italic;letter-spacing:.02em;color:var(--navy);text-decoration:none;}
+#main-nav.solid .nav-logo-rest{color:var(--ink);}
+.nav-links{display:flex;gap:clamp(1.5rem,3vw,2.5rem);list-style:none;margin-left:auto;margin-right:clamp(1.5rem,3vw,2.5rem);}
+.nav-links a{font-size:.72rem;letter-spacing:.12em;color:var(--ink-mid);text-decoration:none;transition:opacity .2s;}
+.nav-links a:hover{opacity:.5;}
+.nav-links a.current{color:var(--ink);font-weight:500;border-bottom:1px solid var(--ink-lt);padding-bottom:2px;}
+.nav-cta{font-size:.72rem;letter-spacing:.1em;color:var(--ink);border:1px solid var(--ink);padding:.5rem 1.2rem;text-decoration:none;display:flex;align-items:center;gap:.4rem;transition:opacity .3s;}
+.nav-cta:hover{opacity:.6;}
+.nav-burger{display:none;flex-direction:column;justify-content:center;align-items:center;gap:5px;width:40px;height:40px;background:transparent;border:none;cursor:pointer;padding:0;z-index:310;}
+.nav-burger__line{display:block;width:22px;height:1px;background:var(--ink);transition:transform .3s,opacity .2s;}
+.nav-burger[aria-expanded="true"] .nav-burger__line:nth-child(1){transform:translateY(6px) rotate(45deg);}
+.nav-burger[aria-expanded="true"] .nav-burger__line:nth-child(2){opacity:0;}
+.nav-burger[aria-expanded="true"] .nav-burger__line:nth-child(3){transform:translateY(-6px) rotate(-45deg);}
+.nav-drawer{position:fixed;inset:0;background:var(--off);z-index:305;padding:5rem 2.5rem 3rem;display:flex;flex-direction:column;transform:translateX(100%);transition:transform .5s cubic-bezier(.22,1,.36,1);}
+.nav-drawer.is-open{transform:translateX(0);}
+.nav-drawer__links{list-style:none;display:flex;flex-direction:column;border-top:1px solid var(--rule);}
+.nav-drawer__links li{border-bottom:1px solid var(--rule);}
+.nav-drawer__links a{display:block;padding:1.2rem 0;font-family:'Noto Serif JP',serif;font-size:1.3rem;font-weight:200;color:var(--ink);text-decoration:none;transition:opacity .2s;}
+.nav-drawer__links a:hover{opacity:.4;}
+.nav-drawer__cta{margin-top:2.5rem;font-size:.72rem;letter-spacing:.12em;background:var(--navy);color:var(--white);text-decoration:none;padding:1rem 1.5rem;display:flex;align-items:center;justify-content:center;gap:.5rem;transition:opacity .2s;}
+.nav-drawer__cta:hover{opacity:.7;}
+.nav-drawer-scrim{position:fixed;inset:0;background:rgba(0,0,0,.3);z-index:304;opacity:0;transition:opacity .3s;}
+.nav-drawer-scrim.is-visible{opacity:1;}
+@media(max-width:1200px){.nav-links,.nav-cta{display:none;}.nav-burger{display:flex;}}
+@media(min-width:1201px){.nav-drawer,.nav-drawer-scrim{display:none;}}
+.page-hero{padding:clamp(7rem,14vw,11rem) clamp(1.5rem,6vw,5rem) clamp(3rem,6vw,5rem);border-bottom:1px solid var(--rule);max-width:100%;}
+.page-hero-inner{max-width:1100px;margin:0 auto;}
+.page-hero-kicker{font-size:.65rem;letter-spacing:.22em;color:var(--ink-lt);text-transform:uppercase;margin-bottom:1.5rem;display:flex;align-items:center;gap:1rem;}
+.page-hero-kicker::before{content:'';display:block;width:30px;height:1px;background:var(--ink-lt);}
+.page-hero-heading{font-family:'Noto Serif JP',serif;font-size:clamp(2rem,5vw,4rem);font-weight:200;color:var(--ink);letter-spacing:.05em;line-height:1.4;word-break:keep-all;overflow-wrap:anywhere;}
+.page-hero-desc{margin-top:1.5rem;font-size:.88rem;color:var(--ink-lt);line-height:2;max-width:520px;}
+.sec-wrap{max-width:1100px;margin:0 auto;}
+.sec-kicker{font-size:.65rem;letter-spacing:.22em;color:var(--ink-lt);text-transform:uppercase;margin-bottom:1.5rem;display:flex;align-items:center;gap:1rem;}
+.sec-kicker::before{content:'';display:block;width:30px;height:1px;background:var(--ink-lt);}
+.sec-heading{font-family:'Noto Serif JP',serif;font-size:clamp(1.5rem,3.5vw,2.2rem);font-weight:200;color:var(--ink);letter-spacing:.05em;margin-bottom:1.5rem;word-break:keep-all;overflow-wrap:anywhere;}
+.sec-body{font-size:.88rem;color:var(--ink-mid);line-height:2;margin-bottom:1.5rem;}
+.fade{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease;}
+.fade.in{opacity:1;transform:none;}
+.legal-section{padding:clamp(3rem,8vw,6rem) clamp(1.5rem,6vw,5rem);}
+.legal-table{width:100%;border-collapse:collapse;margin-top:1.5rem;}
+.legal-table th,.legal-table td{text-align:left;padding:1.1rem 1.5rem;border-bottom:1px solid var(--rule);font-size:.85rem;line-height:1.9;vertical-align:top;}
+.legal-table th{width:180px;font-weight:400;color:var(--ink-lt);font-size:.72rem;letter-spacing:.08em;white-space:nowrap;background:var(--off);}
+.legal-table td{color:var(--ink-mid);}
+.legal-table tr:first-child th,.legal-table tr:first-child td{border-top:1px solid var(--rule);}
+@media(max-width:580px){.legal-table th{display:block;padding-bottom:.3rem;border-bottom:none;font-size:.68rem;width:auto;}.legal-table td{display:block;padding-top:.2rem;padding-left:1.5rem;}.legal-table tr{display:block;border-bottom:1px solid var(--rule);padding:.7rem 0;}}
+.journal-list{border-top:1px solid var(--rule);}
+.journal-item{display:grid;grid-template-columns:120px 80px 1fr auto;gap:1.5rem;align-items:center;padding:1.4rem 0;border-bottom:1px solid var(--rule);text-decoration:none;color:var(--ink);transition:opacity .2s;}
+.journal-item:hover{opacity:.45;}
+@media(max-width:680px){.journal-item{grid-template-columns:1fr auto;grid-template-rows:auto auto;}.journal-tag{order:-1;}.journal-title{grid-column:1;font-size:.9rem;}.journal-date{grid-column:2;grid-row:1;}}
+.journal-date{font-size:.7rem;color:var(--ink-lt);font-variant-numeric:tabular-nums;letter-spacing:.05em;}
+.journal-tag{font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-lt);border:1px solid var(--rule);padding:.2rem .6rem;width:fit-content;}
+.journal-title{font-size:.9rem;font-weight:400;color:var(--ink);}
+.journal-arrow{width:16px;height:16px;opacity:.3;flex-shrink:0;}
+.project-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--rule);}
+@media(max-width:780px){.project-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:480px){.project-grid{grid-template-columns:1fr;}}
+.project-card{background:var(--off);position:relative;overflow:hidden;aspect-ratio:4/3;cursor:pointer;}
+.project-card-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.25,.46,.45,.94);}
+.project-card-ph{position:absolute;inset:0;width:100%;height:100%;transition:transform .7s cubic-bezier(.25,.46,.45,.94);}
+.project-card:hover .project-card-img,.project-card:hover .project-card-ph{transform:scale(1.03);}
+.project-card-info{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:1.5rem;background:linear-gradient(to top,rgba(10,15,30,.7) 0%,transparent 60%);opacity:0;transition:opacity .35s;}
+.project-card:hover .project-card-info{opacity:1;}
+.project-card-tag{font-size:.58rem;letter-spacing:.15em;color:rgba(244,240,230,.65);margin-bottom:.4rem;}
+.project-card-title{font-family:'Noto Serif JP',serif;font-size:.95rem;font-weight:300;color:var(--white);}
+.service-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border-top:1px solid var(--rule);border-left:1px solid var(--rule);}
+@media(max-width:600px){.service-grid{grid-template-columns:1fr;}}
+.service-card{padding:2.5rem 2rem;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);transition:background .3s;}
+.service-card:hover{background:var(--off);}
+.service-icon{width:30px;height:30px;margin-bottom:1.4rem;color:var(--ink);}
+.service-icon svg{width:100%;height:100%;}
+.service-title{font-size:.88rem;font-weight:500;letter-spacing:.05em;margin-bottom:.8rem;color:var(--ink);}
+.service-body{font-size:.78rem;color:var(--ink-mid);line-height:1.9;}
+.pricing-plans{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--rule);}
+@media(max-width:680px){.pricing-plans{grid-template-columns:1fr;}}
+.pricing-plan{padding:2.5rem 2rem;border-right:1px solid var(--rule);}
+.pricing-plan:last-child{border-right:none;}
+@media(max-width:680px){.pricing-plan{border-right:none;border-bottom:1px solid var(--rule);}.pricing-plan:last-child{border-bottom:none;}}
+.plan-name{font-size:.7rem;letter-spacing:.18em;color:var(--ink-lt);text-transform:uppercase;margin-bottom:1.2rem;}
+.plan-price{font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:300;color:var(--ink);line-height:1;margin-bottom:.4rem;}
+.plan-price-note{font-size:.72rem;color:var(--ink-lt);margin-bottom:1.5rem;}
+.plan-features{list-style:none;display:flex;flex-direction:column;gap:.7rem;margin-bottom:2rem;}
+.plan-features li{font-size:.78rem;color:var(--ink-mid);padding-left:1rem;position:relative;}
+.plan-features li::before{content:'—';position:absolute;left:0;color:var(--ink-lt);font-size:.65rem;}
+.plan-cta{display:inline-flex;align-items:center;gap:.5rem;font-size:.72rem;letter-spacing:.1em;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--rule);padding-bottom:.2rem;transition:opacity .2s,border-color .2s;}
+.plan-cta:hover{opacity:.5;border-color:var(--ink);}
+.pricing-note{margin-top:2.5rem;padding:1.5rem 2rem;background:var(--off);border-left:3px solid var(--ink-lt);font-size:.8rem;color:var(--ink-mid);line-height:1.9;}
+.form-wrap{display:flex;flex-direction:column;gap:1.5rem;}
+.form-group{display:flex;flex-direction:column;gap:.5rem;}
+.form-label{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-lt);}
+.form-req{font-size:.58rem;color:var(--ink-lt);margin-left:.4rem;}
+.form-input,.form-textarea,.form-select{background:var(--off);border:1px solid var(--rule);padding:.85rem 1rem;font-family:'DM Sans',sans-serif;font-size:.88rem;color:var(--ink);outline:none;transition:border-color .2s;width:100%;border-radius:0;appearance:none;}
+.form-input:focus,.form-textarea:focus,.form-select:focus{border-color:var(--navy);}
+.form-textarea{min-height:160px;resize:vertical;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;}
+@media(max-width:600px){.form-row{grid-template-columns:1fr;}}
+.form-submit{display:inline-flex;align-items:center;gap:.6rem;font-size:.78rem;letter-spacing:.12em;color:var(--white);background:var(--navy);padding:1rem 2.5rem;border:none;cursor:pointer;transition:opacity .2s;font-family:'DM Sans',sans-serif;}
+.form-submit:hover{opacity:.7;}
+.form-agree{font-size:.75rem;color:var(--ink-lt);line-height:1.8;}
+.form-agree a{color:var(--ink);text-decoration:underline;}
+footer{padding:clamp(3rem,6vw,5rem) clamp(1.5rem,6vw,5rem) 2rem;background:var(--navy);color:rgba(244,240,230,.55);}
+.footer-top{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:clamp(2rem,5vw,4rem);padding-bottom:3rem;border-bottom:1px solid rgba(244,240,230,.12);margin-bottom:2rem;}
+@media(max-width:700px){.footer-top{grid-template-columns:1fr;gap:2.5rem;}}
+.footer-brand-logo{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:300;font-style:italic;color:var(--white);margin-bottom:1rem;}
+.footer-tagline{font-size:.78rem;line-height:1.8;color:rgba(244,240,230,.45);max-width:240px;}
+.footer-col-label{font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(244,240,230,.35);margin-bottom:1.5rem;}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:.9rem;}
+.footer-links a{font-size:.85rem;color:rgba(244,240,230,.6);text-decoration:none;transition:color .2s;}
+.footer-links a:hover{color:var(--white);}
+.footer-studio-info{display:flex;flex-direction:column;gap:.9rem;}
+.studio-line{display:flex;align-items:center;gap:.7rem;font-size:.8rem;color:rgba(244,240,230,.5);}
+.studio-line svg{width:14px;height:14px;flex-shrink:0;}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
+.footer-copy{font-size:.65rem;color:rgba(244,240,230,.28);}
+.footer-bottom-links{display:flex;gap:1.5rem;}
+.footer-bottom-links a{font-size:.65rem;color:rgba(244,240,230,.35);text-decoration:none;transition:color .2s;}
+.footer-bottom-links a:hover{color:rgba(244,240,230,.8);}
+html,body{overflow-x:hidden;max-width:100%;}
+*,*::before,*::after{max-width:100%;}
+:lang(ja) p,:lang(ja) h1,:lang(ja) h2,:lang(ja) h3{word-break:keep-all;overflow-wrap:anywhere;}
 
-/* ══ UNIVERSAL OVERFLOW & TEXT FIX ══ */
-html, body {
-  overflow-x: hidden;
-  max-width: 100%;
-}
-*, *::before, *::after {
-  max-width: 100%;
-}
-/* 全テキスト要素：画面幅で折り返す */
-p, h1, h2, h3, h4, li, td, th, label, span, a {
-  overflow-wrap: break-word;
-  word-break: break-word;
-  -webkit-hyphens: auto;
-  hyphens: auto;
-}
-/* 日本語は keep-all のまま（途中で切れないよう）、英語は break-word */
-:lang(ja) p, :lang(ja) h1, :lang(ja) h2, :lang(ja) h3 {
-  word-break: keep-all;
-  overflow-wrap: anywhere;
-}
-/* marquee だけは nowrap を維持 */
-.marquee-wrap, .marquee-track, .marquee-item {
-  overflow: visible;
-  white-space: nowrap;
-}
-/* テーブルがはみ出さないよう */
-table {
-  table-layout: fixed;
-  width: 100%;
-  overflow-wrap: break-word;
-  word-break: break-all;
-}
-/* nav-cta / ボタン類が縮まないよう最低限確保 */
-.nav-cta, .hero-btn, .filter-btn, .plan-cta, .form-submit,
-.inquiry-submit, .btn-primary, .btn-secondary {
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-/* nav-links が画面からはみ出すなら隠す（既存responsive補完） */
-@media (max-width: 768px) {
-  .nav-links { display: none; }
-}
+/* ══ ROUNDED CORNERS ══ */
+.nav-cta{border-radius:999px!important;padding:.5rem 1.4rem!important;}
+.nav-drawer__cta{border-radius:16px!important;}
+.journal-tag{border-radius:999px!important;}
+.contact-info{border-radius:16px!important;}
+.process-steps{border-radius:16px!important;overflow:hidden!important;}
+.service-grid{border-radius:16px!important;overflow:hidden!important;}
+.pricing-plans{border-radius:16px!important;overflow:hidden!important;}
+.project-grid{border-radius:16px!important;overflow:hidden!important;}
+.form-input,.form-textarea,.form-select{border-radius:10px!important;}
+.form-submit{border-radius:999px!important;}
+.proj-visit-btn{border-radius:999px!important;}
+.proj-showcase{border-radius:20px!important;overflow:hidden!important;}
 
-
-/* ══ GLOBAL OVERFLOW & TEXT FIX ══ */
-html, body {
-  overflow-x: hidden;
-  max-width: 100%;
-}
-*, *::before, *::after {
-  max-width: 100%;
-}
-/* 日本語テキストを画面幅で自然に折り返す */
-h1, h2, h3, h4, p, li, td, th, span, a, label, div {
-  overflow-wrap: break-word;
-  word-break: keep-all;
-  white-space: normal;
-}
-/* 英数字の長い文字列も折り返す */
-.studio-line, .contact-info-val, .footer-copy,
-.footer-tagline, td, .inquiry-agree {
-  word-break: break-all;
-  overflow-wrap: anywhere;
-}
-/* テーブルがはみ出さないように */
-table { table-layout: fixed; width: 100%; }
-/* marquee は横スクロール専用なので除外 */
-.marquee-wrap { overflow: hidden; }
 </style>
 </head>
-<body>
-<nav>
-  <a href="index.html" class="nav-logo">tomo design link</a>
-  <a href="index.html" class="nav-back">
-    <svg width="14" height="10" viewBox="0 0 14 10" fill="none"><path d="M14 5H2M6 1L2 5L6 9" stroke="currentColor" stroke-width="1.2"/></svg>
-    Back
+<body data-page="">
+
+<nav id="main-nav">
+  <a href="index.html" class="nav-logo-rest">tomo design link.</a>
+  <ul class="nav-links">
+    <li><a href="thoughts.html" data-page="thoughts">Thoughts</a></li>
+    <li><a href="project.html" data-page="project">Project</a></li>
+    <li><a href="service.html" data-page="service">Services</a></li>
+    <li><a href="pricing.html" data-page="pricing">Pricing</a></li>
+    <li><a href="journal.html" data-page="journal">Journal</a></li>
+    <li><a href="contact.html" data-page="contact">Contact</a></li>
+  </ul>
+  <a href="contact.html" class="nav-cta">
+    お問い合わせ
+    <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M1 10L10 1M10 1H3M10 1V8" stroke="currentColor" stroke-width="1.3"/></svg>
   </a>
+  <button type="button" class="nav-burger" id="nav-burger" aria-expanded="false" aria-controls="nav-drawer" aria-label="メニューを開く">
+    <span class="nav-burger__line"></span>
+    <span class="nav-burger__line"></span>
+    <span class="nav-burger__line"></span>
+  </button>
 </nav>
-<div class="hero">
-  <p class="eyebrow">Legal</p>
-  <h1>利用規約</h1>
-  <p class="updated">最終更新日：2026年07月01日</p>
+<div class="nav-drawer" id="nav-drawer" aria-hidden="true">
+  <ul class="nav-drawer__links">
+    <li><a href="thoughts.html">Thoughts</a></li>
+    <li><a href="project.html">Project</a></li>
+    <li><a href="service.html">Services</a></li>
+    <li><a href="pricing.html">Pricing</a></li>
+    <li><a href="journal.html">Journal</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="contact.html" class="nav-drawer__cta">
+    お問い合わせ
+    <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M1 10L10 1M10 1H3M10 1V8" stroke="currentColor" stroke-width="1.3"/></svg>
+  </a>
 </div>
-<div class="divider"><hr></div>
-<main>
+<div class="nav-drawer-scrim" id="nav-drawer-scrim" hidden></div>
 
-  <div class="terms-section">
-    <p class="terms-num">/01</p>
-    <h2>適用範囲</h2>
-    <p>本利用規約（以下「本規約」）は、tomo design link（以下「当スタジオ」）が運営するウェブサイト（https://tomodesignlink.netlify.app）の利用、およびお問い合わせフォームを通じた制作サービスの依頼に適用されます。</p>
-    <p>本サイトをご利用いただくことで、本規約に同意したものとみなします。</p>
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <p class="page-hero-kicker">Terms of Use</p>
+    <h1 class="page-hero-heading">利用規約</h1>
   </div>
+</div>
+<section class="legal-section">
+  <div class="sec-wrap fade">
+    <p class="sec-body">本規約は、tomo design link（以下「当スタジオ」）が提供するウェブ制作サービス（以下「本サービス」）のご利用条件を定めるものです。</p>
 
-  <div class="terms-section">
-    <p class="terms-num">/02</p>
-    <h2>サービスの内容</h2>
-    <p>当スタジオは、以下のサービスを提供します。</p>
-    <ul>
-      <li>ウェブサイトのデザイン・コーディング・制作</li>
-      <li>ランディングページ（LP）の制作</li>
-      <li>ECサイトの構築・設定</li>
-      <li>ブランドロゴ・ビジュアルアイデンティティのデザイン</li>
-      <li>その他、上記に付随するデザイン支援業務</li>
-    </ul>
+    <h2 style="font-family:'Noto Serif JP',serif;font-size:1rem;font-weight:300;color:var(--ink);margin:2.5rem 0 .8rem;letter-spacing:.05em;padding-bottom:.5rem;border-bottom:1px solid var(--rule);">第1条（適用）</h2>
+    <p class="sec-body">本規約は、当スタジオとお客様との間のウェブ制作業務に関する一切の関係に適用されます。</p>
+
+    <h2 style="font-family:'Noto Serif JP',serif;font-size:1rem;font-weight:300;color:var(--ink);margin:2.5rem 0 .8rem;letter-spacing:.05em;padding-bottom:.5rem;border-bottom:1px solid var(--rule);">第2条（業務内容と範囲）</h2>
+    <p class="sec-body">制作の範囲・仕様・納期・金額は、別途お見積書・制作仕様書にて確認・合意の上、業務を進めます。合意内容を超える追加作業は、別途お見積りが必要です。</p>
+
+    <h2 style="font-family:'Noto Serif JP',serif;font-size:1rem;font-weight:300;color:var(--ink);margin:2.5rem 0 .8rem;letter-spacing:.05em;padding-bottom:.5rem;border-bottom:1px solid var(--rule);">第3条（著作権）</h2>
+    <p class="sec-body">制作物の著作権は、代金の完済をもってお客様に帰属します。ただし、制作過程で当スタジオが独自に開発したツール・コンポーネント等の著作権は当スタジオに帰属します。</p>
+
+    <h2 style="font-family:'Noto Serif JP',serif;font-size:1rem;font-weight:300;color:var(--ink);margin:2.5rem 0 .8rem;letter-spacing:.05em;padding-bottom:.5rem;border-bottom:1px solid var(--rule);">第4条（ポートフォリオへの掲載）</h2>
+    <p class="sec-body">当スタジオは、制作実績のポートフォリオとしてお客様のウェブサイトを掲載する場合があります。掲載を希望されない場合はお申し付けください。</p>
+
+    <h2 style="font-family:'Noto Serif JP',serif;font-size:1rem;font-weight:300;color:var(--ink);margin:2.5rem 0 .8rem;letter-spacing:.05em;padding-bottom:.5rem;border-bottom:1px solid var(--rule);">第5条（秘密保持）</h2>
+    <p class="sec-body">当スタジオは、業務上知り得たお客様の機密情報を第三者に漏洩しません。</p>
+
+    <h2 style="font-family:'Noto Serif JP',serif;font-size:1rem;font-weight:300;color:var(--ink);margin:2.5rem 0 .8rem;letter-spacing:.05em;padding-bottom:.5rem;border-bottom:1px solid var(--rule);">第6条（免責事項）</h2>
+    <p class="sec-body">天災・サーバー障害・第三者によるサービス変更など、当スタジオの責に帰さない事由による損害については責任を負いかねます。また、制作したサイトの運用結果（売上・アクセス数等）について保証するものではありません。</p>
+
+    <h2 style="font-family:'Noto Serif JP',serif;font-size:1rem;font-weight:300;color:var(--ink);margin:2.5rem 0 .8rem;letter-spacing:.05em;padding-bottom:.5rem;border-bottom:1px solid var(--rule);">第7条（規約の変更）</h2>
+    <p class="sec-body">本規約は予告なく変更する場合があります。変更後の規約は当ページに掲載した時点から効力を発するものとします。</p>
+
+    <p style="margin-top:3rem;font-size:.75rem;color:var(--ink-lt);">制定日：2026年3月15日</p>
   </div>
+</section>
 
-  <div class="terms-section">
-    <p class="terms-num">/03</p>
-    <h2>お申し込みと契約の成立</h2>
-    <p>お問い合わせフォームまたはメールでのご依頼をもってお申し込みとし、当スタジオが書面（メール含む）にて承諾の意思を示した時点で契約が成立するものとします。</p>
-    <p>契約内容・納品物・料金・スケジュールは個別の契約書または合意メールにて確認いたします。</p>
-  </div>
-
-  <div class="terms-section">
-    <p class="terms-num">/04</p>
-    <h2>料金と支払い</h2>
-    <p>料金は<a href="pricing.html" class="inline">料金ページ</a>に記載の金額を基準とし、プロジェクトの内容によって変動する場合があります。詳細は個別にお見積もりいたします。</p>
-    <p>原則として着手金50%を契約後7日以内に、残金50%を納品後14日以内にお支払いいただきます。支払い方法は銀行振込とします。</p>
-  </div>
-
-  <div class="terms-section">
-    <p class="terms-num">/05</p>
-    <h2>キャンセルと解約</h2>
-    <p>制作着手前のキャンセルは、書面による通知をもって受け付けます。着手後のキャンセルは、作業進捗に応じた費用を請求させていただく場合があります。</p>
-    <p>当スタジオは、依頼者が以下に該当する場合、契約を解除する権利を有します。</p>
-    <ul>
-      <li>本規約に違反した場合</li>
-      <li>支払いが期日を過ぎても行われない場合</li>
-      <li>当スタジオへの誹謗中傷・不当な要求が行われた場合</li>
-    </ul>
-  </div>
-
-  <div class="terms-section">
-    <p class="terms-num">/06</p>
-    <h2>著作権と権利の帰属</h2>
-    <p>納品物の著作権は、制作費が完済された時点で依頼者に帰属します。完済前の著作権は当スタジオに帰属します。</p>
-    <p>当スタジオは、制作実績としてポートフォリオやSNSへの掲載を行う権利を有します（依頼者が非公開を希望する場合はご相談ください）。</p>
-  </div>
-
-  <div class="terms-section">
-    <p class="terms-num">/07</p>
-    <h2>免責事項</h2>
-    <p>当スタジオは、納品物の利用によって生じた損害について、故意または重大な過失がある場合を除き、責任を負いません。</p>
-    <p>また、以下については当スタジオの責任外とします。</p>
-    <ul>
-      <li>サーバー障害・ドメイン失効等、第三者サービス起因の問題</li>
-      <li>納品後に依頼者が加えた変更による不具合</li>
-      <li>ブラウザ・OS・デバイスのアップデートによる表示崩れ</li>
-    </ul>
-  </div>
-
-  <div class="terms-section">
-    <p class="terms-num">/08</p>
-    <h2>個人情報の取り扱い</h2>
-    <p>お問い合わせを通じて取得した個人情報は、<a href="privacy.html" class="inline">プライバシーポリシー</a>に基づき適切に管理します。第三者への提供・販売は一切行いません。</p>
-  </div>
-
-  <div class="terms-section">
-    <p class="terms-num">/09</p>
-    <h2>規約の変更</h2>
-    <p>本規約は、必要に応じて予告なく変更する場合があります。変更後の規約は本ページへの掲載をもって効力を生じます。</p>
-  </div>
-
-  <div class="terms-section">
-    <p class="terms-num">/10</p>
-    <h2>準拠法と管轄裁判所</h2>
-    <p>本規約は日本法に準拠します。本規約に関する紛争は、当スタジオの所在地を管轄する裁判所を第一審の専属的合意管轄裁判所とします。</p>
-  </div>
-
-  <div class="terms-section">
-    <p class="terms-num">/11</p>
-    <h2>お問い合わせ</h2>
-    <p>本規約に関するご質問は以下までご連絡ください。<br>
-    tomo design link / tomodesignlink@gmail.com</p>
-  </div>
-
-</main>
 <footer>
-  <a href="index.html" class="footer-logo">tomo design link</a>
-  <div class="footer-links">
-    <a href="privacy.html">Privacy</a>
-    <a href="tokusho.html">特定商取引法</a>
-    <a href="terms.html">利用規約</a>
+  <div class="footer-top">
+    <div>
+      <div class="footer-brand-logo">tomo design link.</div>
+      <p class="footer-tagline">静けさと暖かさを大切にした、信頼に繋がるウェブサイトを制作します。</p>
+    </div>
+    <div>
+      <div class="footer-col-label">Navigate</div>
+      <ul class="footer-links">
+        <li><a href="thoughts.html">Thoughts</a></li>
+        <li><a href="project.html">Project</a></li>
+        <li><a href="service.html">Services</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="journal.html">Journal</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-label">Studio</div>
+      <div class="footer-studio-info">
+        <div class="studio-line">
+          <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="7" cy="6" r="3"/><path d="M7 1C4 1 1 3.5 1 6.5 1 10 7 14 7 14s6-4 6-7.5C13 3.5 10 1 7 1z"/></svg>
+          愛知県　一宮市
+        </div>
+        <div class="studio-line">
+          <svg viewBox="0 0 14 12" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="1" y="1" width="12" height="10" rx="1.5"/><path d="M1 3l6 4 6-4"/></svg>
+          tomodesignlink@gmail.com
+        </div>
+        <div class="studio-line">
+          <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="7" cy="7" r="6"/><path d="M7 4v3l2 2"/></svg>
+          Mon — Fri / 09:00 — 18:00
+        </div>
+      </div>
+    </div>
   </div>
-  <span class="footer-copy">© 2026 tomo design link.</span>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2026 tomo design link. All rights reserved.</span>
+    <div class="footer-bottom-links">
+      <a href="privacy.html">Privacy</a>
+      <a href="tokusho.html">特定商取引法</a>
+      <a href="terms.html">利用規約</a>
+    </div>
+  </div>
 </footer>
+<script>
+const nav=document.getElementById('main-nav');
+nav.classList.add('solid');
+const page=document.body.dataset.page;
+if(page){const a=document.querySelector('.nav-links a[data-page="'+page+'"]');if(a)a.classList.add('current');}
+const burger=document.getElementById('nav-burger');
+const drawer=document.getElementById('nav-drawer');
+const scrim=document.getElementById('nav-drawer-scrim');
+function closeDrawer(){burger.setAttribute('aria-expanded','false');drawer.classList.remove('is-open');drawer.setAttribute('aria-hidden','true');scrim.classList.remove('is-visible');scrim.hidden=true;document.body.style.overflow='';}
+function openDrawer(){burger.setAttribute('aria-expanded','true');drawer.classList.add('is-open');drawer.setAttribute('aria-hidden','false');scrim.hidden=false;requestAnimationFrame(()=>scrim.classList.add('is-visible'));document.body.style.overflow='hidden';}
+burger.addEventListener('click',()=>{burger.getAttribute('aria-expanded')==='true'?closeDrawer():openDrawer();});
+scrim.addEventListener('click',closeDrawer);
+drawer.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeDrawer));
+document.addEventListener('keydown',(e)=>{if(e.key==='Escape')closeDrawer();});
+window.matchMedia('(min-width:901px)').addEventListener('change',(e)=>{if(e.matches)closeDrawer();});
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in');});},{threshold:.1});
+document.querySelectorAll('.fade').forEach(el=>obs.observe(el));
+</script>
 </body>
 </html>

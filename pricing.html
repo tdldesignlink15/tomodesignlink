@@ -2,888 +2,288 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pricing — tomo design link</title>
-<meta name="description" content="愛知・一宮のウェブデザイナー tomo design link の料金プラン。Light ¥88,000〜、Standard ¥198,000〜、Premium ¥330,000〜の3プランをご用意しています。">
-<link rel="canonical" href="https://tomodesignlink.pages.dev/pricing.html">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Pricing — tomo design link">
-<meta property="og:description" content="愛知・一宮のウェブデザイナー tomo design link の料金プラン。3つのプランから選べます。">
-<meta property="og:url" content="https://tomodesignlink.pages.dev/pricing.html">
-<meta property="og:locale" content="ja_JP">
-<meta name="twitter:card" content="summary_large_image">
-<meta property="og:image" content="https://tomodesignlink.pages.dev/assets/images/hero-ogp.jpg">
-<meta name="twitter:image" content="https://tomodesignlink.pages.dev/assets/images/hero-ogp.jpg">
-<meta name="twitter:image" content="https://tomodesignlink.pages.dev/assets/images/hero-ogp.jpg">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Pricing｜tomo design link</title>
+<meta name="og:locale" content="ja_JP">
 <link rel="icon" type="image/png" href="logo.png">
 <link rel="apple-touch-icon" href="logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=Space+Mono:wght@400;700&family=Dancing+Script:wght@500;600&family=Noto+Serif+JP:wght@200;300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
 <style>
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-:root {
-  --ivory:      #F4F0E8;
-  --ivory-card: #EDE8DC;
-  --navy:       #1A2744;
-  --navy-mid:   #2B3F6E;
-  --sand:       #C4A47C;
-  --sand-lt:    #D9C4A5;
-  --text:       #2A3040;
-  --text-muted: #6B7A99;
-  --white:      #FFFFFF;
-  --muted:      #6B7A99;
-  --text:       #2A3040;
-  --text-muted: #6B7A99;
-  --ivory2:     #EDE8DC;
-  --ivory3:     #E5DFD0;
-}
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
-body {
-  background: var(--ivory);
-  color: var(--text);
-  font-family: 'DM Sans', sans-serif;
-  font-weight: 300;
-  line-height: 1.75;
-  overflow-x: hidden;
-  min-height: 100dvh;
-  display: flex; flex-direction: column;
-}
-nav {
-  position: sticky; top: 0; z-index: 100; height: 64px;
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 0 clamp(1.2rem, 5vw, 2.5rem);
-  background: rgba(244,240,232,0.96); backdrop-filter: blur(14px);
-  border-bottom: 1px solid rgba(26,39,68,0.07); flex-shrink: 0;
-}
-.nav-logo {
-  font-family: 'Dancing Script', cursive; font-size: clamp(1.2rem,3vw,1.5rem);
-  font-weight: 500; color: var(--navy); text-decoration: none;
-}
-.nav-back {
-  font-family: 'Space Mono', monospace; font-size: 0.58rem;
-  letter-spacing: 0.15em; text-transform: uppercase;
-  color: var(--muted); text-decoration: none;
-  display: flex; align-items: center; gap: 0.4rem; transition: color 0.2s;
-}
-.nav-back:hover { color: var(--navy); }
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{--white:#F4F0E6;--off:#EDE8DA;--ink:#1A2744;--ink-mid:#2B3F6E;--ink-lt:#7A8BAA;--rule:#C8C0AE;--navy:#1A2744;}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+body{background:var(--white);color:var(--ink);font-family:'DM Sans',sans-serif;font-weight:300;line-height:1.8;overflow-x:hidden;}
+#main-nav{position:fixed;inset:0 0 auto;z-index:300;height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(1.5rem,5vw,4rem);transition:background .4s,border-color .4s;border-bottom:1px solid transparent;}
+#main-nav.scrolled{background:rgba(244,240,230,0.97);backdrop-filter:blur(16px);border-bottom-color:var(--rule);}
+#main-nav.solid{background:var(--white);border-bottom-color:var(--rule);}
+.nav-logo-rest{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:300;font-style:italic;letter-spacing:.02em;color:var(--navy);text-decoration:none;}
+#main-nav.solid .nav-logo-rest{color:var(--ink);}
+.nav-links{display:flex;gap:clamp(1.5rem,3vw,2.5rem);list-style:none;margin-left:auto;margin-right:clamp(1.5rem,3vw,2.5rem);}
+.nav-links a{font-size:.72rem;letter-spacing:.12em;color:var(--ink-mid);text-decoration:none;transition:opacity .2s;}
+.nav-links a:hover{opacity:.5;}
+.nav-links a.current{color:var(--ink);font-weight:500;border-bottom:1px solid var(--ink-lt);padding-bottom:2px;}
+.nav-cta{font-size:.72rem;letter-spacing:.1em;color:var(--ink);border:1px solid var(--ink);padding:.5rem 1.2rem;text-decoration:none;display:flex;align-items:center;gap:.4rem;transition:opacity .3s;}
+.nav-cta:hover{opacity:.6;}
+.nav-burger{display:none;flex-direction:column;justify-content:center;align-items:center;gap:5px;width:40px;height:40px;background:transparent;border:none;cursor:pointer;padding:0;z-index:310;}
+.nav-burger__line{display:block;width:22px;height:1px;background:var(--ink);transition:transform .3s,opacity .2s;}
+.nav-burger[aria-expanded="true"] .nav-burger__line:nth-child(1){transform:translateY(6px) rotate(45deg);}
+.nav-burger[aria-expanded="true"] .nav-burger__line:nth-child(2){opacity:0;}
+.nav-burger[aria-expanded="true"] .nav-burger__line:nth-child(3){transform:translateY(-6px) rotate(-45deg);}
+.nav-drawer{position:fixed;inset:0;background:var(--off);z-index:305;padding:5rem 2.5rem 3rem;display:flex;flex-direction:column;transform:translateX(100%);transition:transform .5s cubic-bezier(.22,1,.36,1);}
+.nav-drawer.is-open{transform:translateX(0);}
+.nav-drawer__links{list-style:none;display:flex;flex-direction:column;border-top:1px solid var(--rule);}
+.nav-drawer__links li{border-bottom:1px solid var(--rule);}
+.nav-drawer__links a{display:block;padding:1.2rem 0;font-family:'Noto Serif JP',serif;font-size:1.3rem;font-weight:200;color:var(--ink);text-decoration:none;transition:opacity .2s;}
+.nav-drawer__links a:hover{opacity:.4;}
+.nav-drawer__cta{margin-top:2.5rem;font-size:.72rem;letter-spacing:.12em;background:var(--navy);color:var(--white);text-decoration:none;padding:1rem 1.5rem;display:flex;align-items:center;justify-content:center;gap:.5rem;transition:opacity .2s;}
+.nav-drawer__cta:hover{opacity:.7;}
+.nav-drawer-scrim{position:fixed;inset:0;background:rgba(0,0,0,.3);z-index:304;opacity:0;transition:opacity .3s;}
+.nav-drawer-scrim.is-visible{opacity:1;}
+@media(max-width:1200px){.nav-links,.nav-cta{display:none;}.nav-burger{display:flex;}}
+@media(min-width:1201px){.nav-drawer,.nav-drawer-scrim{display:none;}}
+.page-hero{padding:clamp(7rem,14vw,11rem) clamp(1.5rem,6vw,5rem) clamp(3rem,6vw,5rem);border-bottom:1px solid var(--rule);max-width:100%;}
+.page-hero-inner{max-width:1100px;margin:0 auto;}
+.page-hero-kicker{font-size:.65rem;letter-spacing:.22em;color:var(--ink-lt);text-transform:uppercase;margin-bottom:1.5rem;display:flex;align-items:center;gap:1rem;}
+.page-hero-kicker::before{content:'';display:block;width:30px;height:1px;background:var(--ink-lt);}
+.page-hero-heading{font-family:'Noto Serif JP',serif;font-size:clamp(2rem,5vw,4rem);font-weight:200;color:var(--ink);letter-spacing:.05em;line-height:1.4;word-break:keep-all;overflow-wrap:anywhere;}
+.page-hero-desc{margin-top:1.5rem;font-size:.88rem;color:var(--ink-lt);line-height:2;max-width:520px;}
+.sec-wrap{max-width:1100px;margin:0 auto;}
+.sec-kicker{font-size:.65rem;letter-spacing:.22em;color:var(--ink-lt);text-transform:uppercase;margin-bottom:1.5rem;display:flex;align-items:center;gap:1rem;}
+.sec-kicker::before{content:'';display:block;width:30px;height:1px;background:var(--ink-lt);}
+.sec-heading{font-family:'Noto Serif JP',serif;font-size:clamp(1.5rem,3.5vw,2.2rem);font-weight:200;color:var(--ink);letter-spacing:.05em;margin-bottom:1.5rem;word-break:keep-all;overflow-wrap:anywhere;}
+.sec-body{font-size:.88rem;color:var(--ink-mid);line-height:2;margin-bottom:1.5rem;}
+.fade{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease;}
+.fade.in{opacity:1;transform:none;}
+.legal-section{padding:clamp(3rem,8vw,6rem) clamp(1.5rem,6vw,5rem);}
+.legal-table{width:100%;border-collapse:collapse;margin-top:1.5rem;}
+.legal-table th,.legal-table td{text-align:left;padding:1.1rem 1.5rem;border-bottom:1px solid var(--rule);font-size:.85rem;line-height:1.9;vertical-align:top;}
+.legal-table th{width:180px;font-weight:400;color:var(--ink-lt);font-size:.72rem;letter-spacing:.08em;white-space:nowrap;background:var(--off);}
+.legal-table td{color:var(--ink-mid);}
+.legal-table tr:first-child th,.legal-table tr:first-child td{border-top:1px solid var(--rule);}
+@media(max-width:580px){.legal-table th{display:block;padding-bottom:.3rem;border-bottom:none;font-size:.68rem;width:auto;}.legal-table td{display:block;padding-top:.2rem;padding-left:1.5rem;}.legal-table tr{display:block;border-bottom:1px solid var(--rule);padding:.7rem 0;}}
+.journal-list{border-top:1px solid var(--rule);}
+.journal-item{display:grid;grid-template-columns:120px 80px 1fr auto;gap:1.5rem;align-items:center;padding:1.4rem 0;border-bottom:1px solid var(--rule);text-decoration:none;color:var(--ink);transition:opacity .2s;}
+.journal-item:hover{opacity:.45;}
+@media(max-width:680px){.journal-item{grid-template-columns:1fr auto;grid-template-rows:auto auto;}.journal-tag{order:-1;}.journal-title{grid-column:1;font-size:.9rem;}.journal-date{grid-column:2;grid-row:1;}}
+.journal-date{font-size:.7rem;color:var(--ink-lt);font-variant-numeric:tabular-nums;letter-spacing:.05em;}
+.journal-tag{font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-lt);border:1px solid var(--rule);padding:.2rem .6rem;width:fit-content;}
+.journal-title{font-size:.9rem;font-weight:400;color:var(--ink);}
+.journal-arrow{width:16px;height:16px;opacity:.3;flex-shrink:0;}
+.project-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--rule);}
+@media(max-width:780px){.project-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:480px){.project-grid{grid-template-columns:1fr;}}
+.project-card{background:var(--off);position:relative;overflow:hidden;aspect-ratio:4/3;cursor:pointer;}
+.project-card-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.25,.46,.45,.94);}
+.project-card-ph{position:absolute;inset:0;width:100%;height:100%;transition:transform .7s cubic-bezier(.25,.46,.45,.94);}
+.project-card:hover .project-card-img,.project-card:hover .project-card-ph{transform:scale(1.03);}
+.project-card-info{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:1.5rem;background:linear-gradient(to top,rgba(10,15,30,.7) 0%,transparent 60%);opacity:0;transition:opacity .35s;}
+.project-card:hover .project-card-info{opacity:1;}
+.project-card-tag{font-size:.58rem;letter-spacing:.15em;color:rgba(244,240,230,.65);margin-bottom:.4rem;}
+.project-card-title{font-family:'Noto Serif JP',serif;font-size:.95rem;font-weight:300;color:var(--white);}
+.service-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border-top:1px solid var(--rule);border-left:1px solid var(--rule);}
+@media(max-width:600px){.service-grid{grid-template-columns:1fr;}}
+.service-card{padding:2.5rem 2rem;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);transition:background .3s;}
+.service-card:hover{background:var(--off);}
+.service-icon{width:30px;height:30px;margin-bottom:1.4rem;color:var(--ink);}
+.service-icon svg{width:100%;height:100%;}
+.service-title{font-size:.88rem;font-weight:500;letter-spacing:.05em;margin-bottom:.8rem;color:var(--ink);}
+.service-body{font-size:.78rem;color:var(--ink-mid);line-height:1.9;}
+.pricing-plans{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--rule);}
+@media(max-width:680px){.pricing-plans{grid-template-columns:1fr;}}
+.pricing-plan{padding:2.5rem 2rem;border-right:1px solid var(--rule);}
+.pricing-plan:last-child{border-right:none;}
+@media(max-width:680px){.pricing-plan{border-right:none;border-bottom:1px solid var(--rule);}.pricing-plan:last-child{border-bottom:none;}}
+.plan-name{font-size:.7rem;letter-spacing:.18em;color:var(--ink-lt);text-transform:uppercase;margin-bottom:1.2rem;}
+.plan-price{font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:300;color:var(--ink);line-height:1;margin-bottom:.4rem;}
+.plan-price-note{font-size:.72rem;color:var(--ink-lt);margin-bottom:1.5rem;}
+.plan-features{list-style:none;display:flex;flex-direction:column;gap:.7rem;margin-bottom:2rem;}
+.plan-features li{font-size:.78rem;color:var(--ink-mid);padding-left:1rem;position:relative;}
+.plan-features li::before{content:'—';position:absolute;left:0;color:var(--ink-lt);font-size:.65rem;}
+.plan-cta{display:inline-flex;align-items:center;gap:.5rem;font-size:.72rem;letter-spacing:.1em;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--rule);padding-bottom:.2rem;transition:opacity .2s,border-color .2s;}
+.plan-cta:hover{opacity:.5;border-color:var(--ink);}
+.pricing-note{margin-top:2.5rem;padding:1.5rem 2rem;background:var(--off);border-left:3px solid var(--ink-lt);font-size:.8rem;color:var(--ink-mid);line-height:1.9;}
+.form-wrap{display:flex;flex-direction:column;gap:1.5rem;}
+.form-group{display:flex;flex-direction:column;gap:.5rem;}
+.form-label{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-lt);}
+.form-req{font-size:.58rem;color:var(--ink-lt);margin-left:.4rem;}
+.form-input,.form-textarea,.form-select{background:var(--off);border:1px solid var(--rule);padding:.85rem 1rem;font-family:'DM Sans',sans-serif;font-size:.88rem;color:var(--ink);outline:none;transition:border-color .2s;width:100%;border-radius:0;appearance:none;}
+.form-input:focus,.form-textarea:focus,.form-select:focus{border-color:var(--navy);}
+.form-textarea{min-height:160px;resize:vertical;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;}
+@media(max-width:600px){.form-row{grid-template-columns:1fr;}}
+.form-submit{display:inline-flex;align-items:center;gap:.6rem;font-size:.78rem;letter-spacing:.12em;color:var(--white);background:var(--navy);padding:1rem 2.5rem;border:none;cursor:pointer;transition:opacity .2s;font-family:'DM Sans',sans-serif;}
+.form-submit:hover{opacity:.7;}
+.form-agree{font-size:.75rem;color:var(--ink-lt);line-height:1.8;}
+.form-agree a{color:var(--ink);text-decoration:underline;}
+footer{padding:clamp(3rem,6vw,5rem) clamp(1.5rem,6vw,5rem) 2rem;background:var(--navy);color:rgba(244,240,230,.55);}
+.footer-top{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:clamp(2rem,5vw,4rem);padding-bottom:3rem;border-bottom:1px solid rgba(244,240,230,.12);margin-bottom:2rem;}
+@media(max-width:700px){.footer-top{grid-template-columns:1fr;gap:2.5rem;}}
+.footer-brand-logo{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:300;font-style:italic;color:var(--white);margin-bottom:1rem;}
+.footer-tagline{font-size:.78rem;line-height:1.8;color:rgba(244,240,230,.45);max-width:240px;}
+.footer-col-label{font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(244,240,230,.35);margin-bottom:1.5rem;}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:.9rem;}
+.footer-links a{font-size:.85rem;color:rgba(244,240,230,.6);text-decoration:none;transition:color .2s;}
+.footer-links a:hover{color:var(--white);}
+.footer-studio-info{display:flex;flex-direction:column;gap:.9rem;}
+.studio-line{display:flex;align-items:center;gap:.7rem;font-size:.8rem;color:rgba(244,240,230,.5);}
+.studio-line svg{width:14px;height:14px;flex-shrink:0;}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
+.footer-copy{font-size:.65rem;color:rgba(244,240,230,.28);}
+.footer-bottom-links{display:flex;gap:1.5rem;}
+.footer-bottom-links a{font-size:.65rem;color:rgba(244,240,230,.35);text-decoration:none;transition:color .2s;}
+.footer-bottom-links a:hover{color:rgba(244,240,230,.8);}
+html,body{overflow-x:hidden;max-width:100%;}
+*,*::before,*::after{max-width:100%;}
+:lang(ja) p,:lang(ja) h1,:lang(ja) h2,:lang(ja) h3{word-break:keep-all;overflow-wrap:anywhere;}
 
-/* ── HERO ── */
-.pricing-hero {
-  padding: clamp(2.5rem, 6vw, 4rem) clamp(1.5rem, 6vw, 4rem) clamp(2rem, 4vw, 3rem);
-  max-width: 860px;
-  margin: 0 auto;
-  width: 100%;
-}
-.pricing-eyebrow {
-  font-family: 'Space Mono', monospace;
-  font-size: 0.58rem;
-  letter-spacing: 0.28em;
-  text-transform: uppercase;
-  color: var(--sand);
-  margin-bottom: 1.4rem;
-  display: flex; align-items: center; gap: 0.8rem;
-}
-.pricing-eyebrow::before {
-  content: ''; width: 24px; height: 1px; background: var(--sand);
-}
-.pricing-title {
-  font-family: 'Noto Serif JP', serif;
-  font-size: clamp(2.2rem, 6vw, 4rem);
-  font-weight: 200;
-  line-height: 1.25;
-  color: var(--navy);
-  margin-bottom: 1.2rem;
-  word-break: keep-all;
-  letter-spacing: 0.04em;
-}
-.pricing-title em {
-  font-style: italic;
-  font-family: 'Cormorant Garamond', serif;
-  color: var(--muted);
-}
-.pricing-note {
-  font-size: clamp(0.8rem, 1.8vw, 0.88rem);
-  color: var(--muted);
-  line-height: 1.9;
-  max-width: 560px;
-  word-break: keep-all;
-}
+/* ══ ROUNDED CORNERS ══ */
+.nav-cta{border-radius:999px!important;padding:.5rem 1.4rem!important;}
+.nav-drawer__cta{border-radius:16px!important;}
+.journal-tag{border-radius:999px!important;}
+.contact-info{border-radius:16px!important;}
+.process-steps{border-radius:16px!important;overflow:hidden!important;}
+.service-grid{border-radius:16px!important;overflow:hidden!important;}
+.pricing-plans{border-radius:16px!important;overflow:hidden!important;}
+.project-grid{border-radius:16px!important;overflow:hidden!important;}
+.form-input,.form-textarea,.form-select{border-radius:10px!important;}
+.form-submit{border-radius:999px!important;}
+.proj-visit-btn{border-radius:999px!important;}
+.proj-showcase{border-radius:20px!important;overflow:hidden!important;}
 
-/* ── DIVIDER ── */
-.divider {
-  max-width: 860px;
-  margin: 0 auto;
-  padding: 0 clamp(1.5rem, 6vw, 4rem);
-}
-.divider hr {
-  border: none;
-  border-top: 1px solid rgba(26,39,68,0.09);
-}
-
-/* ── MAIN ── */
-main {
-  flex: 1;
-  padding: clamp(2.5rem, 6vw, 5rem) clamp(1.5rem, 6vw, 4rem) clamp(4rem, 8vw, 7rem);
-  max-width: 1100px;
-  margin: 0 auto;
-  width: 100%;
-}
-
-/* ── PLANS GRID ── */
-.plans-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 320px));
-  gap: 1.2rem;
-  margin: 0 auto clamp(3rem, 6vw, 5rem);
-  justify-content: center;
-  width: 100%;
-}
-
-.plan-card {
-  background: var(--ivory2);
-  border-radius: 1.2rem;
-  padding: clamp(1.8rem, 4vw, 2.5rem);
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  transition: box-shadow 0.3s;
-  border: 1px solid transparent;
-}
-.plan-card:hover {
-  box-shadow: 0 8px 32px rgba(26,39,68,0.08);
-}
-.plan-card.featured {
-  background: var(--navy);
-  color: white;
-  border-color: transparent;
-}
-.plan-card.featured:hover {
-  box-shadow: 0 8px 32px rgba(26,39,68,0.25);
-}
-
-/* 人気バッジ */
-.plan-badge {
-  position: absolute;
-  top: -0.6rem;
-  left: 50%;
-  transform: translateX(-50%);
-  font-family: 'Space Mono', monospace;
-  font-size: 0.5rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  background: var(--sand);
-  color: var(--navy);
-  padding: 0.25rem 0.9rem;
-  border-radius: 50px;
-  white-space: nowrap;
-}
-
-.plan-label {
-  font-family: 'Space Mono', monospace;
-  font-size: 0.55rem;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--sand);
-  margin-bottom: 0.8rem;
-}
-.plan-card.featured .plan-label { color: rgba(196,164,124,0.8); }
-
-.plan-name {
-  font-family: 'Noto Serif JP', serif;
-  font-size: clamp(1.3rem, 2.5vw, 1.7rem);
-  font-weight: 200;
-  color: var(--navy);
-  margin-bottom: 0.5rem;
-  letter-spacing: 0.04em;
-  word-break: keep-all;
-}
-.plan-card.featured .plan-name { color: white; }
-
-.plan-price {
-  display: flex;
-  align-items: baseline;
-  gap: 0.3rem;
-  margin-bottom: 0.4rem;
-}
-.plan-price-num {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(2rem, 4vw, 3rem);
-  font-weight: 300;
-  color: var(--navy);
-  line-height: 1;
-  letter-spacing: -0.02em;
-}
-.plan-card.featured .plan-price-num { color: white; }
-.plan-price-unit {
-  font-size: 0.75rem;
-  color: var(--muted);
-}
-.plan-card.featured .plan-price-unit { color: rgba(255,255,255,0.5); }
-.plan-price-note {
-  font-size: 0.7rem;
-  color: var(--muted);
-  margin-bottom: 1.5rem;
-}
-.plan-card.featured .plan-price-note { color: rgba(255,255,255,0.45); }
-
-.plan-divider {
-  border: none;
-  border-top: 1px solid rgba(26,39,68,0.1);
-  margin-bottom: 1.5rem;
-}
-.plan-card.featured .plan-divider { border-color: rgba(255,255,255,0.1); }
-
-.plan-desc {
-  font-size: 0.78rem;
-  color: var(--muted);
-  line-height: 1.85;
-  margin-bottom: 1.5rem;
-  word-break: keep-all;
-  flex: 1;
-}
-.plan-card.featured .plan-desc { color: rgba(255,255,255,0.6); }
-
-.plan-features {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
-  margin-bottom: 2rem;
-}
-.plan-features li {
-  font-size: 0.78rem;
-  color: var(--navy);
-  display: flex;
-  align-items: flex-start;
-  gap: 0.6rem;
-  line-height: 1.5;
-  word-break: keep-all;
-  overflow-wrap: break-word;
-  min-width: 0;
-}
-.plan-card.featured .plan-features li { color: rgba(255,255,255,0.82); }
-.plan-features li::before {
-  content: '';
-  width: 14px; height: 14px;
-  flex-shrink: 0;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpath d='M2 7l3.5 3.5L12 3' stroke='%23C4A47C' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") center/contain no-repeat;
-  margin-top: 0.1rem;
-}
-
-.plan-cta {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  padding: 0.85rem 1.4rem;
-  border-radius: 50px;
-  font-family: 'Space Mono', monospace;
-  font-size: 0.58rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  text-decoration: none;
-  transition: opacity 0.2s, transform 0.2s;
-  margin-top: auto;
-}
-.plan-cta:hover { opacity: 0.78; transform: translateY(-1px); }
-.plan-cta-outline {
-  border: 1px solid rgba(26,39,68,0.2);
-  color: var(--navy);
-  background: transparent;
-}
-.plan-cta-filled {
-  background: var(--sand);
-  color: var(--navy);
-  border: 1px solid transparent;
-}
-.plan-cta-white {
-  background: white;
-  color: var(--navy);
-  border: 1px solid transparent;
-}
-
-/* ── OPTION TABLE ── */
-.options-section {
-  margin-bottom: clamp(3rem, 6vw, 5rem);
-}
-.options-heading {
-  font-family: 'Noto Serif JP', serif;
-  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
-  font-weight: 200;
-  color: var(--navy);
-  margin-bottom: 0.6rem;
-  letter-spacing: 0.04em;
-  word-break: keep-all;
-}
-.options-sub {
-  font-size: 0.82rem;
-  color: var(--muted);
-  margin-bottom: 1.8rem;
-  line-height: 1.8;
-}
-.options-label {
-  font-family: 'Space Mono', monospace;
-  font-size: 0.55rem;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--sand);
-  margin-bottom: 1.5rem;
-  display: flex; align-items: center; gap: 0.7rem;
-}
-.options-label::before {
-  content: ''; width: 20px; height: 1px; background: var(--sand);
-}
-.options-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0.8rem;
-}
-.option-item {
-  background: var(--ivory2);
-  border-radius: 0.8rem;
-  padding: 1.2rem 1.4rem;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 1rem;
-  min-width: 0;
-}
-.option-name {
-  font-size: 0.82rem;
-  color: var(--navy);
-  font-weight: 400;
-  word-break: keep-all;
-}
-.option-desc {
-  font-size: 0.68rem;
-  color: var(--muted);
-  margin-top: 0.2rem;
-  line-height: 1.6;
-  word-break: keep-all;
-}
-.option-price {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1rem;
-  font-weight: 300;
-  color: var(--navy);
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-
-/* ── FAQ ── */
-.faq-section { margin-bottom: clamp(3rem, 6vw, 5rem); }
-.faq-heading {
-  font-family: 'Noto Serif JP', serif;
-  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
-  font-weight: 200;
-  color: var(--navy);
-  margin-bottom: 1.8rem;
-  letter-spacing: 0.04em;
-  word-break: keep-all;
-}
-.faq-label {
-  font-family: 'Space Mono', monospace;
-  font-size: 0.55rem;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--sand);
-  margin-bottom: 1.5rem;
-  display: flex; align-items: center; gap: 0.7rem;
-}
-.faq-label::before {
-  content: ''; width: 20px; height: 1px; background: var(--sand);
-}
-.faq-list { display: flex; flex-direction: column; }
-.faq-item {
-  border-bottom: 1px solid rgba(26,39,68,0.08);
-  padding: 1.4rem 0;
-}
-.faq-item:first-child { border-top: 1px solid rgba(26,39,68,0.08); }
-.faq-q {
-  font-size: 0.9rem;
-  font-weight: 400;
-  color: var(--navy);
-  margin-bottom: 0.6rem;
-  display: flex; align-items: flex-start; gap: 0.8rem;
-  word-break: keep-all;
-  line-height: 1.6;
-}
-.faq-q::before {
-  content: 'Q';
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1rem;
-  font-weight: 300;
-  color: var(--sand);
-  flex-shrink: 0;
-  margin-top: 0.05rem;
-}
-.faq-a {
-  font-size: 0.82rem;
-  color: var(--muted);
-  line-height: 1.9;
-  padding-left: 1.4rem;
-  word-break: keep-all;
-}
-
-/* ── CTA BANNER ── */
-.cta-banner {
-  background: var(--ivory2);
-  border: 1px solid rgba(26,39,68,0.08);
-  border-radius: 1.5rem;
-  padding: clamp(3rem, 6vw, 5rem) clamp(2rem, 5vw, 4rem);
-  text-align: center;
-}
-.cta-banner-label {
-  font-family: 'Space Mono', monospace;
-  font-size: 0.58rem;
-  letter-spacing: 0.28em;
-  text-transform: uppercase;
-  color: var(--sand);
-  margin-bottom: 1.6rem;
-  display: flex; align-items: center; justify-content: center; gap: 0.8rem;
-}
-.cta-banner-label::before {
-  content: ''; display: block; width: 36px; height: 1px; background: var(--sand);
-}
-.cta-banner-heading {
-  font-family: 'Noto Serif JP', serif;
-  font-size: clamp(1.6rem, 3.5vw, 2.6rem);
-  font-weight: 200;
-  color: var(--navy);
-  margin-bottom: 1rem;
-  letter-spacing: 0.04em;
-  word-break: keep-all;
-  line-height: 1.4;
-}
-.cta-banner-sub {
-  font-size: 0.86rem;
-  color: var(--text-muted);
-  margin-bottom: 2.4rem;
-  line-height: 1.9;
-}
-.cta-banner-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: var(--navy);
-  color: white;
-  padding: 0.9rem 2.2rem;
-  border-radius: 50px;
-  font-family: 'Space Mono', monospace;
-  font-size: 0.62rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  text-decoration: none;
-  transition: opacity 0.2s, transform 0.2s;
-}
-.cta-banner-btn:hover { opacity: 0.8; transform: translateY(-2px); }
-
-/* ── FOOTER ── */
-footer {
-  flex-shrink: 0;
-  background: var(--navy);
-  padding: clamp(2rem, 4vw, 3rem) clamp(1.5rem, 5vw, 3rem);
-  display: flex; align-items: center; justify-content: space-between;
-  flex-wrap: wrap; gap: 1rem;
-}
-.footer-logo {
-  font-family: 'Dancing Script', cursive;
-  font-size: 1.3rem;
-  font-weight: 500;
-  color: rgba(255,255,255,0.65);
-  text-decoration: none;
-  transition: opacity 0.2s;
-}
-.footer-logo:hover { opacity: 0.5; }
-.footer-copy {
-  font-family: 'Space Mono', monospace;
-  font-size: 0.5rem;
-  letter-spacing: 0.08em;
-  color: rgba(255,255,255,0.22);
-}
-
-/* ── RESPONSIVE ── */
-@media (max-width: 860px) {
-  .plans-grid  { grid-template-columns: 1fr; max-width: 500px; margin-left: auto; margin-right: auto; }
-  .options-grid { grid-template-columns: repeat(2, 1fr); }
-  main         { padding-left: clamp(1.2rem, 4vw, 2rem); padding-right: clamp(1.2rem, 4vw, 2rem); }
-  .cta-banner  { padding: clamp(2.5rem, 5vw, 3.5rem) clamp(1.5rem, 4vw, 2.5rem); }
-  .inquiry-form { max-width: 100%; }
-}
-@media (max-width: 560px) {
-  nav          { padding: 0 1rem; height: 56px; }
-  .pricing-hero { padding-left: 1.2rem; padding-right: 1.2rem; }
-  .divider     { padding-left: 1.2rem; padding-right: 1.2rem; }
-  main         { padding-left: 1.2rem; padding-right: 1.2rem; }
-  .options-grid { grid-template-columns: 1fr; }
-  .option-item { flex-direction: column; gap: 0.4rem; }
-  .option-price { font-size: 0.9rem; }
-  .cta-banner  { padding: 2.5rem 1.4rem; border-radius: 1rem; }
-  .inquiry-row { grid-template-columns: 1fr; }
-  .inquiry-input { font-size: 0.85rem; }
-  .inquiry-submit { font-size: 0.78rem; }
-  footer       { flex-direction: column; align-items: flex-start; gap: 0.8rem; }
-  .plan-card   { padding: 1.8rem 1.5rem; }
-}
-@media (max-width: 380px) {
-  .plan-price-num { font-size: 2rem; }
-  .cta-banner-heading { font-size: 1.5rem; }
-}
-
-/* ══ UNIVERSAL OVERFLOW & TEXT FIX ══ */
-html, body {
-  overflow-x: hidden;
-  max-width: 100%;
-}
-*, *::before, *::after {
-  max-width: 100%;
-}
-/* 全テキスト要素：画面幅で折り返す */
-p, h1, h2, h3, h4, li, td, th, label, span, a {
-  overflow-wrap: break-word;
-  word-break: break-word;
-  -webkit-hyphens: auto;
-  hyphens: auto;
-}
-/* 日本語は keep-all のまま（途中で切れないよう）、英語は break-word */
-:lang(ja) p, :lang(ja) h1, :lang(ja) h2, :lang(ja) h3 {
-  word-break: keep-all;
-  overflow-wrap: anywhere;
-}
-/* marquee だけは nowrap を維持 */
-.marquee-wrap, .marquee-track, .marquee-item {
-  overflow: visible;
-  white-space: nowrap;
-}
-/* テーブルがはみ出さないよう */
-table {
-  table-layout: fixed;
-  width: 100%;
-  overflow-wrap: break-word;
-  word-break: break-all;
-}
-/* nav-cta / ボタン類が縮まないよう最低限確保 */
-.nav-cta, .hero-btn, .filter-btn, .plan-cta, .form-submit,
-.inquiry-submit, .btn-primary, .btn-secondary {
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-/* nav-links が画面からはみ出すなら隠す（既存responsive補完） */
-@media (max-width: 768px) {
-  .nav-links { display: none; }
-}
-
-
-/* ══ GLOBAL OVERFLOW & TEXT FIX ══ */
-html, body {
-  overflow-x: hidden;
-  max-width: 100%;
-}
-*, *::before, *::after {
-  max-width: 100%;
-}
-/* 日本語テキストを画面幅で自然に折り返す */
-h1, h2, h3, h4, p, li, td, th, span, a, label, div {
-  overflow-wrap: break-word;
-  word-break: keep-all;
-  white-space: normal;
-}
-/* 英数字の長い文字列も折り返す */
-.studio-line, .contact-info-val, .footer-copy,
-.footer-tagline, td, .inquiry-agree {
-  word-break: break-all;
-  overflow-wrap: anywhere;
-}
-/* テーブルがはみ出さないように */
-table { table-layout: fixed; width: 100%; }
-/* marquee は横スクロール専用なので除外 */
-.marquee-wrap { overflow: hidden; }
-
-/* ── FOOTER（indexと統一） ── */
-footer {
-  background: var(--navy);
-  padding: clamp(3rem,6vw,4rem) clamp(1.5rem,5vw,3rem) clamp(1.5rem,3vw,2rem);
-  margin-top: 0;
-}
-.footer-top {
-  display: grid; grid-template-columns: 2fr 1fr 1fr;
-  gap: 3rem;
-  padding-bottom: 3rem;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
-}
-.footer-brand-logo { display: flex; align-items: baseline; gap: 0.4rem; margin-bottom: 1rem; }
-.footer-rest {
-  font-family: 'Dancing Script', cursive;
-  font-size: 1.4rem; font-weight: 500; color: rgba(200,168,130,0.9);
-}
-.footer-follow-label {
-  font-family: 'Space Mono', monospace; font-size: 0.55rem;
-  letter-spacing: 0.22em; text-transform: uppercase;
-  color: rgba(255,255,255,0.35); margin-bottom: 0.8rem;
-}
-.footer-socials { display: flex; gap: 0.6rem; }
-.social-icon {
-  width: 36px; height: 36px; border-radius: 50%;
-  border: 1px solid rgba(255,255,255,0.15);
-  display: flex; align-items: center; justify-content: center;
-  text-decoration: none; transition: border-color 0.2s;
-}
-.social-icon:hover { border-color: rgba(255,255,255,0.4); }
-.social-icon svg { width: 15px; height: 15px; }
-.footer-col-label {
-  font-family: 'Space Mono', monospace; font-size: 0.6rem;
-  letter-spacing: 0.22em; text-transform: uppercase;
-  color: rgba(255,255,255,0.35); margin-bottom: 1.2rem;
-}
-.footer-links { list-style: none; }
-.footer-links li { margin-bottom: 0.7rem; }
-.footer-links a {
-  font-size: 0.85rem; color: rgba(255,255,255,0.65);
-  text-decoration: none; border-bottom: 1px solid transparent;
-  transition: color 0.2s, border-color 0.2s;
-}
-.footer-links a:hover { color: rgba(255,255,255,0.9); border-bottom-color: rgba(255,255,255,0.3); }
-.footer-studio-info { display: flex; flex-direction: column; gap: 0.8rem; }
-.studio-line {
-  display: flex; align-items: flex-start; gap: 0.6rem;
-  font-size: 0.8rem; color: rgba(255,255,255,0.55);
-}
-.studio-line svg { width: 14px; height: 14px; flex-shrink: 0; margin-top: 2px; }
-.footer-bottom {
-  padding-top: 1.8rem;
-  display: flex; justify-content: space-between; align-items: center;
-  flex-wrap: wrap; gap: 1rem;
-}
-.footer-copy { font-size: 0.75rem; color: rgba(255,255,255,0.3); }
-.footer-bottom-links { display: flex; gap: 1.5rem; }
-.footer-bottom-links a {
-  font-size: 0.75rem; color: rgba(255,255,255,0.35);
-  text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.2);
-  transition: color 0.2s;
-}
-.footer-bottom-links a:hover { color: rgba(255,255,255,0.65); }
-@media (max-width: 900px) { .footer-top { grid-template-columns: 1fr; } }
-@media (max-width: 620px) {
-  footer { padding: 2.5rem 1.2rem 1.5rem; }
-  .footer-bottom { flex-direction: column; align-items: flex-start; gap: 0.6rem; }
-  .footer-bottom-links { gap: 1rem; flex-wrap: wrap; }
-  .footer-copy { font-size: 0.6rem; }
-}
 </style>
 </head>
-<body>
-<nav>
-  <a href="index.html" class="nav-logo">tomo design link</a>
-  <a href="index.html" class="nav-back">
-    <svg width="14" height="10" viewBox="0 0 14 10" fill="none"><path d="M14 5H2M6 1L2 5L6 9" stroke="currentColor" stroke-width="1.2"/></svg>
-    Back
+<body data-page="pricing">
+
+<nav id="main-nav">
+  <a href="index.html" class="nav-logo-rest">tomo design link.</a>
+  <ul class="nav-links">
+    <li><a href="thoughts.html" data-page="thoughts">Thoughts</a></li>
+    <li><a href="project.html" data-page="project">Project</a></li>
+    <li><a href="service.html" data-page="service">Services</a></li>
+    <li><a href="pricing.html" data-page="pricing">Pricing</a></li>
+    <li><a href="journal.html" data-page="journal">Journal</a></li>
+    <li><a href="contact.html" data-page="contact">Contact</a></li>
+  </ul>
+  <a href="contact.html" class="nav-cta">
+    お問い合わせ
+    <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M1 10L10 1M10 1H3M10 1V8" stroke="currentColor" stroke-width="1.3"/></svg>
   </a>
+  <button type="button" class="nav-burger" id="nav-burger" aria-expanded="false" aria-controls="nav-drawer" aria-label="メニューを開く">
+    <span class="nav-burger__line"></span>
+    <span class="nav-burger__line"></span>
+    <span class="nav-burger__line"></span>
+  </button>
 </nav>
-<!-- HERO -->
-<div class="pricing-hero">
-  <p class="pricing-eyebrow">Pricing</p>
-  <h1 class="pricing-title">
-    まずは目安だけでも<br>見てみてください。
-  </h1>
-  <p class="pricing-note">
-    すべての価格は税込みの目安です。「予算が合うか不安」という方も、まず一度ご相談ください。一緒に最適な方法を考えます。
-  </p>
+<div class="nav-drawer" id="nav-drawer" aria-hidden="true">
+  <ul class="nav-drawer__links">
+    <li><a href="thoughts.html">Thoughts</a></li>
+    <li><a href="project.html">Project</a></li>
+    <li><a href="service.html">Services</a></li>
+    <li><a href="pricing.html">Pricing</a></li>
+    <li><a href="journal.html">Journal</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="contact.html" class="nav-drawer__cta">
+    お問い合わせ
+    <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M1 10L10 1M10 1H3M10 1V8" stroke="currentColor" stroke-width="1.3"/></svg>
+  </a>
 </div>
-<div class="divider"><hr></div>
+<div class="nav-drawer-scrim" id="nav-drawer-scrim" hidden></div>
 
-<!-- MAIN -->
-<main>
-
-  <!-- PLANS -->
-  <div class="plans-grid">
-
-    <!-- ライト -->
-    <div class="plan-card">
-      <p class="plan-label">Light</p>
-      <h2 class="plan-name">シンプルサイト</h2>
-      <div class="plan-price">
-        <span class="plan-price-num">¥88,000</span>
-        <span class="plan-price-unit">〜</span>
-      </div>
-      <p class="plan-price-note">税込 / 一括払い</p>
-      <hr class="plan-divider">
-      <p class="plan-desc">はじめてのウェブサイトや、シンプルに情報を伝えたい方に。スピード重視で、丁寧に仕上げます。</p>
-      <ul class="plan-features">
-        <li>ページ数：1〜3ページ</li>
-        <li>レスポンシブ対応</li>
-        <li>お問い合わせフォーム</li>
-        <li>納期目安：2〜3週間</li>
-        <li>修正回数：2回</li>
-      </ul>
-      <a href="contact.html" class="plan-cta plan-cta-outline">
-        相談する
-        <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M1 9L9 1M9 1H3M9 1V7" stroke="currentColor" stroke-width="1.3"/></svg>
-      </a>
-    </div>
-
-    <!-- スタンダード（おすすめ） -->
-    <div class="plan-card featured">
-      <span class="plan-badge">人気プラン</span>
-      <p class="plan-label">Standard</p>
-      <h2 class="plan-name">ブランドサイト</h2>
-      <div class="plan-price">
-        <span class="plan-price-num">¥198,000</span>
-        <span class="plan-price-unit">〜</span>
-      </div>
-      <p class="plan-price-note">税込 / 一括払い</p>
-      <hr class="plan-divider">
-      <p class="plan-desc">お店やサービスの雰囲気をしっかり伝えたい方に。コンセプトから実装まで、一貫してお任せいただけます。</p>
-      <ul class="plan-features">
-        <li>ページ数：4〜8ページ</li>
-        <li>デザインコンセプト提案</li>
-        <li>レスポンシブ対応</li>
-        <li>お問い合わせフォーム</li>
-        <li>納期目安：4〜6週間</li>
-        <li>修正回数：3回</li>
-        <li>公開後1ヶ月サポート</li>
-      </ul>
-      <a href="contact.html" class="plan-cta plan-cta-white">
-        相談する
-        <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M1 9L9 1M9 1H3M9 1V7" stroke="currentColor" stroke-width="1.3"/></svg>
-      </a>
-    </div>
-
-    <!-- プレミアム -->
-    <div class="plan-card">
-      <p class="plan-label">Premium</p>
-      <h2 class="plan-name">フルオーダー</h2>
-      <div class="plan-price">
-        <span class="plan-price-num">¥330,000</span>
-        <span class="plan-price-unit">〜</span>
-      </div>
-      <p class="plan-price-note">税込 / 要相談</p>
-      <hr class="plan-divider">
-      <p class="plan-desc">ECサイトや大規模サイト、ブランドを一から作りたい方に。ご要望に合わせてフルオーダーで対応します。</p>
-      <ul class="plan-features">
-        <li>ページ数：9ページ〜</li>
-        <li>ブランディング込み</li>
-        <li>EC機能対応可</li>
-        <li>CMS実装対応</li>
-        <li>納期目安：8週間〜</li>
-        <li>修正回数：無制限</li>
-        <li>公開後3ヶ月サポート</li>
-      </ul>
-      <a href="contact.html" class="plan-cta plan-cta-filled">
-        相談する
-        <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M1 9L9 1M9 1H3M9 1V7" stroke="currentColor" stroke-width="1.3"/></svg>
-      </a>
-    </div>
-
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <p class="page-hero-kicker">Pricing</p>
+    <h1 class="page-hero-heading">わかりやすく、<br>誠実な料金設計。</h1>
+    <p class="page-hero-desc">ご依頼内容に合わせたプランをご用意しています。全てのプランに無料の事前相談が含まれます。</p>
   </div>
-
-  <!-- OPTIONS -->
-  <div class="options-section">
-    <p class="options-label">Add-on Options</p>
-    <h2 class="options-heading">オプション料金</h2>
-    <p class="options-sub">必要な機能だけ追加できます。「これって頼めますか？」もお気軽にどうぞ。</p>
-    <div class="options-grid">
-      <div class="option-item">
-        <div>
-          <div class="option-name">追加ページ制作</div>
-          <div class="option-desc">1ページごとに追加</div>
-        </div>
-        <span class="option-price">¥22,000〜</span>
+</div>
+<section style="padding:clamp(4rem,8vw,7rem) clamp(1.5rem,6vw,5rem);">
+  <div class="sec-wrap">
+    <div class="pricing-plans fade">
+      <div class="pricing-plan">
+        <div class="plan-name">Light</div>
+        <div class="plan-price">¥88,000</div>
+        <div class="plan-price-note">〜 税込</div>
+        <ul class="plan-features">
+          <li>5ページ以内のWebサイト</li>
+          <li>レスポンシブ対応</li>
+          <li>お問い合わせフォーム</li>
+          <li>納品後1ヶ月サポート</li>
+          <li>Google アナリティクス設定</li>
+        </ul>
+        <a href="contact.html" class="plan-cta">相談する <svg width="10" height="8" viewBox="0 0 14 10" fill="none"><path d="M0 5H12M8 1L12 5L8 9" stroke="currentColor" stroke-width="1.3"/></svg></a>
       </div>
-      <div class="option-item">
-        <div>
-          <div class="option-name">WordPress実装</div>
-          <div class="option-desc">更新しやすいCMSへ</div>
-        </div>
-        <span class="option-price">¥33,000〜</span>
+      <div class="pricing-plan">
+        <div class="plan-name">Standard</div>
+        <div class="plan-price">¥198,000</div>
+        <div class="plan-price-note">〜 税込</div>
+        <ul class="plan-features">
+          <li>10ページ以内のWebサイト</li>
+          <li>レスポンシブ対応</li>
+          <li>CMS導入（WordPress等）</li>
+          <li>SEO基本設定</li>
+          <li>Google アナリティクス設定</li>
+          <li>納品後3ヶ月サポート</li>
+        </ul>
+        <a href="contact.html" class="plan-cta">相談する <svg width="10" height="8" viewBox="0 0 14 10" fill="none"><path d="M0 5H12M8 1L12 5L8 9" stroke="currentColor" stroke-width="1.3"/></svg></a>
       </div>
-      <div class="option-item">
-        <div>
-          <div class="option-name">ロゴデザイン</div>
-          <div class="option-desc">ブランドアイデンティティ</div>
-        </div>
-        <span class="option-price">¥55,000〜</span>
+      <div class="pricing-plan">
+        <div class="plan-name">Premium</div>
+        <div class="plan-price">¥330,000</div>
+        <div class="plan-price-note">〜 税込</div>
+        <ul class="plan-features">
+          <li>ページ数制限なし</li>
+          <li>ブランディングサポート</li>
+          <li>撮影・コピーライティング協働</li>
+          <li>CMS導入・カスタマイズ</li>
+          <li>SEO詳細設定</li>
+          <li>納品後6ヶ月サポート</li>
+        </ul>
+        <a href="contact.html" class="plan-cta">相談する <svg width="10" height="8" viewBox="0 0 14 10" fill="none"><path d="M0 5H12M8 1L12 5L8 9" stroke="currentColor" stroke-width="1.3"/></svg></a>
       </div>
-      <div class="option-item">
-        <div>
-          <div class="option-name">SEO対策</div>
-          <div class="option-desc">メタタグ・構造化データ</div>
-        </div>
-        <span class="option-price">¥22,000〜</span>
-      </div>
-      <div class="option-item">
-        <div>
-          <div class="option-name">コピーライティング</div>
-          <div class="option-desc">ことばからデザインへ</div>
-        </div>
-        <span class="option-price">¥33,000〜</span>
-      </div>
-      <div class="option-item">
-        <div>
-          <div class="option-name">保守・運用サポート</div>
-          <div class="option-desc">月額サポート契約</div>
-        </div>
-        <span class="option-price">¥11,000〜/月</span>
-      </div>
+    </div>
+    <div class="fade" style="margin-top:1.5rem;padding:1.5rem 2rem;background:var(--off);border-left:3px solid var(--ink-lt);font-size:.8rem;color:var(--ink-mid);line-height:1.9;">
+      ※ 上記は目安の料金です。ページ数・機能・デザインの複雑さによって変動します。まずはお気軽にご相談ください。<br>
+      ※ 別途、ドメイン・サーバー費用が必要な場合があります。<br>
+      ※ お支払いは着手金50%・納品時50%となります。
+    </div>
+    <div class="fade" style="margin-top:4rem;">
+      <p class="sec-kicker">オプション</p>
+      <table style="width:100%;border-collapse:collapse;margin-top:1.5rem;">
+        <tbody>
+          <tr style="border-bottom:1px solid var(--rule);">
+            <th style="text-align:left;padding:1rem 1.5rem;font-size:.75rem;font-weight:400;color:var(--ink-lt);width:200px;background:var(--off);">ロゴデザイン</th>
+            <td style="padding:1rem 1.5rem;font-size:.82rem;color:var(--ink-mid);">¥33,000〜</td>
+            <td style="padding:1rem 1.5rem;font-size:.78rem;color:var(--ink-lt);">シンプルなロゴ制作。ブランドカラー・フォント選定含む。</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--rule);">
+            <th style="text-align:left;padding:1rem 1.5rem;font-size:.75rem;font-weight:400;color:var(--ink-lt);background:var(--off);">保守・更新サポート</th>
+            <td style="padding:1rem 1.5rem;font-size:.82rem;color:var(--ink-mid);">¥5,500〜/月</td>
+            <td style="padding:1rem 1.5rem;font-size:.78rem;color:var(--ink-lt);">月次の更新・不具合対応・セキュリティ管理。</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--rule);">
+            <th style="text-align:left;padding:1rem 1.5rem;font-size:.75rem;font-weight:400;color:var(--ink-lt);background:var(--off);">追加ページ制作</th>
+            <td style="padding:1rem 1.5rem;font-size:.82rem;color:var(--ink-mid);">¥22,000〜/ページ</td>
+            <td style="padding:1rem 1.5rem;font-size:.78rem;color:var(--ink-lt);">既存サイトへのページ追加。</td>
+          </tr>
+          <tr>
+            <th style="text-align:left;padding:1rem 1.5rem;font-size:.75rem;font-weight:400;color:var(--ink-lt);background:var(--off);">印刷物デザイン</th>
+            <td style="padding:1rem 1.5rem;font-size:.82rem;color:var(--ink-mid);">¥22,000〜</td>
+            <td style="padding:1rem 1.5rem;font-size:.78rem;color:var(--ink-lt);">名刺・チラシ・パンフレット等。</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
-
-  <!-- FAQ -->
-  <div class="faq-section">
-    <p class="faq-label">FAQ</p>
-    <h2 class="faq-heading">よくあるご質問</h2>
-    <div class="faq-list">
-      <div class="faq-item">
-        <p class="faq-q">分割払いはできますか？</p>
-        <p class="faq-a">はい、対応しています。基本は着手金50%・納品時50%ですが、ご事情に応じて柔軟に相談できます。まずは気軽にお声がけください。</p>
-      </div>
-      <div class="faq-item">
-        <p class="faq-q">制作期間はどのくらいかかりますか？</p>
-        <p class="faq-a">プランによって異なりますが、シンプルサイトで2〜3週間、ブランドサイトで4〜6週間が目安です。お急ぎの場合はご相談ください。</p>
-      </div>
-      <div class="faq-item">
-        <p class="faq-q">修正はどこまで対応してもらえますか？</p>
-        <p class="faq-a">細かい修正はもちろん対応します。デザインの方向性を大きく変える場合は、別途ご相談させてください。「これくらいなら言っていいのかな」という遠慮は不要です。</p>
-      </div>
-      <div class="faq-item">
-        <p class="faq-q">サーバーやドメインの取得も相談できますか？</p>
-        <p class="faq-a">もちろんです。どのサービスが合っているか、費用感も含めて一緒に選びます。お客様のご負担になる部分は事前に明確にお伝えします。</p>
-      </div>
-      <div class="faq-item">
-        <p class="faq-q">既存サイトのリニューアルも対応していますか？</p>
-        <p class="faq-a">はい、リニューアルのご依頼も歓迎しています。現状の課題や目的をヒアリングしながら最適なプランをご提案します。</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- CTA -->
-  <div class="cta-banner">
-    <p class="cta-banner-label">Let's talk</p>
-    <h2 class="cta-banner-heading">言葉を交わす所から。</h2>
-    <p class="cta-banner-sub">お見積もりは無料です。お気軽にご連絡下さい。</p>
-    <a href="contact.html" class="cta-banner-btn">
-      お問い合わせはこちら
-      <svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M0 5H10M6 1l4 4-4 4" stroke="currentColor" stroke-width="1.3"/></svg>
-    </a>
-  </div>
-
-</main>
+</section>
 
 <footer>
   <div class="footer-top">
     <div>
-      <div class="footer-brand-logo">
-        <span class="footer-rest">tomo design link</span>
-      </div>
-      <div class="footer-follow-label">FOLLOW</div>
-      <div class="footer-socials">
-        <a href="#" class="social-icon" aria-label="Instagram">
-          <svg viewBox="0 0 15 15" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.2"><rect x="2" y="2" width="11" height="11" rx="3"/><circle cx="7.5" cy="7.5" r="2.5"/><circle cx="11" cy="4" r="0.8" fill="rgba(255,255,255,0.6)" stroke="none"/></svg>
-        </a>
-        <a href="mailto:tomodesignlink@gmail.com" class="social-icon" aria-label="メール">
-          <svg viewBox="0 0 15 12" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.2"><rect x="1" y="1" width="13" height="10" rx="1.5"/><path d="M1 3l6.5 4L14 3"/></svg>
-        </a>
-      </div>
+      <div class="footer-brand-logo">tomo design link.</div>
+      <p class="footer-tagline">静けさと暖かさを大切にした、信頼に繋がるウェブサイトを制作します。</p>
     </div>
     <div>
       <div class="footer-col-label">Navigate</div>
@@ -900,22 +300,22 @@ footer {
       <div class="footer-col-label">Studio</div>
       <div class="footer-studio-info">
         <div class="studio-line">
-          <svg viewBox="0 0 14 14" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.2"><circle cx="7" cy="6" r="3"/><path d="M7 1C4 1 1 3.5 1 6.5 1 10 7 14 7 14s6-4 6-7.5C13 3.5 10 1 7 1z"/></svg>
+          <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="7" cy="6" r="3"/><path d="M7 1C4 1 1 3.5 1 6.5 1 10 7 14 7 14s6-4 6-7.5C13 3.5 10 1 7 1z"/></svg>
           愛知県　一宮市
         </div>
         <div class="studio-line">
-          <svg viewBox="0 0 14 12" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.2"><rect x="1" y="1" width="12" height="10" rx="1.5"/><path d="M1 3l6 4 6-4"/></svg>
+          <svg viewBox="0 0 14 12" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="1" y="1" width="12" height="10" rx="1.5"/><path d="M1 3l6 4 6-4"/></svg>
           tomodesignlink@gmail.com
         </div>
         <div class="studio-line">
-          <svg viewBox="0 0 14 14" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.2"><circle cx="7" cy="7" r="6"/><path d="M7 4v3l2 2"/></svg>
+          <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="7" cy="7" r="6"/><path d="M7 4v3l2 2"/></svg>
           Mon — Fri / 09:00 — 18:00
         </div>
       </div>
     </div>
   </div>
   <div class="footer-bottom">
-    <span class="footer-copy">Designed &amp; coded with care by y &nbsp;·&nbsp; © 2026 tomo design link. All rights reserved.</span>
+    <span class="footer-copy">© 2026 tomo design link. All rights reserved.</span>
     <div class="footer-bottom-links">
       <a href="privacy.html">Privacy</a>
       <a href="tokusho.html">特定商取引法</a>
@@ -923,6 +323,23 @@ footer {
     </div>
   </div>
 </footer>
-
+<script>
+const nav=document.getElementById('main-nav');
+nav.classList.add('solid');
+const page=document.body.dataset.page;
+if(page){const a=document.querySelector('.nav-links a[data-page="'+page+'"]');if(a)a.classList.add('current');}
+const burger=document.getElementById('nav-burger');
+const drawer=document.getElementById('nav-drawer');
+const scrim=document.getElementById('nav-drawer-scrim');
+function closeDrawer(){burger.setAttribute('aria-expanded','false');drawer.classList.remove('is-open');drawer.setAttribute('aria-hidden','true');scrim.classList.remove('is-visible');scrim.hidden=true;document.body.style.overflow='';}
+function openDrawer(){burger.setAttribute('aria-expanded','true');drawer.classList.add('is-open');drawer.setAttribute('aria-hidden','false');scrim.hidden=false;requestAnimationFrame(()=>scrim.classList.add('is-visible'));document.body.style.overflow='hidden';}
+burger.addEventListener('click',()=>{burger.getAttribute('aria-expanded')==='true'?closeDrawer():openDrawer();});
+scrim.addEventListener('click',closeDrawer);
+drawer.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeDrawer));
+document.addEventListener('keydown',(e)=>{if(e.key==='Escape')closeDrawer();});
+window.matchMedia('(min-width:901px)').addEventListener('change',(e)=>{if(e.matches)closeDrawer();});
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in');});},{threshold:.1});
+document.querySelectorAll('.fade').forEach(el=>obs.observe(el));
+</script>
 </body>
 </html>
