@@ -54,7 +54,7 @@ body{background:var(--white);color:var(--ink);font-family:'DM Sans',sans-serif;f
 .sec-kicker::before{content:'';display:block;width:30px;height:1px;background:var(--ink-lt);}
 .sec-heading{font-family:'Noto Serif JP',serif;font-size:clamp(1.5rem,3.5vw,2.2rem);font-weight:200;color:var(--ink);letter-spacing:.05em;margin-bottom:1.5rem;word-break:keep-all;overflow-wrap:anywhere;}
 .sec-body{font-size:.88rem;color:var(--ink-mid);line-height:2;margin-bottom:1.5rem;}
-.fade{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease;}
+.fade{opacity:0;transform:translateY(24px);transition:opacity 1.2s cubic-bezier(.25,.1,.25,1),transform 1.2s cubic-bezier(.25,.1,.25,1);}
 .fade.in{opacity:1;transform:none;}
 .legal-section{padding:clamp(3rem,8vw,6rem) clamp(1.5rem,6vw,5rem);}
 .legal-table{width:100%;border-collapse:collapse;margin-top:1.5rem;}
@@ -235,26 +235,34 @@ html,body{overflow-x:hidden;max-width:100%;}
     </div>
     <div class="fade" style="margin-top:4rem;padding:2.5rem;background:var(--off);border:1px solid var(--rule);">
       <p class="sec-kicker">ご依頼の流れ</p>
-      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-left:1px solid var(--rule);margin-top:1.5rem;">
-        <div style="padding:1.5rem 1.5rem;border-right:1px solid var(--rule);">
-          <div style="font-family:'Cormorant Garamond',serif;font-size:1.6rem;color:var(--ink-lt);margin-bottom:.8rem;">01</div>
-          <div style="font-size:.82rem;font-weight:500;margin-bottom:.5rem;">ヒアリング</div>
-          <p style="font-size:.75rem;color:var(--ink-mid);line-height:1.8;">まずはお話を聞かせてください。目的・ターゲット・ご要望をお聞きします。</p>
+      <div style="margin-top:1.5rem;border-top:1px solid var(--rule);">
+        <div style="display:flex;gap:2rem;align-items:baseline;padding:1.5rem 0;border-bottom:1px solid var(--rule);">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:300;color:var(--ink-lt);flex-shrink:0;width:2rem;">01</div>
+          <div>
+            <div style="font-size:.82rem;font-weight:500;margin-bottom:.4rem;color:var(--ink);">ヒアリング</div>
+            <p style="font-size:.75rem;color:var(--ink-mid);line-height:1.8;">まずはお話を聞かせてください。目的・ターゲット・ご要望をお聞きします。</p>
+          </div>
         </div>
-        <div style="padding:1.5rem 1.5rem;border-right:1px solid var(--rule);">
-          <div style="font-family:'Cormorant Garamond',serif;font-size:1.6rem;color:var(--ink-lt);margin-bottom:.8rem;">02</div>
-          <div style="font-size:.82rem;font-weight:500;margin-bottom:.5rem;">お見積り</div>
-          <p style="font-size:.75rem;color:var(--ink-mid);line-height:1.8;">ご要望を元にお見積りをご提示します。ご納得いただいてから進めます。</p>
+        <div style="display:flex;gap:2rem;align-items:baseline;padding:1.5rem 0;border-bottom:1px solid var(--rule);">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:300;color:var(--ink-lt);flex-shrink:0;width:2rem;">02</div>
+          <div>
+            <div style="font-size:.82rem;font-weight:500;margin-bottom:.4rem;color:var(--ink);">お見積り</div>
+            <p style="font-size:.75rem;color:var(--ink-mid);line-height:1.8;">ご要望を元にお見積りをご提示します。ご納得いただいてから進めます。</p>
+          </div>
         </div>
-        <div style="padding:1.5rem 1.5rem;border-right:1px solid var(--rule);">
-          <div style="font-family:'Cormorant Garamond',serif;font-size:1.6rem;color:var(--ink-lt);margin-bottom:.8rem;">03</div>
-          <div style="font-size:.82rem;font-weight:500;margin-bottom:.5rem;">制作・確認</div>
-          <p style="font-size:.75rem;color:var(--ink-mid);line-height:1.8;">デザイン・実装を進め、都度ご確認いただきながら丁寧に仕上げます。</p>
+        <div style="display:flex;gap:2rem;align-items:baseline;padding:1.5rem 0;border-bottom:1px solid var(--rule);">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:300;color:var(--ink-lt);flex-shrink:0;width:2rem;">03</div>
+          <div>
+            <div style="font-size:.82rem;font-weight:500;margin-bottom:.4rem;color:var(--ink);">制作・確認</div>
+            <p style="font-size:.75rem;color:var(--ink-mid);line-height:1.8;">デザイン・実装を進め、都度ご確認いただきながら丁寧に仕上げます。</p>
+          </div>
         </div>
-        <div style="padding:1.5rem 1.5rem;border-right:1px solid var(--rule);">
-          <div style="font-family:'Cormorant Garamond',serif;font-size:1.6rem;color:var(--ink-lt);margin-bottom:.8rem;">04</div>
-          <div style="font-size:.82rem;font-weight:500;margin-bottom:.5rem;">納品・サポート</div>
-          <p style="font-size:.75rem;color:var(--ink-mid);line-height:1.8;">公開後も安心。運用のご相談やアフターサポートも対応します。</p>
+        <div style="display:flex;gap:2rem;align-items:baseline;padding:1.5rem 0;border-bottom:1px solid var(--rule);">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:300;color:var(--ink-lt);flex-shrink:0;width:2rem;">04</div>
+          <div>
+            <div style="font-size:.82rem;font-weight:500;margin-bottom:.4rem;color:var(--ink);">納品・サポート</div>
+            <p style="font-size:.75rem;color:var(--ink-mid);line-height:1.8;">公開後も安心。運用のご相談やアフターサポートも対応します。</p>
+          </div>
         </div>
       </div>
     </div>

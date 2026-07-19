@@ -54,7 +54,7 @@ body{background:var(--white);color:var(--ink);font-family:'DM Sans',sans-serif;f
 .sec-kicker::before{content:'';display:block;width:30px;height:1px;background:var(--ink-lt);}
 .sec-heading{font-family:'Noto Serif JP',serif;font-size:clamp(1.5rem,3.5vw,2.2rem);font-weight:200;color:var(--ink);letter-spacing:.05em;margin-bottom:1.5rem;word-break:keep-all;overflow-wrap:anywhere;}
 .sec-body{font-size:.88rem;color:var(--ink-mid);line-height:2;margin-bottom:1.5rem;}
-.fade{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease;}
+.fade{opacity:0;transform:translateY(24px);transition:opacity 1.2s cubic-bezier(.25,.1,.25,1),transform 1.2s cubic-bezier(.25,.1,.25,1);}
 .fade.in{opacity:1;transform:none;}
 .legal-section{padding:clamp(3rem,8vw,6rem) clamp(1.5rem,6vw,5rem);}
 .legal-table{width:100%;border-collapse:collapse;margin-top:1.5rem;}
@@ -193,7 +193,7 @@ html,body{overflow-x:hidden;max-width:100%;}
 <div class="nav-drawer-scrim" id="nav-drawer-scrim" hidden></div>
 
 <style>
-.proj-hero-img{width:100%;display:block;aspect-ratio:16/9;object-fit:cover;object-position:center top;border-radius:20px;}
+.proj-hero-img{width:100%;max-width:720px;display:block;aspect-ratio:16/9;object-fit:cover;object-position:center top;border-radius:20px;margin:0 auto;}
 .proj-meta-row{display:flex;gap:0;border-top:1px solid var(--rule);border-left:1px solid var(--rule);border-radius:16px;overflow:hidden;margin-top:1.5rem;}
 .proj-meta-item{flex:1;padding:1.4rem 1.8rem;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);}
 .proj-meta-label{font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-lt);margin-bottom:.5rem;}
@@ -221,27 +221,33 @@ html,body{overflow-x:hidden;max-width:100%;}
 </div>
 
 <!-- 大判ビジュアル -->
-<div class="fade">
-  <img src="arcaluce.png" alt="介護美容 ARCA LUCE ウェブサイト" class="proj-hero-img">
+<div style="padding:clamp(3rem,6vw,5rem) clamp(1.5rem,6vw,5rem) 0;">
+  <div class="sec-wrap fade">
+    <img src="arcaluce.png" alt="介護美容 ARCA LUCE ウェブサイト" class="proj-hero-img">
+  </div>
 </div>
 
 <!-- メタ情報 -->
-<div class="proj-meta-row fade">
-  <div class="proj-meta-item">
-    <div class="proj-meta-label">Category</div>
-    <div class="proj-meta-val">訪問美容・介護美容サロン</div>
-  </div>
-  <div class="proj-meta-item">
-    <div class="proj-meta-label">Scope</div>
-    <div class="proj-meta-val">Webデザイン・コーディング</div>
-  </div>
-  <div class="proj-meta-item">
-    <div class="proj-meta-label">Year</div>
-    <div class="proj-meta-val">2026</div>
-  </div>
-  <div class="proj-meta-item">
-    <div class="proj-meta-label">URL</div>
-    <div class="proj-meta-val"><a href="https://arcaluce.pages.dev/" target="_blank" style="color:var(--ink);text-decoration:none;border-bottom:1px solid var(--rule);">arcaluce.pages.dev ↗</a></div>
+<div style="padding:1.5rem clamp(1.5rem,6vw,5rem) 0;">
+  <div class="sec-wrap">
+    <div class="proj-meta-row fade">
+      <div class="proj-meta-item">
+        <div class="proj-meta-label">Category</div>
+        <div class="proj-meta-val">訪問美容・介護美容サロン</div>
+      </div>
+      <div class="proj-meta-item">
+        <div class="proj-meta-label">Scope</div>
+        <div class="proj-meta-val">Webデザイン・コーディング</div>
+      </div>
+      <div class="proj-meta-item">
+        <div class="proj-meta-label">Year</div>
+        <div class="proj-meta-val">2026</div>
+      </div>
+      <div class="proj-meta-item">
+        <div class="proj-meta-label">URL</div>
+        <div class="proj-meta-val"><a href="https://arcaluce.pages.dev/" target="_blank" style="color:var(--ink);text-decoration:none;border-bottom:1px solid var(--rule);">arcaluce.pages.dev ↗</a></div>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -318,7 +324,7 @@ html,body{overflow-x:hidden;max-width:100%;}
   <div class="footer-top">
     <div>
       <div class="footer-brand-logo">tomo design link.</div>
-      <p class="footer-tagline">静けさと暖かさを大切にした、信頼に繋がるウェブサイトを制作します。</p>
+      <p class="footer-tagline">静けさと暖かさを大切にした、信頼につながるウェブサイトを制作します。</p>
     </div>
     <div>
       <div class="footer-col-label">Navigate</div>
