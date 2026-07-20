@@ -54,7 +54,7 @@ body{background:var(--white);color:var(--ink);font-family:'DM Sans',sans-serif;f
 .sec-kicker::before{content:'';display:block;width:30px;height:1px;background:var(--ink-lt);}
 .sec-heading{font-family:'Noto Serif JP',serif;font-size:clamp(1.5rem,3.5vw,2.2rem);font-weight:200;color:var(--ink);letter-spacing:.05em;margin-bottom:1.5rem;word-break:keep-all;overflow-wrap:anywhere;}
 .sec-body{font-size:.88rem;color:var(--ink-mid);line-height:2;margin-bottom:1.5rem;}
-.fade{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease;}
+.fade{opacity:0;transform:translateY(24px);transition:opacity 1.2s cubic-bezier(.25,.1,.25,1),transform 1.2s cubic-bezier(.25,.1,.25,1);}
 .fade.in{opacity:1;transform:none;}
 .legal-section{padding:clamp(3rem,8vw,6rem) clamp(1.5rem,6vw,5rem);}
 .legal-table{width:100%;border-collapse:collapse;margin-top:1.5rem;}
@@ -153,6 +153,10 @@ html,body{overflow-x:hidden;max-width:100%;}
 .proj-showcase{border-radius:20px!important;overflow:hidden!important;}
 
 </style>
+<meta property="og:image" content="https://tomodesignlink.pages.dev/hero-ogp.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://tomodesignlink.pages.dev/hero-ogp.jpg">
 </head>
 <body data-page="contact">
 
@@ -204,24 +208,31 @@ html,body{overflow-x:hidden;max-width:100%;}
     <div style="display:grid;grid-template-columns:1fr 360px;gap:clamp(3rem,6vw,5rem);align-items:start;" class="fade">
       <div>
         <p class="sec-kicker">お問い合わせフォーム</p>
-        <div class="form-wrap">
+
+        <!-- 送信完了メッセージ（初期非表示） -->
+        <div id="form-success" style="display:none;padding:2rem;background:var(--off);border:1px solid var(--rule);border-radius:12px;margin-bottom:2rem;">
+          <p style="font-family:'Noto Serif JP',serif;font-size:1.1rem;font-weight:200;color:var(--ink);margin-bottom:.8rem;">送信が完了しました。</p>
+          <p style="font-size:.85rem;color:var(--ink-mid);line-height:1.9;">お問い合わせいただきありがとうございます。<br>通常2営業日以内にご返答いたします。</p>
+        </div>
+
+        <form id="contact-form" action="https://formspree.io/f/xykqkkky" method="POST" class="form-wrap">
           <div class="form-row">
             <div class="form-group">
-              <label class="form-label">お名前<span class="form-req">必須</span></label>
-              <input type="text" class="form-input" placeholder="山田 太郎">
+              <label class="form-label" for="f-name">お名前<span class="form-req">必須</span></label>
+              <input type="text" id="f-name" name="お名前" class="form-input" placeholder="山田 太郎" required>
             </div>
             <div class="form-group">
-              <label class="form-label">会社名・屋号</label>
-              <input type="text" class="form-input" placeholder="株式会社〇〇">
+              <label class="form-label" for="f-company">会社名・屋号</label>
+              <input type="text" id="f-company" name="会社名・屋号" class="form-input" placeholder="株式会社〇〇">
             </div>
           </div>
           <div class="form-group">
-            <label class="form-label">メールアドレス<span class="form-req">必須</span></label>
-            <input type="email" class="form-input" placeholder="email@example.com">
+            <label class="form-label" for="f-email">メールアドレス<span class="form-req">必須</span></label>
+            <input type="email" id="f-email" name="メールアドレス" class="form-input" placeholder="email@example.com" required>
           </div>
           <div class="form-group">
-            <label class="form-label">ご相談内容</label>
-            <select class="form-select">
+            <label class="form-label" for="f-type">ご相談内容</label>
+            <select id="f-type" name="ご相談内容" class="form-select">
               <option value="">選択してください</option>
               <option>Webサイト制作のご依頼</option>
               <option>ECサイト構築のご依頼</option>
@@ -232,17 +243,17 @@ html,body{overflow-x:hidden;max-width:100%;}
             </select>
           </div>
           <div class="form-group">
-            <label class="form-label">メッセージ<span class="form-req">必須</span></label>
-            <textarea class="form-textarea" placeholder="ご依頼内容やご質問をお気軽にご記入ください。"></textarea>
+            <label class="form-label" for="f-message">メッセージ<span class="form-req">必須</span></label>
+            <textarea id="f-message" name="メッセージ" class="form-textarea" placeholder="ご依頼内容やご質問をお気軽にご記入ください。" required></textarea>
           </div>
           <p class="form-agree">送信前に<a href="privacy.html">プライバシーポリシー</a>および<a href="terms.html">利用規約</a>をご確認ください。</p>
           <div>
-            <button class="form-submit">
+            <button type="submit" class="form-submit" id="form-btn">
               送信する
               <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M1 10L10 1M10 1H3M10 1V8" stroke="currentColor" stroke-width="1.3"/></svg>
             </button>
           </div>
-        </div>
+        </form>
       </div>
       <div style="display:flex;flex-direction:column;gap:0;border:1px solid var(--rule);">
         <div style="padding:2rem;border-bottom:1px solid var(--rule);">
@@ -328,6 +339,43 @@ document.addEventListener('keydown',(e)=>{if(e.key==='Escape')closeDrawer();});
 window.matchMedia('(min-width:901px)').addEventListener('change',(e)=>{if(e.matches)closeDrawer();});
 const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in');});},{threshold:.1});
 document.querySelectorAll('.fade').forEach(el=>obs.observe(el));
+
+/* Formspree 非同期送信 */
+const form = document.getElementById('contact-form');
+const btn  = document.getElementById('form-btn');
+const successBox = document.getElementById('form-success');
+if (form) {
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    btn.textContent = '送信中…';
+    btn.disabled = true;
+    btn.style.opacity = '.6';
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (res.ok) {
+        form.style.display = 'none';
+        successBox.style.display = 'block';
+        successBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      } else {
+        const data = await res.json();
+        const msg = data.errors ? data.errors.map(e => e.message).join(', ') : '送信に失敗しました。';
+        alert(msg);
+        btn.textContent = '送信する';
+        btn.disabled = false;
+        btn.style.opacity = '1';
+      }
+    } catch {
+      alert('ネットワークエラーが発生しました。時間をおいて再度お試しください。');
+      btn.textContent = '送信する';
+      btn.disabled = false;
+      btn.style.opacity = '1';
+    }
+  });
+}
 </script>
 </body>
 </html>
