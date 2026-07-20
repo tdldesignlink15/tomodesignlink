@@ -216,7 +216,6 @@ html,body{overflow-x:hidden;max-width:100%;}
         </div>
 
         <form id="contact-form" action="https://formspree.io/f/xykqkkky" method="POST" class="form-wrap">
-          <input type="hidden" name="_next" value="https://tomodesignlink.pages.dev/thankyou.html">
           <input type="hidden" name="_subject" value="【tomo design link】お問い合わせがありました">
           <div class="form-row">
             <div class="form-group">
@@ -341,6 +340,40 @@ document.addEventListener('keydown',(e)=>{if(e.key==='Escape')closeDrawer();});
 window.matchMedia('(min-width:901px)').addEventListener('change',(e)=>{if(e.matches)closeDrawer();});
 const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in');});},{threshold:.1});
 document.querySelectorAll('.fade').forEach(el=>obs.observe(el));
+
+/* Formspree 非同期送信 → thankyou.html へリダイレクト */
+const form = document.getElementById('contact-form');
+const btn  = document.getElementById('form-btn');
+if (form) {
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    btn.textContent = '送信中…';
+    btn.disabled = true;
+    btn.style.opacity = '.6';
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (res.ok) {
+        window.location.href = 'thankyou.html';
+      } else {
+        const data = await res.json();
+        const msg = data.errors ? data.errors.map(e => e.message).join(', ') : '送信に失敗しました。時間をおいて再度お試しください。';
+        alert(msg);
+        btn.textContent = '送信する';
+        btn.disabled = false;
+        btn.style.opacity = '1';
+      }
+    } catch {
+      alert('ネットワークエラーが発生しました。時間をおいて再度お試しください。');
+      btn.textContent = '送信する';
+      btn.disabled = false;
+      btn.style.opacity = '1';
+    }
+  });
+}
 </script>
 </body>
 </html>
