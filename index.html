@@ -51,6 +51,11 @@ body{background:var(--white);color:var(--ink);font-family:'DM Sans',sans-serif;f
 .nav-burger[aria-expanded="true"] .nav-burger__line:nth-child(3){transform:translateY(-6px) rotate(-45deg);}
 .nav-drawer{position:fixed;inset:0;background:var(--off);z-index:305;padding:5rem 2.5rem 3rem;display:flex;flex-direction:column;transform:translateX(100%);transition:transform .5s cubic-bezier(.22,1,.36,1);}
 .nav-drawer.is-open{transform:translateX(0);}
+.nav-drawer__close{position:absolute;top:1.2rem;right:1.2rem;width:44px;height:44px;background:transparent;border:1px solid var(--rule);border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:opacity .2s;}
+.nav-drawer__close:hover{opacity:.5;}
+.nav-drawer__close span{position:absolute;width:18px;height:1px;background:var(--ink);display:block;}
+.nav-drawer__close span:nth-child(1){transform:rotate(45deg);}
+.nav-drawer__close span:nth-child(2){transform:rotate(-45deg);}
 .nav-drawer__links{list-style:none;display:flex;flex-direction:column;border-top:1px solid var(--rule);}
 .nav-drawer__links li{border-bottom:1px solid var(--rule);}
 .nav-drawer__links a{display:block;padding:1.2rem 0;font-family:'Noto Serif JP',serif;font-size:1.3rem;font-weight:200;color:var(--ink);text-decoration:none;transition:opacity .2s;}
@@ -84,27 +89,19 @@ body{background:var(--white);color:var(--ink);font-family:'DM Sans',sans-serif;f
 .sec-kicker::before{content:'';display:block;width:30px;height:1px;background:var(--ink-lt);}
 
 /* ══ ANIMATION SYSTEM ══ */
-/* 下から */
-.reveal{opacity:0;transform:translateY(40px);transition:opacity 3.4s cubic-bezier(.16,1,.3,1),transform 3.4s cubic-bezier(.16,1,.3,1);}
+.reveal{opacity:0;transform:translateY(40px);transition:opacity 3.8s cubic-bezier(.16,1,.3,1),transform 3.8s cubic-bezier(.16,1,.3,1);}
 .reveal.in{opacity:1;transform:none;}
-/* 左から */
-.reveal-left{opacity:0;transform:translateX(-36px);transition:opacity 3.4s cubic-bezier(.16,1,.3,1),transform 3.4s  cubic-bezier(.16,1,.3,1);}
+.reveal-left{opacity:0;transform:translateX(-36px);transition:opacity 3.8s cubic-bezier(.16,1,.3,1),transform 3.8s cubic-bezier(.16,1,.3,1);}
 .reveal-left.in{opacity:1;transform:none;}
-/* 右から */
-.reveal-right{opacity:0;transform:translateX(36px);transition:opacity 3.4s cubic-bezier(.16,1,.3,1),transform 3.4s cubic-bezier(.16,1,.3,1);}
+.reveal-right{opacity:0;transform:translateX(36px);transition:opacity 3.8s cubic-bezier(.16,1,.3,1),transform 3.8s cubic-bezier(.16,1,.3,1);}
 .reveal-right.in{opacity:1;transform:none;}
-/* スケール */
-.reveal-scale{opacity:0;transform:scale(.96);transition:opacity 3.4s cubic-bezier(.16,1,.3,1),transform 3.4s  cubic-bezier(.16,1,.3,1);}
+.reveal-scale{opacity:0;transform:scale(.96);transition:opacity 3.8s cubic-bezier(.16,1,.3,1),transform 3.8s cubic-bezier(.16,1,.3,1);}
 .reveal-scale.in{opacity:1;transform:scale(1);}
-/* clip reveal（タイトル用） */
-.reveal-clip{clip-path:inset(0 100% 0 0);transition:clip-path 3.4s cubic-bezier(.16,1,.3,1);}
+.reveal-clip{clip-path:inset(0 100% 0 0);transition:clip-path 3.8s cubic-bezier(.16,1,.3,1);}
 .reveal-clip.in{clip-path:inset(0 0% 0 0);}
-/* 遅延 */
 .d1{transition-delay:.1s;} .d2{transition-delay:.22s;} .d3{transition-delay:.36s;} .d4{transition-delay:.5s;}
 .d5{transition-delay:.65s;} .d6{transition-delay:.8s;}
-
-/* 後方互換 */
-.fade{opacity:0;transform:translateY(24px);transition:opacity 1.2s cubic-bezier(.25,.1,.25,1),transform 1.2s cubic-bezier(.25,.1,.25,1);}
+.fade{opacity:0;transform:translateY(24px);transition:opacity 3.8s cubic-bezier(.16,1,.3,1),transform 3.8s cubic-bezier(.16,1,.3,1);}
 .fade.in{opacity:1;transform:none;}
 
 /* ══ THOUGHTS ══ */
@@ -261,6 +258,9 @@ html,body{overflow-x:hidden;max-width:100%;}
   </button>
 </nav>
 <div class="nav-drawer" id="nav-drawer" aria-hidden="true">
+  <button type="button" class="nav-drawer__close" id="nav-drawer-close" aria-label="メニューを閉じる">
+    <span></span><span></span>
+  </button>
   <ul class="nav-drawer__links">
     <li><a href="thoughts.html">Thoughts</a></li><li><a href="project.html">Project</a></li>
     <li><a href="service.html">Services</a></li><li><a href="pricing.html">Pricing</a></li>
@@ -279,7 +279,7 @@ html,body{overflow-x:hidden;max-width:100%;}
     </video>
   </div>
   <div class="hero-inner">
-    <p class="hero-kicker" id="hero-kicker">tomo design link — Web Design Studio</p>
+    <p class="hero-kicker" id="hero-kicker">tomo design link. / Web Design Studio</p>
   </div>
   <div class="hero-bottom" id="hero-bottom">
     <div class="hero-stats">
@@ -301,7 +301,7 @@ html,body{overflow-x:hidden;max-width:100%;}
     <div class="thoughts-right reveal d2">
       <p class="thoughts-body">
         <br><br>愛知の一宮を拠点にウェブデザインを専門に活動しています。<br>
-        静けさと暖かさを大切にした、信頼に繋がるウェブサイトを制作します。
+        静けさと暖かさを大切にした、信頼につながるウェブサイトを制作します。
       </p>
       <a href="thoughts.html" class="thoughts-more">
         もっと詳しく
@@ -530,16 +530,17 @@ function openDrawer()  { burger.setAttribute('aria-expanded','true');  drawer.cl
 burger.addEventListener('click', () => { burger.getAttribute('aria-expanded')==='true' ? closeDrawer() : openDrawer(); });
 scrim.addEventListener('click', closeDrawer);
 drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', closeDrawer));
+document.getElementById('nav-drawer-close').addEventListener('click', closeDrawer);
 document.addEventListener('keydown', e => { if(e.key==='Escape') closeDrawer(); });
 window.matchMedia('(min-width:1201px)').addEventListener('change', e => { if(e.matches) closeDrawer(); });
 
 /* HERO — kicker & bottom フェードイン */
 window.addEventListener('load', () => {
   setTimeout(() => {
-    document.getElementById('hero-kicker').style.cssText = 'opacity:1;transform:none;transition:opacity 1.8s ease,transform 1.8s ease;';
+    document.getElementById('hero-kicker').style.cssText = 'opacity:1;transform:none;transition:opacity 1.4s ease,transform 1.4s ease;';
   }, 300);
   setTimeout(() => {
-    document.getElementById('hero-bottom').style.cssText = 'opacity:1;transform:none;transition:opacity 1.8s ease,transform 1.8s ease;';
+    document.getElementById('hero-bottom').style.cssText = 'opacity:1;transform:none;transition:opacity 1.4s ease,transform 1.4s ease;';
   }, 700);
 });
 document.getElementById('hero-kicker').style.cssText = 'opacity:0;transform:translateY(12px);';
