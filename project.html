@@ -26,7 +26,7 @@ body{background:var(--white);color:var(--ink);font-family:'DM Sans',sans-serif;f
 .nav-links a.current{color:var(--ink);font-weight:500;border-bottom:1px solid var(--ink-lt);padding-bottom:2px;}
 .nav-cta{font-size:.72rem;letter-spacing:.1em;color:var(--ink);border:1px solid var(--ink);padding:.5rem 1.2rem;text-decoration:none;display:flex;align-items:center;gap:.4rem;transition:opacity .3s;}
 .nav-cta:hover{opacity:.6;}
-.nav-burger{display:none;flex-direction:column;justify-content:center;align-items:center;gap:5px;width:40px;height:40px;background:transparent;border:none;cursor:pointer;padding:0;z-index:310;}
+.nav-burger{display:none;position:fixed;top:12px;right:clamp(1.5rem,5vw,4rem);flex-direction:column;justify-content:center;align-items:center;gap:5px;width:40px;height:40px;background:transparent;border:none;cursor:pointer;padding:0;z-index:310;}
 .nav-burger__line{display:block;width:22px;height:1px;background:var(--ink);transition:transform .3s,opacity .2s;}
 .nav-burger[aria-expanded="true"] .nav-burger__line:nth-child(1){transform:translateY(6px) rotate(45deg);}
 .nav-burger[aria-expanded="true"] .nav-burger__line:nth-child(2){opacity:0;}
@@ -182,12 +182,10 @@ html,body{overflow-x:hidden;max-width:100%;}
     お問い合わせ
     <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M1 10L10 1M10 1H3M10 1V8" stroke="currentColor" stroke-width="1.3"/></svg>
   </a>
-  <button type="button" class="nav-burger" id="nav-burger" aria-expanded="false" aria-controls="nav-drawer" aria-label="メニューを開く">
-    <span class="nav-burger__line"></span>
-    <span class="nav-burger__line"></span>
-    <span class="nav-burger__line"></span>
-  </button>
 </nav>
+<button type="button" class="nav-burger" id="nav-burger" aria-expanded="false" aria-controls="nav-drawer" aria-label="メニューを開く">
+  <span class="nav-burger__line"></span><span class="nav-burger__line"></span><span class="nav-burger__line"></span>
+</button>
 <div class="nav-drawer" id="nav-drawer" aria-hidden="true">
   <ul class="nav-drawer__links">
     <li><a href="thoughts.html">Thoughts</a></li>

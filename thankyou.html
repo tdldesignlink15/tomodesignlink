@@ -19,8 +19,11 @@ body{background:var(--white);color:var(--ink);font-family:'DM Sans',sans-serif;f
 /* NAV */
 #main-nav{position:fixed;inset:0 0 auto;z-index:300;height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(1.5rem,5vw,4rem);background:var(--white);border-bottom:1px solid var(--rule);}
 .nav-logo-rest{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:300;font-style:italic;letter-spacing:.02em;color:var(--ink);text-decoration:none;}
-.nav-burger{display:none;flex-direction:column;justify-content:center;align-items:center;gap:5px;width:40px;height:40px;background:transparent;border:none;cursor:pointer;padding:0;}
-.nav-burger__line{display:block;width:22px;height:1px;background:var(--ink);}
+.nav-burger{display:none;position:fixed;top:12px;right:clamp(1.5rem,5vw,4rem);flex-direction:column;justify-content:center;align-items:center;gap:5px;width:40px;height:40px;background:transparent;border:none;cursor:pointer;padding:0;z-index:310;}
+.nav-burger__line{display:block;width:22px;height:1px;background:var(--ink);transition:transform .3s,opacity .2s;}
+.nav-burger[aria-expanded="true"] .nav-burger__line:nth-child(1){transform:translateY(6px) rotate(45deg);}
+.nav-burger[aria-expanded="true"] .nav-burger__line:nth-child(2){opacity:0;}
+.nav-burger[aria-expanded="true"] .nav-burger__line:nth-child(3){transform:translateY(-6px) rotate(-45deg);}
 .nav-links{display:flex;gap:clamp(1.5rem,3vw,2.5rem);list-style:none;margin-left:auto;margin-right:clamp(1.5rem,3vw,2.5rem);}
 .nav-links a{font-size:.72rem;letter-spacing:.12em;color:var(--ink-mid);text-decoration:none;transition:opacity .2s;}
 .nav-links a:hover{opacity:.5;}
@@ -28,11 +31,11 @@ body{background:var(--white);color:var(--ink);font-family:'DM Sans',sans-serif;f
 .nav-cta:hover{opacity:.6;}
 .nav-drawer{position:fixed;inset:0;background:var(--off);z-index:305;padding:5rem 2.5rem 3rem;display:flex;flex-direction:column;transform:translateX(100%);transition:transform .5s cubic-bezier(.22,1,.36,1);}
 .nav-drawer.is-open{transform:translateX(0);}
-.nav-drawer__close{position:absolute;top:1.2rem;right:1.2rem;width:44px;height:44px;background:transparent;border:1px solid var(--rule);border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:opacity .2s;}
-.nav-drawer__close:hover{opacity:.5;}
-.nav-drawer__close span{position:absolute;width:18px;height:1px;background:var(--ink);display:block;}
-.nav-drawer__close span:nth-child(1){transform:rotate(45deg);}
-.nav-drawer__close span:nth-child(2){transform:rotate(-45deg);}
+
+
+
+
+
 .nav-drawer__links{list-style:none;display:flex;flex-direction:column;border-top:1px solid var(--rule);}
 .nav-drawer__links li{border-bottom:1px solid var(--rule);}
 .nav-drawer__links a{display:block;padding:1.2rem 0;font-family:'Noto Serif JP',serif;font-size:1.3rem;font-weight:200;color:var(--ink);text-decoration:none;transition:opacity .2s;}
@@ -91,15 +94,12 @@ footer{padding:clamp(2rem,4vw,3rem) clamp(1.5rem,6vw,5rem);background:var(--navy
     <li><a href="contact.html">Contact</a></li>
   </ul>
   <a href="contact.html" class="nav-cta">お問い合わせ <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M1 10L10 1M10 1H3M10 1V8" stroke="currentColor" stroke-width="1.3"/></svg></a>
-  <button type="button" class="nav-burger" id="nav-burger" aria-expanded="false" aria-controls="nav-drawer" aria-label="メニューを開く">
-    <span class="nav-burger__line"></span><span class="nav-burger__line"></span><span class="nav-burger__line"></span>
-  </button>
 </nav>
+<button type="button" class="nav-burger" id="nav-burger" aria-expanded="false" aria-controls="nav-drawer" aria-label="メニューを開く">
+  <span class="nav-burger__line"></span><span class="nav-burger__line"></span><span class="nav-burger__line"></span>
+</button>
 
 <div class="nav-drawer" id="nav-drawer" aria-hidden="true">
-  <button type="button" class="nav-drawer__close" id="nav-drawer-close" aria-label="メニューを閉じる">
-    <span></span><span></span>
-  </button>
   <ul class="nav-drawer__links">
     <li><a href="thoughts.html">Thoughts</a></li>
     <li><a href="project.html">Project</a></li>
@@ -151,7 +151,6 @@ function openDrawer(){burger.setAttribute('aria-expanded','true');drawer.classLi
 burger.addEventListener('click',()=>{burger.getAttribute('aria-expanded')==='true'?closeDrawer():openDrawer();});
 scrim.addEventListener('click',closeDrawer);
 drawer.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeDrawer));
-document.getElementById('nav-drawer-close').addEventListener('click',closeDrawer);
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeDrawer();});
 window.matchMedia('(min-width:1201px)').addEventListener('change',e=>{if(e.matches)closeDrawer();});
 
